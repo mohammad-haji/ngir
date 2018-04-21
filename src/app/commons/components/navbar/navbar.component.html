@@ -1,0 +1,50 @@
+<!-- TODO: figure out if the <nav> should go inside of a <header> element. -->
+<nav class="docs-navbar-header">
+    <button mat-icon-button (click)="onToggleMenuClick()">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <a class="docs-button" mat-button routerLink="/" aria-label="Angular Material">
+        <img class="docs-angular-logo"
+             src="../../../assets/img/homepage/angular-white-transparent.svg"
+             alt="angular">
+        <span>پنل مدیریت</span>
+    </a>
+    <a mat-button class="docs-navbar-hide-small docs-button"
+       *ngFor="let route of sections"
+       [routerLink]="route.path">{{route.title}}</a>
+    <div class="flex-spacer"></div>
+    <mat-menu #appMenu="matMenu">
+        <button mat-menu-item>
+            <mat-icon>notifications_off</mat-icon>
+            <span>تنظیمات</span>
+        </button>
+        <button mat-menu-item>
+            <mat-icon>account_box</mat-icon>
+            <span>پروفایل</span>
+        </button>
+        <button mat-menu-item>
+            <mat-icon>exit_to_app</mat-icon>
+            <span>خروج</span>
+        </button>
+    </mat-menu>
+
+    <button mat-icon-button>
+        <mat-icon>notifications</mat-icon>
+        <span class="notification-label" style="position: absolute;
+    top: 0;
+    left: 50%;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 13px;
+    border-radius: 50%;
+    width: 13px;
+    height: 13px;
+    background-color: #f44336;
+    border: 4px solid #f44336;
+    color: #fff;
+    text-align: center;">7</span>
+    </button>
+    <button mat-icon-button>
+        <mat-icon>more_vert</mat-icon>
+    </button>
+</nav>
