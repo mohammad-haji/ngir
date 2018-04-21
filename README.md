@@ -1,5 +1,6 @@
+<div align="center">
 <img src="https://cdn-images-1.medium.com/max/1600/1*nbJ41jD1-r2Oe6FsLjKaOg.png" alt="ngir boilerplate" align="center" />
-
+</div>
 <br />
 
 <div align="center"><strong>Start your next Angular project in seconds</strong></div>
