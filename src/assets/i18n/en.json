@@ -1,0 +1,43 @@
+{
+  "HOME": {
+    "TITLE": "Hello Angular with ngx-translate!",
+    "SELECT": "Change language"
+  },
+  "HEADER": {
+    "CHIDNA": "Persis",
+    "PANEL": "Panel"
+  },
+  "USERS": {
+    "LIST": "List Of Users"
+  },
+  "PRODUCTS": {
+    "LIST": "List Of Products"
+  },
+  "PRODUCT_ATTRIBUTES": {
+    "LIST": "List Of Class Attributes"
+  },
+  "PRODUCT_CLASS_ATTRIBUTES": {
+    "LIST": "List Of Product Classes"
+  },
+  "TAGS": {
+    "LIST": "List Of Tags"
+  },
+  "ORDERS": {
+    "LIST": "List Of Orders"
+  },
+  "TRANSACTIONS": {
+    "LIST": "List Of Transactions"
+  },
+  "REVIEWS": {
+    "LIST": "List Of Reviews"
+  },
+  "CATEGORIES": {
+    "LIST": "List Of Categories"
+  },
+  "GENERAL": {
+    "SAVE": "Save",
+    "CREATED_BY": "Created by ♥ ",
+    "CREATOR": "Mohammad Hajiaghazadeh",
+    "YEAR": "2018"
+  }
+}

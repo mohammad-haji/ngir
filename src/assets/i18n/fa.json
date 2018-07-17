@@ -1,0 +1,43 @@
+{
+  "HOME": {
+    "TITLE": "",
+    "SELECT": ""
+  },
+  "HEADER": {
+    "CHIDNA": "Persis",
+    "PANEL": "پنل"
+  },
+  "USERS": {
+    "LIST": "لیست کاربران"
+  },
+  "PRODUCTS": {
+    "LIST": "لیست محصولات"
+  },
+  "PRODUCT_ATTRIBUTES": {
+    "LIST": "لیست ویژگی های کلاس"
+  },
+  "PRODUCT_CLASS_ATTRIBUTES": {
+    "LIST": "لیست کلاس های محصول"
+  },
+  "TAGS": {
+    "LIST": "لیست تگ ها"
+  },
+  "ORDERS": {
+    "LIST": "لیست سفارشات"
+  },
+  "TRANSACTIONS": {
+    "LIST": "لیست تراکنش ها"
+  },
+  "REVIEWS": {
+    "LIST": "لیست دیدگاه ها"
+  },
+  "CATEGORIES": {
+    "LIST": "لیست دسته ها"
+  },
+  "GENERAL": {
+    "SAVE": "ذخیره",
+    "CREATED_BY": "ایجاد شده با ♥ توسط",
+    "CREATOR": "محمد حاجی آقازاده",
+    "YEAR": "۲۰۱۸"
+  }
+}
