@@ -1,10 +1,10 @@
 {
   "name": "ngir",
-  "version": "0.10.0",
+  "version": "1.10.0",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "http://gitlab.ngirdp.local/ngirUI/ngir.erp.ui.git"
+    "url": "https://github.com/mohammad-haji/ngir.git"
   },
   "contributors": [],
   "scripts": {
@@ -44,7 +44,7 @@
     "@asymmetrik/ngx-leaflet": "3.0.1",
     "@nebular/auth": "2.0.0-rc.8",
     "@nebular/security": "2.0.0-rc.8",
-    "@nebular/theme": "2.0.0-rc.8",
+    "@nebular/theme": "^2.0.0-rc.9",
     "@ng-bootstrap/ng-bootstrap": "1.0.0",
     "@nguniversal/common": "^6.0.0",
     "@nguniversal/express-engine": "^6.0.0",
@@ -53,6 +53,7 @@
     "@ngx-translate/http-loader": "^3.0.1",
     "@swimlane/ngx-charts": "7.0.1",
     "@types/lodash": "^4.14.111",
+    "acorn-dynamic-import": "^3.0.0",
     "angular-tree-component": "7.2.0",
     "angular2-chartjs": "0.4.1",
     "angular2-image-upload": "^1.0.0-rc.1",

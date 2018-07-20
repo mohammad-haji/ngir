@@ -28,7 +28,7 @@ import { StateService } from '../../../@core/data/state.service';
                    [end]="sidebar.id === 'end'">
         <nb-sidebar-header>
           <a href="/" class="btn btn-hero-success main-btn">
-            <i class="ion ion-social-github"></i> <span>ngir</span>
+            <i class="ion ion-social-github"></i> <span>persis</span>
           </a>
         </nb-sidebar-header>
         <ng-content select="nb-menu"></ng-content>

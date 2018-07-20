@@ -46,6 +46,8 @@ import {COSMIC_THEME} from './styles/theme.cosmic';
 import {TranslateModule} from "@ngx-translate/core";
 import {NgxAuthBlockComponent, NgxAuthComponent, NgxLoginComponent} from "./components/auth";
 import {AuthService} from "./components/auth/auth.service";
+import {CORPORATE_THEME} from "./styles/theme.corporate";
+import {ThemeSwitcherListComponent} from "./components/theme-switcher/themes-switcher-list/themes-switcher-list.component";
 
 const BASE_MODULES = [CommonModule, FormsModule, ReactiveFormsModule, RouterModule, TranslateModule];
 
@@ -70,6 +72,7 @@ const COMPONENTS = [
   SwitcherComponent,
   LayoutDirectionSwitcherComponent,
   ThemeSwitcherComponent,
+  ThemeSwitcherListComponent,
   HeaderComponent,
   FooterComponent,
   SearchInputComponent,
@@ -94,12 +97,16 @@ const PIPES = [
   TimingPipe,
 ];
 
+const ENTRY_COMPONENTS = [
+  ThemeSwitcherListComponent,
+];
+
 const NB_THEME_PROVIDERS = [
   ...NbThemeModule.forRoot(
     {
-      name: 'default',
+      name: 'corporate',
     },
-    [DEFAULT_THEME, COSMIC_THEME],
+    [DEFAULT_THEME, COSMIC_THEME, CORPORATE_THEME],
   ).providers,
   ...NbSidebarModule.forRoot().providers,
   ...NbMenuModule.forRoot().providers,
@@ -112,7 +119,8 @@ const NB_THEME_PROVIDERS = [
   providers: [
     AuthService,
     NbMenuService
-  ]
+  ],
+  entryComponents: [...ENTRY_COMPONENTS],
 })
 export class ThemeModule {
   static forRoot(): ModuleWithProviders {

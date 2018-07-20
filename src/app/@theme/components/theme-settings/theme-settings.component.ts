@@ -28,7 +28,7 @@ import { StateService } from '../../../@core/data/state.service';
     </div>
     <h6 class="settings">SETTINGS</h6>
     <div class="switcher">
-      <ngx-theme-switcher [vertical]="true"></ngx-theme-switcher>
+      <ngx-theme-switcher></ngx-theme-switcher>
     </div>
     <div class="switcher">
       <ngx-layout-direction-switcher [vertical]="true"></ngx-layout-direction-switcher>
