@@ -7,6 +7,7 @@ import {throwIfAlreadyLoaded} from './module-import-guard';
 import {DataModule} from './data/data.module';
 import {AnalyticsService} from './utils/analytics.service';
 import {HttpResponse} from '@angular/common/http';
+import {PageTitleTagsService} from "./services/page-title-tags.service";
 
 const socialLinks = [
   {
@@ -65,8 +66,10 @@ const NB_CORE_PROVIDERS = [
     CommonModule,
   ],
   exports: [],
-  declarations: [
-  ],
+  declarations: [],
+  providers: [
+    PageTitleTagsService
+  ]
 })
 export class CoreModule {
   constructor(@Optional() @SkipSelf() parentModule: CoreModule) {
