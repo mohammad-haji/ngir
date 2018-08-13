@@ -15,6 +15,7 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/mergeMap';
 import {isPlatformServer} from "@angular/common";
 import {AuthService} from "./@theme/components/auth/auth.service";
+import {PageTitleTagsService} from "./@core/services/page-title-tags.service";
 
 const TOKEN_KEY = makeStateKey<string>('token');
 const USER_KEY = makeStateKey<string>('user');
@@ -51,15 +52,17 @@ export class AppComponent implements OnInit {
               private tstate: TransferState,
               @Inject(PLATFORM_ID) platformId,
               private activatedRoute: ActivatedRoute,
-              private authService: AuthService) {
+              private authService: AuthService,
+              private pageTitleTagsService: PageTitleTagsService) {
     this.isServer = isPlatformServer(platformId);
   }
 
   ngOnInit(): void {
     this.analytics.trackPageViews();
     this.makeToasterConfig();
-    this.updatePageTitleTags();
+    // this.updatePageTitleTags();
     // this.checkAccessToken();
+    this.pageTitleTagsService.updatePageTitleTags();
   }
 
   makeToasterConfig() {
@@ -74,27 +77,27 @@ export class AppComponent implements OnInit {
     });
   }
 
-  updatePageTitleTags(): void {
-    this.router.events
-      .filter((event) => event instanceof NavigationEnd)
-      .map(() => this.activatedRoute)
-      .map((route) => {
-        while (route.firstChild) {
-          route = route.firstChild;
-        }
-        return route;
-      })
-      .filter((route) => route.outlet === 'primary')
-      .mergeMap((route) => route.data)
-      .subscribe((event) => {
-        if (event['metaTags'] && event['metaTags'].length) {
-          event['metaTags'].forEach((tag: any) => {
-            this.meta.updateTag(tag, `name='${tag.name}'`);
-          });
-        }
-        this.titleService.setTitle(event['title'] || 'ngir')
-      });
-  }
+  // updatePageTitleTags(): void {
+  //   this.router.events
+  //     .filter((event) => event instanceof NavigationEnd)
+  //     .map(() => this.activatedRoute)
+  //     .map((route) => {
+  //       while (route.firstChild) {
+  //         route = route.firstChild;
+  //       }
+  //       return route;
+  //     })
+  //     .filter((route) => route.outlet === 'primary')
+  //     .mergeMap((route) => route.data)
+  //     .subscribe((event) => {
+  //       if (event['metaTags'] && event['metaTags'].length) {
+  //         event['metaTags'].forEach((tag: any) => {
+  //           this.meta.updateTag(tag, `name='${tag.name}'`);
+  //         });
+  //       }
+  //       this.titleService.setTitle(event['title'] || 'ngir')
+  //     });
+  // }
 
   checkAccessToken(): void {
     if (this.tstate.hasKey(TOKEN_KEY)) {

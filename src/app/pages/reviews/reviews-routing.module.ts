@@ -22,6 +22,9 @@ const routes: Routes = [{
     }, {
       path: 'list',
       component: ListReviewComponent,
+      data: {
+        TITLE_TAG_KEY: 'reviews.list'
+      }
     },
     ],
   },

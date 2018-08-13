@@ -15,7 +15,7 @@ const routes: Routes = [{
     children: [{
       path: 'add',
       component: AddUserComponent,
-      data: PAGE_TITLE_TAGS_CONST.users.add,
+      data: PAGE_TITLE_TAGS_CONST.users.add
     }, {
       path: 'detail',
       component: DetailUserComponent,
@@ -25,6 +25,9 @@ const routes: Routes = [{
     }, {
       path: 'list',
       component: ListUserComponent,
+      data: {
+        TITLE_TAG_KEY: 'users.list'
+      }
     }, {
       path: 'profile',
       component: ProfileComponent,
