@@ -42,23 +42,7 @@ export class FormLoaderService implements Resolve<Observable<any>> {
    * @returns {any}
    */
   resolve(route: ActivatedRouteSnapshot) {
+    // @FIXME use logic of menu loader
     return this.loadForms(route);
   }
 }
-
-
-// return  Observable.forkJoin ([
-//   this._mockService.dynamicTitle('resolver'),
-//   this._mockService.request(withError)
-// ])
-//   .map(results => ({
-//     dynamicTitle: results[0],
-//     records : results[1]
-//   }))
-//   .catch(error => {
-//     this._ngAlert.push({
-//       message: error.message,
-//       type: MessageType.error
-//     });
-//     return Observable.throw(error);
-//   });
