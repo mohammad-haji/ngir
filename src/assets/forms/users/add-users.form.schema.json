@@ -467,7 +467,7 @@
   "fieldsets": [
     {
       "id": "part_1",
-      "title": "قسمت اول",
+      "title": "اطلاعات پایه",
       "fields": [
         "firstName",
         "lastName",

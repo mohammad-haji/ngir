@@ -8,7 +8,7 @@ import {
 import {Observable} from 'rxjs/Observable';
 import {CONFIG} from '../config'
 
-const exceptionList: Array<any> = ['/assets/i18n/en.json', '/assets/i18n/fa.json'];
+const exceptionList: Array<any> = ['/assets/'];
 
 @Injectable()
 export class BaseurlInterceptor implements HttpInterceptor {
@@ -17,7 +17,13 @@ export class BaseurlInterceptor implements HttpInterceptor {
 
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     const {url} = request;
-    if (exceptionList.indexOf(url) === -1) {
+    let isUrlException: boolean = false;
+    exceptionList.forEach((exception) => {
+      if (url.includes(exception)) {
+        isUrlException = true;
+      }
+    });
+    if (!isUrlException) {
       request = request.clone({
         url: CONFIG.server.serverBaseURL + url,
       });
