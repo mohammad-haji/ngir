@@ -28,6 +28,7 @@ export class LayoutDirectionSwitcherComponent implements OnDestroy, OnInit {
   constructor(private directionService: NbLayoutDirectionService, public translate: TranslateService) {
     translate.addLangs(['fa', 'en']);
     translate.setDefaultLang('fa');
+    translate.currentLang = 'fa';
 
     const browserLang = translate.getBrowserLang();
     // translate.use(browserLang.match(/en|fa/) ? browserLang : 'fa');
@@ -42,12 +43,14 @@ export class LayoutDirectionSwitcherComponent implements OnDestroy, OnInit {
   }
 
   ngOnInit() {
-    this.toggleDirection('rtl', 'fa');
+    // this.toggleDirection('rtl', 'fa');
   }
 
   toggleDirection(newDirection, lang) {
+    let _lang = lang === 'rtl' ? 'en' : 'fa';
+    this.translate.use(_lang);
+    this.translate.currentLang = _lang;
     this.directionService.setDirection(newDirection);
-    this.translate.use((lang === 'rtl' ? 'en' : 'fa'))
   }
 
   ngOnDestroy() {
