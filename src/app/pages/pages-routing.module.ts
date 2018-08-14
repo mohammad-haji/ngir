@@ -4,11 +4,17 @@ import {NgModule} from '@angular/core';
 import {PagesComponent} from './pages.component';
 import {DashboardComponent} from './dashboard/dashboard.component';
 import {NotFoundComponent} from './miscellaneous/not-found/not-found.component';
-import {PAGE_TITLE_TAGS_CONST} from '../config/tags/page-title-tags.const';
+import {MenuLoaderService} from "../@core/services/menu-loader.service";
 
 const routes: Routes = [{
   path: '',
   component: PagesComponent,
+  data: {
+    menus: ['side_bar']
+  },
+  resolve: {
+    menus: MenuLoaderService
+  },
   children: [{
     path: 'dashboard',
     component: DashboardComponent,

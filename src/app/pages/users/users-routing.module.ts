@@ -19,15 +19,20 @@ const routes: Routes = [{
       TITLE_TAG_KEY: 'users.add',
       pageTitle: 'افزودن کاربر',
       forms: {
-        add_users: {
-          title: 'اطلاعات پایه کاربر',
+        basic_info: {
+          title: 'اطلاعات اصلی',
           containerClass: 'col-sm-6',
-          path: 'users/add-users'
+          path: 'users/basic-info-users'
         },
         edit_users: {
           title: 'فرم نقش های کاربر',
           containerClass: 'col-sm-6',
           path: 'users/edit-users'
+        },
+        add_users: {
+          title: 'اطلاعات پایه کاربر',
+          containerClass: 'col-sm-6',
+          path: 'users/add-users'
         },
       }
     },

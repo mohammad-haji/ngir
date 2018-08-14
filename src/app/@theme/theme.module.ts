@@ -19,7 +19,7 @@ import {
   NbUserModule,
   NbCheckboxModule,
   NbPopoverModule,
-  NbContextMenuModule, NbMenuService,
+  NbContextMenuModule, NbMenuService, NbLayoutDimensions,
 } from '@nebular/theme';
 
 import {NbSecurityModule} from '@nebular/security';
@@ -48,6 +48,7 @@ import {NgxAuthBlockComponent, NgxAuthComponent, NgxLoginComponent} from "./comp
 import {AuthService} from "./components/auth/auth.service";
 import {CORPORATE_THEME} from "./styles/theme.corporate";
 import {ThemeSwitcherListComponent} from "./components/theme-switcher/themes-switcher-list/themes-switcher-list.component";
+import {NbLayoutDirection} from "@nebular/theme/services/direction.service";
 
 const BASE_MODULES = [CommonModule, FormsModule, ReactiveFormsModule, RouterModule, TranslateModule];
 
@@ -107,6 +108,7 @@ const NB_THEME_PROVIDERS = [
       name: 'corporate',
     },
     [DEFAULT_THEME, COSMIC_THEME, CORPORATE_THEME],
+    null, NbLayoutDirection.RTL
   ).providers,
   ...NbSidebarModule.forRoot().providers,
   ...NbMenuModule.forRoot().providers,
