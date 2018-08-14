@@ -62,14 +62,6 @@
         "id": "checkbox"
       }
     },
-    "moreInfo": {
-      "type": "boolean",
-      "widget": {
-        "id": "checkbox"
-      },
-      "description": "More information?",
-      "default": true
-    },
     "survey": {
       "type": "object",
       "description": "Little survey",
@@ -80,44 +72,6 @@
           "widget": {
             "id": "string"
           }
-        },
-        "q2": {
-          "type": "object",
-          "description": "Address",
-          "properties": {
-            "color": {
-              "description": "color",
-              "type": "string",
-              "default": "#aaa000",
-              "pattern": "ff$",
-              "widget": {
-                "id": "color"
-              }
-            },
-            "zip": {
-              "description": "zip",
-              "type": "number",
-              "default": 15,
-              "widget": {
-                "id": "number"
-              }
-            }
-          },
-          "fieldsets": [
-            {
-              "id": "fieldset-default",
-              "title": "",
-              "description": "Address",
-              "name": "",
-              "fields": [
-                "color",
-                "zip"
-              ]
-            }
-          ],
-          "widget": {
-            "id": "object"
-          }
         }
       },
       "fieldsets": [
@@ -127,27 +81,12 @@
           "description": "Little survey",
           "name": "",
           "fields": [
-            "q1",
-            "q2"
+            "q1"
           ]
         }
       ],
       "widget": {
         "id": "object"
-      }
-    },
-    "favoriteColor": {
-      "type": "string",
-      "pattern": "^#[0-9a-fA-F]{6}$",
-      "widget": {
-        "id": "color"
-      },
-      "default": "#aaa111",
-      "description": "Favorite color",
-      "visibleIf": {
-        "moreInfo": [
-          true
-        ]
       }
     },
     "transactionNumber": {
@@ -414,40 +353,6 @@
           ]
         }
       ]
-    },
-    "colors": {
-      "type": "array",
-      "description": "Colors",
-      "index": "i",
-      "items": {
-        "type": "string",
-        "description": "Color $i",
-        "widget": {
-          "id": "color"
-        },
-        "buttons": [
-          {
-            "label": "Supprimer",
-            "id": "Remove"
-          }
-        ]
-      },
-      "buttons": [
-        {
-          "label": "Ajouter",
-          "id": "addItem",
-          "parameters": {
-            "value": "#afeadd"
-          }
-        },
-        {
-          "label": "Reset",
-          "id": "reset"
-        }
-      ],
-      "widget": {
-        "id": "array"
-      }
     }
   },
   "buttons": [
@@ -473,9 +378,6 @@
         "lastName",
         "categories",
         "bornOn",
-        "moreInfo",
-        "favoriteColor",
-        "colors",
         "survey"
       ]
     },
