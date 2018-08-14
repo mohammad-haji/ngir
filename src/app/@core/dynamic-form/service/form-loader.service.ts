@@ -8,7 +8,7 @@ import {HttpClient} from "@angular/common/http";
 
 @Injectable()
 export class FormLoaderService implements Resolve<Observable<any>> {
-  private JSON_DIR = '/assets/forms/';
+  private JSON_DIR = '/assets/data/forms/';
 
   constructor(private httpClient: HttpClient) {
 
@@ -45,3 +45,20 @@ export class FormLoaderService implements Resolve<Observable<any>> {
     return this.loadForms(route);
   }
 }
+
+
+// return  Observable.forkJoin ([
+//   this._mockService.dynamicTitle('resolver'),
+//   this._mockService.request(withError)
+// ])
+//   .map(results => ({
+//     dynamicTitle: results[0],
+//     records : results[1]
+//   }))
+//   .catch(error => {
+//     this._ngAlert.push({
+//       message: error.message,
+//       type: MessageType.error
+//     });
+//     return Observable.throw(error);
+//   });
