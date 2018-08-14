@@ -1,0 +1,37 @@
+[
+  {
+    "title": "داشبورد",
+    "icon": "nb-home",
+    "link": "/pages/dashboard",
+    "home": true
+  },
+  {
+    "title": "مدیریت",
+    "group": true
+  },
+  {
+    "title": "کاربران",
+    "icon": "nb-keypad",
+    "link": "/pages/users",
+    "children": [
+      {
+        "title": "افزودن کاربر جدید",
+        "link": "/pages/users/add"
+      },
+      {
+        "title": "لیست کاربران",
+        "link": "/pages/users/list"
+      }
+    ]
+  },
+  {
+    "title": "دیدگاه ها",
+    "icon": "nb-gear",
+    "children": [
+      {
+        "title": "لیست دیدگاه ها",
+        "link": "/pages/reviews/list"
+      }
+    ]
+  }
+]

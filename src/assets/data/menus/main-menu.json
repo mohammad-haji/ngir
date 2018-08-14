@@ -1,0 +1,103 @@
+[
+  {
+    "title": "داشبورد",
+    "icon": "nb-home",
+    "link": "/pages/dashboard",
+    "home": true
+  },
+  {
+    "title": "مدیریت",
+    "group": true
+  },
+  {
+    "title": "کاربران",
+    "icon": "nb-keypad",
+    "link": "/pages/users",
+    "children": [
+      {
+        "title": "افزودن کاربر جدید",
+        "link": "/pages/users/add"
+      },
+      {
+        "title": "لیست کاربران",
+        "link": "/pages/users/list"
+      }
+    ]
+  },
+  {
+    "title": "محصولات",
+    "icon": "nb-title",
+    "link": "/pages/products",
+    "children": [
+      {
+        "title": "افزودن محصول جدید",
+        "link": "/pages/products/add"
+      },
+      {
+        "title": "لیست محصولات",
+        "link": "/pages/products/list"
+      }
+    ]
+  },
+  {
+    "title": "کلاس و ویژگی ها",
+    "icon": "nb-title",
+    "link": "/pages/product-attributes",
+    "children": [
+      {
+        "title": "لیست کلاس ها",
+        "link": "/pages/product-attributes/list"
+      }
+    ]
+  },
+  {
+    "title": "دسته ها",
+    "icon": "nb-title",
+    "link": "/pages/categories",
+    "children": [
+      {
+        "title": "افزودن دسته جدید",
+        "link": "/pages/categories/add"
+      },
+      {
+        "title": "لیست دسته ها",
+        "link": "/pages/categories/list"
+      }
+    ]
+  },
+  {
+    "title": "تگ ها",
+    "icon": "nb-title",
+    "link": "/pages/tags",
+    "children": [
+      {
+        "title": "افزودن تگ جدید",
+        "link": "/pages/tags/add"
+      },
+      {
+        "title": "لیست تگ ها",
+        "link": "/pages/tags/list"
+      }
+    ]
+  },
+  {
+    "title": "سفارشات",
+    "icon": "nb-bar-chart",
+    "children": [
+      {
+        "title": "لیست سفارشات",
+        "link": "/pages/orders/list"
+      }
+    ]
+  },
+  {
+    "title": "دیدگاه ها",
+    "icon": "nb-gear",
+    "children": [
+      {
+        "title": "لیست دیدگاه ها",
+        "link": "/pages/reviews/list"
+      }
+    ]
+  }
+]

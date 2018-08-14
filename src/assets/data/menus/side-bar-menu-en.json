@@ -1,0 +1,37 @@
+[
+  {
+    "title": "Dashboard",
+    "icon": "nb-home",
+    "link": "/pages/dashboard",
+    "home": true
+  },
+  {
+    "title": "Management",
+    "group": true
+  },
+  {
+    "title": "Users",
+    "icon": "nb-keypad",
+    "link": "/pages/users",
+    "children": [
+      {
+        "title": "Add New User",
+        "link": "/pages/users/add"
+      },
+      {
+        "title": "List Of Users",
+        "link": "/pages/users/list"
+      }
+    ]
+  },
+  {
+    "title": "Reviews",
+    "icon": "nb-gear",
+    "children": [
+      {
+        "title": "List Of Reviews",
+        "link": "/pages/reviews/list"
+      }
+    ]
+  }
+]
