@@ -5,3 +5,14 @@
   top: 2px !important;
   right: -1px !important;
 }
+
+.has-error{
+  color: red !important;
+}
+.has-error .control-label::after{
+  content: "*"
+}
+
+.has-success{
+  color: green !important;
+}

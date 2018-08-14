@@ -10,6 +10,8 @@ import {ListUserComponent} from './list/list-user.component';
 import {Ng2SmartTableModule} from 'ng2-smart-table';
 import {UsersService} from './users.service';
 import {ProfileComponent} from "./profile/profile.component";
+import {SchemaFormModule, WidgetRegistry, DefaultWidgetRegistry} from "ngx-schema-form";
+import {FormsModule} from "@angular/forms";
 
 const components = [
   UsersComponent,
@@ -25,12 +27,15 @@ const components = [
     ThemeModule,
     Ng2SmartTableModule,
     UsersRoutingModule,
+    FormsModule,
+    SchemaFormModule.forRoot(),
   ],
   declarations: [
     ...components,
   ],
   providers: [
     UsersService,
+    {provide: WidgetRegistry, useClass: DefaultWidgetRegistry}
   ],
   entryComponents: [],
 })

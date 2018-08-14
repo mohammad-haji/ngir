@@ -90,6 +90,7 @@
     "typeface-exo": "0.0.22",
     "web-animations-js": "2.2.5",
     "webpack-cli": "^2.0.14",
+    "z-schema": "^3.23.0",
     "zone.js": "^0.8.26"
   },
   "devDependencies": {

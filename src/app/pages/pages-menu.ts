@@ -16,10 +16,10 @@ export const MENU_ITEMS: NbMenuItem[] = [
     icon: 'nb-keypad',
     link: '/pages/users',
     children: [
-      // {
-      //   title: 'افزودن کاربر جدید',
-      //   link: '/pages/users/add',
-      // },
+      {
+        title: 'افزودن کاربر جدید',
+        link: '/pages/users/add',
+      },
       {
         title: 'لیست کاربران',
         link: '/pages/users/list',
