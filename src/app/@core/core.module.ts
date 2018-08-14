@@ -8,6 +8,7 @@ import {DataModule} from './data/data.module';
 import {AnalyticsService} from './utils/analytics.service';
 import {HttpResponse} from '@angular/common/http';
 import {PageTitleTagsService} from "./services/page-title-tags.service";
+import {FormLoaderService} from "./dynamic-form/service/form-loader.service";
 
 const socialLinks = [
   {
@@ -68,7 +69,8 @@ const NB_CORE_PROVIDERS = [
   exports: [],
   declarations: [],
   providers: [
-    PageTitleTagsService
+    PageTitleTagsService,
+    FormLoaderService
   ]
 })
 export class CoreModule {
