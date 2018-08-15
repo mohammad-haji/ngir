@@ -15,10 +15,6 @@
     "link": "/pages/users",
     "children": [
       {
-        "title": "افزودن کاربر جدید",
-        "link": "/pages/users/add"
-      },
-      {
         "title": "لیست کاربران",
         "link": "/pages/users/list"
       }

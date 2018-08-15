@@ -12,5 +12,10 @@
       "url": "/user/:id",
       "method": "GET"
     }
+  },
+  "comments": {
+    "getAll": {
+      "url": "/comments"
+    }
   }
 }

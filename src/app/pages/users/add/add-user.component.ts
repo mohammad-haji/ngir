@@ -18,18 +18,6 @@ export class AddUserComponent implements OnInit {
   }
 
   ngOnInit() {
-    // this.apiDataProviderService.createApi('users').getAll().subscribe(res => {
-    //   console.log('getAll ', res);
-    // });
-    // this.apiDataProviderService.createApi('users').getById().subscribe(res => {
-    //   console.log('getById ', res);
-    // });
-    // this.apiDataProviderService.createApi('users').create({
-    //   firstName: 'mohammad',
-    //   lastName: 'haji'
-    // }).subscribe(res => {
-    //   console.log('getById ', res);
-    // });
     this.initPageWithConfig(_.cloneDeep(this.activatedRoute.snapshot.data));
   }
 

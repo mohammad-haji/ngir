@@ -14,12 +14,12 @@ export const TABLE_CONFIG = {
     confirmDelete: true,
   },
   actions: {
-    add: false,
-    edit: false,
-    delete: false
+    add: true,
+    edit: true,
+    delete: true
   },
   columns: {
-    title: {
+    name: {
       title: 'عنوان',
       type: 'string',
     },
@@ -27,7 +27,7 @@ export const TABLE_CONFIG = {
       title: 'وضعیت',
       type: 'string',
     },
-    created: {
+    createdAt: {
       title: 'تاریخ ثبت نام',
       type: 'date',
     },

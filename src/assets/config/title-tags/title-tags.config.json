@@ -83,6 +83,27 @@
           "content": "ngir عالی است"
         }
       ]
+    },
+    "edit": {
+      "title": "ویرایش کاربر",
+      "metaTags": [
+        {
+          "name": "twitter:card",
+          "content": "summary_large_image"
+        },
+        {
+          "name": "twitter:site",
+          "content": "ngir"
+        },
+        {
+          "name": "twitter:description",
+          "content": "بهترین فروشگاه ایران"
+        },
+        {
+          "name": "twitter:title",
+          "content": "ngir عالی است"
+        }
+      ]
     }
   },
   "products": {

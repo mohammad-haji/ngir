@@ -40,11 +40,35 @@ const routes: Routes = [{
       form: FormLoaderService,
     }
   }, {
-    path: 'detail',
+    path: 'detail/:id',
     component: DetailUserComponent,
   }, {
-    path: 'edit',
+    path: 'edit/:id',
     component: EditUserComponent,
+    data: {
+      TITLE_TAG_KEY: 'users.edit',
+      pageTitle: 'ویرایش کاربر',
+      forms: {
+        basic_info: {
+          title: 'اطلاعات اصلی',
+          containerClass: 'col-sm-6',
+          path: 'users/basic-info-users'
+        },
+        edit_users: {
+          title: 'فرم نقش های کاربر',
+          containerClass: 'col-sm-6',
+          path: 'users/edit-users'
+        },
+        add_users: {
+          title: 'اطلاعات پایه کاربر',
+          containerClass: 'col-sm-6',
+          path: 'users/add-users'
+        },
+      }
+    },
+    resolve: {
+      form: FormLoaderService,
+    }
   }, {
     path: 'list',
     component: ListUserComponent,
