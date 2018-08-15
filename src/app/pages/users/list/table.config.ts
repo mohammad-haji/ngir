@@ -19,29 +19,17 @@ export const TABLE_CONFIG = {
     delete: false,
   },
   columns: {
-    username: {
-      title: 'نام کاربری',
+    id: {
+      title: 'id',
       type: 'string',
     },
-    firstName: {
+    name: {
       title: 'نام',
       type: 'string',
     },
-    lastName: {
-      title: 'نام خانوادگی',
-      type: 'string',
-    },
-    provider: {
-      title: 'نحوه ورود',
-      type: 'string',
-    },
-    created: {
+    createdAt: {
       title: 'تاریخ ثبت نام',
       type: 'date',
-    },
-    email: {
-      title: 'ایمیل',
-      type: 'string',
-    },
+    }
   },
 };

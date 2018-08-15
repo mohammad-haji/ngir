@@ -1,0 +1,107 @@
+{
+  "response": {
+    "body": {
+      "data": [
+        {
+          "_id": {
+            "$oid": "55b5c7629f760097d4c7a296"
+          },
+          "discount": {
+            "code": "D1345",
+            "description": "discount for bill",
+            "descriptionInOtherLanguages": {
+              "descriptionInOtherLanguage": [
+                {
+                  "description": "OFFERING l01",
+                  "language": {
+                    "code": "en"
+                  },
+                  "channel": {
+                    "code": "Direct Sales"
+                  }
+                },
+                {
+                  "description": "OFFl01",
+                  "language": {
+                    "code": "sp"
+                  },
+                  "channel": {
+                    "code": "Self-care"
+                  }
+                }
+              ]
+            },
+            "currency": {
+              "code": "USD"
+            },
+            "discountCriteria": {
+              "code": "Comparison"
+            },
+            "considerDuration": true,
+            "discountArticle": {
+              "code": "Discount13424"
+            },
+            "lineOfBusiness": {
+              "code": "Mobile Telephony"
+            },
+            "discountCriteriaOn": {
+              "code": "MultiArticle"
+            },
+            "criteriaValue": 100,
+            "criteriaOnArticles": {
+              "commercialArticle": [
+                {
+                  "code": "comAr1"
+                },
+                {
+                  "code": "comAr2"
+                }
+              ]
+            },
+            "discountByMaster": {
+              "code": "Percentage"
+            },
+            "discountOn": {
+              "code": "MultiArticle"
+            },
+            "discountOnArticles": {
+              "commercialArticle": [
+                {
+                  "code": "comAr1"
+                },
+                {
+                  "code": "comAr2"
+                }
+              ]
+            },
+            "discountSlabOption": {
+              "code": "Tierd"
+            },
+            "discountSlabs": {
+              "discountSlab": [
+                {
+                  "startSlabAmount": "1",
+                  "endSlabAmount": "2",
+                  "discountPercentage": "30"
+                },
+                {
+                  "startSlabAmount": "2",
+                  "endSlabAmount": "3",
+                  "discountPercentage": "40"
+                }
+              ]
+            },
+            "discountSlabBase": {
+              "code": "Amount"
+            },
+            "discountValue": 12,
+            "status": {
+              "code": "Active"
+            }
+          }
+        }
+      ],
+      "totalRecordsCount": 1
+    }
+  }
+}
