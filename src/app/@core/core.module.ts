@@ -10,6 +10,8 @@ import {HttpResponse} from '@angular/common/http';
 import {PageTitleTagsService} from "./services/page-title-tags.service";
 import {FormLoaderService} from "./dynamic-form/service/form-loader.service";
 import {MenuLoaderService} from "./services/menu-loader.service";
+import {ApiDataProviderService} from "./services/api/api-data-provider.service";
+import {ApiConfigReaderService} from "./services/api/api-config-reader.service";
 
 const socialLinks = [
   {
@@ -72,7 +74,9 @@ const NB_CORE_PROVIDERS = [
   providers: [
     PageTitleTagsService,
     FormLoaderService,
-    MenuLoaderService
+    MenuLoaderService,
+    ApiDataProviderService,
+    ApiConfigReaderService
   ]
 })
 export class CoreModule {

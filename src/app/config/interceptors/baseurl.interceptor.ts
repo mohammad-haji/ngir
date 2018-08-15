@@ -8,7 +8,7 @@ import {
 import {Observable} from 'rxjs/Observable';
 import {CONFIG} from '../config'
 
-const exceptionList: Array<any> = ['/assets/'];
+const exceptionList: Array<any> = ['/assets/', 'http'];
 
 @Injectable()
 export class BaseurlInterceptor implements HttpInterceptor {
