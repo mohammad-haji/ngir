@@ -1,0 +1,16 @@
+{
+  "users": {
+    "getAll": {
+      "url": "/user",
+      "method": "GET"
+    },
+    "create": {
+      "url": "/user",
+      "method": "POST"
+    },
+    "getById": {
+      "url": "/user/:id",
+      "method": "GET"
+    }
+  }
+}
