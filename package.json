@@ -1,6 +1,6 @@
 {
   "name": "ngir",
-  "version": "1.11.3",
+  "version": "1.12.5",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -22,7 +22,7 @@
     "serve:ssr": "node dist/server",
     "compodoc": "./node_modules/.bin/compodoc -p src/tsconfig.app.json",
     "local-versioning": "node ./src/version.js",
-    "run-conventional-changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md",
+    "run-conventional-changelog": "conventional-changelog -p angular -i CHANGELOG.md && git add CHANGELOG.md",
     "version": "npm run local-versioning && npm run run-conventional-changelog"
   },
   "pre-commit": [],
