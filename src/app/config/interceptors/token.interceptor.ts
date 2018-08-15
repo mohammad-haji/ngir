@@ -21,13 +21,14 @@ export class TokenInterceptor implements HttpInterceptor {
     if (!this.isServer) {
       token = localStorage.getItem('token');
     }
-    if (token) {
-      request = request.clone({
-        setHeaders: {
-          'x-access-token': token,
-        },
-      });
-    }
+    // @TODO: prod uncomment this on production
+    // if (token) {
+    //   request = request.clone({
+    //     setHeaders: {
+    //       'x-access-token': token,
+    //     },
+    //   });
+    // }
     return next.handle(request);
   }
 }
