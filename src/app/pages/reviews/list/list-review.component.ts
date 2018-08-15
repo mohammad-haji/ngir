@@ -3,6 +3,7 @@ import {SmartTableService} from '../../../@core/data/smart-table.service';
 import {LocalDataSource} from 'ng2-smart-table';
 import {TABLE_CONFIG} from './table.config';
 import {ReviewsService} from '../reviews.service';
+import {ApiDataProviderService} from "../../../@core/services/api/api-data-provider.service";
 
 @Component({
   selector: 'ngx-list-review-component',
@@ -13,12 +14,12 @@ export class ListReviewComponent implements OnInit {
   settings = TABLE_CONFIG;
   source: LocalDataSource = new LocalDataSource();
 
-  constructor(private reviewsService: ReviewsService) {
+  constructor(private apiDataProviderService: ApiDataProviderService) {
   }
 
   ngOnInit() {
-    this.reviewsService.getReviewsList().subscribe((res: any) => {
-      this.source = res.data.docs;
+    this.apiDataProviderService.createApi('comments').getAll().subscribe(res => {
+      this.source = res;
     })
   }
 
