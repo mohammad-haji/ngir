@@ -6,7 +6,8 @@
     },
     "create": {
       "url": "/user",
-      "method": "POST"
+      "method": "POST",
+      "model": "users.create"
     },
     "getById": {
       "url": "/user/:id",

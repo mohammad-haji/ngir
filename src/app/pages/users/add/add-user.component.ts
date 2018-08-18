@@ -17,6 +17,12 @@ export class AddUserComponent implements OnInit {
               private apiDataProviderService: ApiDataProviderService) {
   }
 
+  submit(): void{
+    this.apiDataProviderService.createApi('users').getAll().subscribe(res=>{
+
+    })
+  }
+
   ngOnInit() {
     this.initPageWithConfig(_.cloneDeep(this.activatedRoute.snapshot.data));
   }
