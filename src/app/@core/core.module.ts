@@ -12,6 +12,7 @@ import {FormLoaderService} from "./dynamic-form/service/form-loader.service";
 import {MenuLoaderService} from "./services/menu-loader.service";
 import {ApiDataProviderService} from "./services/api/api-data-provider.service";
 import {ApiConfigReaderService} from "./services/api/api-config-reader.service";
+import {ApiDataCleanerService} from "./services/api/api-data-cleaner.service";
 
 const socialLinks = [
   {
@@ -76,7 +77,8 @@ const NB_CORE_PROVIDERS = [
     FormLoaderService,
     MenuLoaderService,
     ApiDataProviderService,
-    ApiConfigReaderService
+    ApiConfigReaderService,
+    ApiDataCleanerService
   ]
 })
 export class CoreModule {
