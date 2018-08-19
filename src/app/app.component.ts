@@ -24,6 +24,7 @@ const USER_KEY = makeStateKey<string>('user');
   selector: 'ngx-app',
   template: `
     <toaster-container [toasterconfig]="toasterConfig"></toaster-container>
+    <!--<ngx-schema-page [schema]="sampleNgxShema"></ngx-schema-page>-->
     <router-outlet></router-outlet>`,
 })
 
@@ -45,6 +46,25 @@ export class AppComponent implements OnInit {
   result: string = '';
   user: string = '';
 
+  sampleNgxShema = {
+    "$schema": "http://json-schema.org/draft-04/hyper-schema#",
+    "type": "page",
+    "head": {
+      "title": "nested layout demo"
+    },
+    "body": {
+      "type": "object",
+      "sections": [{
+        "items": [{
+          "type": "horizontal",
+          "components": [{
+            "type": "heading"
+          }]
+        }]
+      }]
+    }
+  };
+
   constructor(private analytics: AnalyticsService,
               private router: Router,
               private meta: Meta,
@@ -60,8 +80,8 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.analytics.trackPageViews();
     this.makeToasterConfig();
-    // this.updatePageTitleTags();
-    // this.checkAccessToken();
+// this.updatePageTitleTags();
+// this.checkAccessToken();
     this.pageTitleTagsService.updatePageTitleTags();
   }
 
@@ -77,37 +97,39 @@ export class AppComponent implements OnInit {
     });
   }
 
-  // updatePageTitleTags(): void {
-  //   this.router.events
-  //     .filter((event) => event instanceof NavigationEnd)
-  //     .map(() => this.activatedRoute)
-  //     .map((route) => {
-  //       while (route.firstChild) {
-  //         route = route.firstChild;
-  //       }
-  //       return route;
-  //     })
-  //     .filter((route) => route.outlet === 'primary')
-  //     .mergeMap((route) => route.data)
-  //     .subscribe((event) => {
-  //       if (event['metaTags'] && event['metaTags'].length) {
-  //         event['metaTags'].forEach((tag: any) => {
-  //           this.meta.updateTag(tag, `name='${tag.name}'`);
-  //         });
-  //       }
-  //       this.titleService.setTitle(event['title'] || 'ngir')
-  //     });
-  // }
+// updatePageTitleTags(): void {
+//   this.router.events
+//     .filter((event) => event instanceof NavigationEnd)
+//     .map(() => this.activatedRoute)
+//     .map((route) => {
+//       while (route.firstChild) {
+//         route = route.firstChild;
+//       }
+//       return route;
+//     })
+//     .filter((route) => route.outlet === 'primary')
+//     .mergeMap((route) => route.data)
+//     .subscribe((event) => {
+//       if (event['metaTags'] && event['metaTags'].length) {
+//         event['metaTags'].forEach((tag: any) => {
+//           this.meta.updateTag(tag, `name='${tag.name}'`);
+//         });
+//       }
+//       this.titleService.setTitle(event['title'] || 'ngir')
+//     });
+// }
 
   checkAccessToken(): void {
-    if (this.tstate.hasKey(TOKEN_KEY)) {
+    if (this.tstate.hasKey(TOKEN_KEY)
+    ) {
       // We are in the browser
       this.result = this.tstate.get(TOKEN_KEY, '');
       this.user = this.tstate.get(USER_KEY, '');
       console.log('on Browser', this.user);
       console.log('on Browser', this.result);
       console.log('on Browser', this.tstate);
-    } else if (this.isServer) {
+    }
+    else if (this.isServer) {
       // We are on the server
       this.authService.isAuthenticated.subscribe(res => {
         this.tstate.set(USER_KEY, res);

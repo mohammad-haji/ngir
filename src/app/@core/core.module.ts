@@ -13,6 +13,7 @@ import {MenuLoaderService} from "./services/menu-loader.service";
 import {ApiDataProviderService} from "./services/api/api-data-provider.service";
 import {ApiConfigReaderService} from "./services/api/api-config-reader.service";
 import {ApiDataCleanerService} from "./services/api/api-data-cleaner.service";
+import {NgxSchemaPageModule} from "./ngx-schema-page/ngx-schema-page.module";
 
 const socialLinks = [
   {
@@ -69,8 +70,11 @@ const NB_CORE_PROVIDERS = [
 @NgModule({
   imports: [
     CommonModule,
+    NgxSchemaPageModule
   ],
-  exports: [],
+  exports: [
+    NgxSchemaPageModule
+  ],
   declarations: [],
   providers: [
     PageTitleTagsService,
