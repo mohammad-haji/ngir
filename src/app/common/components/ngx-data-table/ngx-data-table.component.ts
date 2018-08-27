@@ -24,6 +24,9 @@ export class NgxDatatableComponent implements OnInit {
   public tableActions: any;
   public objectKeys = Object.keys;
 
+  //TODO remove this
+  item: any;
+
   constructor(private apiDataProviderService: ApiDataProviderService) {}
 
   ngOnInit() {

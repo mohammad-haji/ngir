@@ -1,5 +1,6 @@
 import { OnInit, ChangeDetectorRef, OnChanges, DoCheck, Output, EventEmitter } from '@angular/core';
 import {Component, Input} from '@angular/core';
+import * as _ from 'lodash';
 
 @Component({
   selector: 'ngx-detail-view-component',
@@ -34,6 +35,10 @@ export class NgxDetailViewComponent implements DoCheck{
   private _model: any = {};
   private oldFields: any = [];
   private oldModel: any = {};
+  //TODO: remove this
+  field: any;
+
+
   @Input() set fields (value: any){
     this._fields = value;
     this.processData(this._fields, (this._model || {}));
@@ -89,7 +94,7 @@ export class NgxDetailViewComponent implements DoCheck{
   }
 
   ngDoCheck() {
-    if(!_.isEqual(this.oldFields.sort(), this._fields.sort()) || !_.isEqual(this.oldModel, this._model) {
+    if(!_.isEqual(this.oldFields.sort(), this._fields.sort()) || !_.isEqual(this.oldModel, this._model)) {
       this.oldFields = _.cloneDeep(this._fields);
       this.oldModel = _.cloneDeep(this._model);
       this.processData(this._fields, this._model);
