@@ -24,6 +24,9 @@ const routes: Routes = [{
   }, {
     path: 'users',
     loadChildren: './users/users.module#UsersModule',
+  },{
+    path: 'crud',
+    loadChildren: './crud/crud.module#CrudModule',
   },
     //   {
     //   path: 'products',
