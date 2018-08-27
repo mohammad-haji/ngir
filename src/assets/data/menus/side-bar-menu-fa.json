@@ -29,5 +29,19 @@
         "link": "/pages/reviews/list"
       }
     ]
+  },
+  {
+    "title": "تخفیف ها",
+    "icon": "nb-heart",
+    "children": [
+      {
+        "title": "لیست تخفیف ها",
+        "link": "/pages/crud/list/discounts"
+      },
+      {
+        "title": "افزودن تخفیف جدید",
+        "link": "/pages/crud/add/discounts"
+      }
+    ]
   }
 ]

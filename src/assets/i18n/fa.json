@@ -8,8 +8,43 @@
     "PANEL": "پنل"
   },
   "USERS": {
-    "LIST": "لیست کاربران"
+    "LIST": "لیست کاربران",
+    "AddUser":"افزودن کاربر"
   },
+  "Discount":{
+    "List": "لیست تخفیف ها",
+    "AddDiscount": "افزودن تخفیف",
+    "EditDiscount":"ویرایش تخفیف",
+    "Store": "فروشگاه",
+    "DiscountType": "نوع تخفیف",
+    "ActivationCode": "کد فعالسازی",
+    "DiscountPercentage": "درصد تخفیف",
+    "ExpireTime": "زمان انقضا",
+    "TotalUse": "تعداد استفاده کننده"
+  },
+  "Buttons":{
+    "Submit": "ثبت",
+    "Save": "ذخیره",
+    "Add": "افزودن",
+    "Reset": "ریست",
+    "Cancel": "انصراف",
+    "Close": "بستن",
+    "Delete": "حذف"
+  },
+  "DataTable": {
+    "New": "افزودن",
+    "Edit": "ویرایش",
+    "Remove": "حذف",
+    "Detail": "نمایش",
+    "EmptyList": "داده ای موجود نیست",
+    "Total": "مجموع"
+  },
+  "Messages":{
+    "ConfirmToDelete": "آیا از حذف اطمینان دارید؟"
+  },
+
+
+
   "PRODUCTS": {
     "LIST": "لیست محصولات"
   },

@@ -10,5 +10,8 @@
         "id": "string"
       }
     }
-  }
+  },
+    "required": [
+      "firstName"
+    ]
 }

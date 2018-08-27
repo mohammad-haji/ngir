@@ -33,5 +33,19 @@
         "link": "/pages/reviews/list"
       }
     ]
+  },
+  {
+    "title": "Discounts",
+    "icon": "nb-heart",
+    "children": [
+      {
+        "title": "List Of Discounts",
+        "link": "/pages/crud/list/discounts"
+      },
+      {
+        "title": "Add New Discount",
+        "link": "/pages/crud/add/discounts"
+      }
+    ]
   }
 ]

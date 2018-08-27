@@ -14,6 +14,21 @@
       "method": "GET"
     }
   },
+  "discounts": {
+    "getAll": {
+      "url": "/discount",
+      "method": "GET"
+    },
+    "create": {
+      "url": "/discount",
+      "method": "POST",
+      "model": "users.create"
+    },
+    "getById": {
+      "url": "/discount/:id",
+      "method": "GET"
+    }
+  },
   "comments": {
     "getAll": {
       "url": "/comments"
