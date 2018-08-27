@@ -26,14 +26,14 @@ const routes: Routes = [{
       }
     },
     {
-      path: 'detail/:entity',
+      path: 'detail/:entity/:id',
       component: CrudDetailComponent,
       data: {
         TITLE_TAG_KEY: 'discounts.detail'
       }
     },
     {
-      path: 'edit/:entity',
+      path: 'edit/:entity/:id',
       component: CrudEditComponent,
       data: {
         TITLE_TAG_KEY: 'discounts.edit'

@@ -1,6 +1,7 @@
 import { Observable } from 'rxjs/Rx';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from "@angular/core";
+import * as _ from 'lodash';
 
 @Injectable()
 export class SPService{
@@ -23,6 +24,24 @@ export class SPService{
   }
 
   getPageSchema(type, component, entity){
-    return this.load(type, component, entity);
+    return this.load(type, component, entity).map((res)=>{
+      this.setPageSchema(res);
+      return  res;
+    });
+  }
+
+  getWidgetById(id){
+    let widgetInfo = {};
+    _.forEach(this.pageSchema.body.sections, function (section) {
+    	 _.forEach(section.items, function (item) {
+          _.forEach(item.components, function (cp) {
+            if(cp.id=='discountDetailView'){
+              widgetInfo = cp;
+            }
+          });
+      });
+    });
+    return widgetInfo;
+    // return this.pageSchema.body.sections.forEach((section)=>{section.items.forEach(item=>item.components.filter(cp=>cp.id == id))});
   }
 }

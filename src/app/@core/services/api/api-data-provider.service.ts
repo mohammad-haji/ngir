@@ -29,9 +29,9 @@ export class ApiDataProviderService {
     }
   }
 
-  getById(): Observable<any> {
+  getById(id: any ):Observable<any> {
     if (this.isMethodConfigExists) {
-      return this.httpClient.get(this.apiConfig[this.entityKey].getById.url);
+      return this.httpClient.get(`${this.apiConfig[this.entityKey].getById.url}/${id}`);
     }
   }
 
@@ -43,7 +43,7 @@ export class ApiDataProviderService {
 
   create(payload: any): Observable<any> {
     if (this.isMethodConfigExists) {
-      let reqPayload = this.apiDataCleanerService.cleanForCreate(this.apiConfig[this.entityKey].create.model, payload);
+      const reqPayload = this.apiDataCleanerService.cleanForCreate(this.apiConfig[this.entityKey].create.model, payload);
       return this.httpClient.post(this.apiConfig[this.entityKey].create.url, reqPayload);
     }
   }

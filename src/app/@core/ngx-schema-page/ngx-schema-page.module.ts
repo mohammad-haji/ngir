@@ -16,6 +16,7 @@ import { SFFormWidget } from './defaultwidgets/sfform/sfform.widget';
 import { FormsModule } from '@angular/forms';
 import { SchemaFormModule } from '../schema-form/src/lib/schema-form.module';
 import { NgxSchemaPageService } from './ngx-schema-page.service';
+import {DetailViewWidget} from './defaultwidgets/detailView/detailView.widget';
 
 
 const WIDGETS = [
@@ -23,6 +24,7 @@ const WIDGETS = [
   HeadingWidget,
   ObjectWidget,
   SFFormWidget,
+  DetailViewWidget,
 
   DefaultWidget
 ];

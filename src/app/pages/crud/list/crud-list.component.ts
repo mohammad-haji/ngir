@@ -39,10 +39,10 @@ export class CrudListComponent implements OnDestroy{
         this.router.navigateByUrl(`/pages/crud/add/${this.entity}`);
       },
       'DATATABLE_DETAIL': (data)=>{
-        this.router.navigateByUrl(`/pages/crud/detail/${this.entity}`);
+        this.router.navigateByUrl(`/pages/crud/detail/${this.entity}/${data.id}`);
       },
       'DATATABLE_EDIT': (data)=>{
-        this.router.navigateByUrl(`/pages/crud/edit/${this.entity}`);
+        this.router.navigateByUrl(`/pages/crud/edit/${this.entity}/${data.id}`);
       },
       'DATATABLE_REMOVE': (data)=>{
         this.confirmModalService.open({}).result.then((evt)=>{

@@ -25,7 +25,7 @@
       "model": "users.create"
     },
     "getById": {
-      "url": "/discount/:id",
+      "url": "/discount",
       "method": "GET"
     }
   },

@@ -9,11 +9,13 @@ import {NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
 import { SplitStringPipe } from './pipes/split-string/split-string.pipe';
 import { ConfirmModal } from './modals/confirm/confirm.modal';
 import { ConfirmModalService } from './modals/confirm/confirm.modal.service';
+import {NgxDetailViewComponent} from './components/detail-view/ngx-detail-view.component';
 
 
 const COMPONENTS = [
   NgxDatatableComponent,
-  NgxImageUploadComponent
+  NgxImageUploadComponent,
+  NgxDetailViewComponent
 ];
 
 const NG_BOOTSTRAP = [
