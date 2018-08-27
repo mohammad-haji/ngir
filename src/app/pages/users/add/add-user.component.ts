@@ -1,7 +1,7 @@
-import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute} from "@angular/router";
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from "@angular/router";
 import * as _ from 'lodash';
-import {ApiDataProviderService} from "../../../@core/services/api/api-data-provider.service";
+import { ApiDataProviderService } from "../../../@core/services/api/api-data-provider.service";
 
 @Component({
   selector: 'ngx-add-user-component',
@@ -14,27 +14,25 @@ export class AddUserComponent implements OnInit {
   objectKeys = Object.keys;
 
   constructor(private activatedRoute: ActivatedRoute,
-              private apiDataProviderService: ApiDataProviderService) {
+    private apiDataProviderService: ApiDataProviderService) {
   }
 
-  submit(): void{
-    this.apiDataProviderService.createApi('users').getAll().subscribe(res=>{
-
-    })
+  submit(): void {
+    this.apiDataProviderService.createApi('users').getAll().subscribe(res => {
+      console.log(res);
+    });
   }
 
   ngOnInit() {
     this.initPageWithConfig(_.cloneDeep(this.activatedRoute.snapshot.data));
   }
 
-
+  /**
+   * get page data from router
+   * @param config page router data
+   */
   private initPageWithConfig(config): void {
     this.pageTitle = config.pageTitle;
-    Object.keys(config.forms).forEach(FORM_KEY => {
-      config.forms[FORM_KEY].schema.subscribe(res => {
-        this.formList[FORM_KEY] = config.forms[FORM_KEY];
-        this.formList[FORM_KEY].schema = res;
-      })
-    });
+    this.formList = config.forms;
   }
 }
