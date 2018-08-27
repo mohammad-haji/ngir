@@ -1,0 +1,45 @@
+<div class="table-responsive">
+  <!-- <ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '14px' }"></ngx-loading> -->
+  <table class="table table-hover table-striped table-bordered">
+    <thead>
+      <th>
+        <button type="button" class="btn btn-primary btn-sm" *ngIf="(tableActions && tableActions.add.isShow)"
+          (click)="onActionClick('add', {}, tableActions['add']);">
+          {{tableActions.add.title|translate}}
+        </button>
+      </th>
+      <ng-container *ngFor="let header of config.columns">
+        <th *ngIf="!header.hidden">
+          {{header.name|translate}}
+        </th>
+      </ng-container>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of rows;trackBy:item?.id">
+        <td class="actions" *ngIf="tableActions">
+          <ng-container *ngFor="let actionKey of objectKeys(tableActions)">
+            <button type="button" class="btn btn-light btn-sm data-table-icon" *ngIf="tableActions[actionKey].isShow && actionKey!=='add'" (click)="onActionClick(actionKey, item, tableActions[actionKey]);">
+              <i ngbTooltip="{{tableActions[actionKey].title|translate}}" aria-label="Example icon-button with a heart icon" class="{{tableActions[actionKey].icon}}"></i>
+            </button>
+          </ng-container>
+        </td>
+        <td *ngFor="let field of item.visibleFields; trackBy:field" [ngSwitch]="field.type">
+          <span *ngSwitchCase="'string'">{{item[field.prop]}}</span>
+          <span *ngSwitchCase="'text'" ngbTooltip="{{item[field.prop]}}">
+            {{item[field.prop] | splitString: '20'}}</span>
+          <!--<span *ngSwitchCase="date">{{item[field.prop] | jalaliDate:(field.format?field.format:'HH:mm:ss - jYYYY/jMM/jDD')}}</span>-->
+          <!--<span *ngSwitchCase="enum">{{item[field.prop] | appEnum: field.format}}</span>-->
+          <span *ngSwitchCase="'bool'">{{item[field.prop] | checkMark}}</span>
+          <!--<span *ngSwitchCase="action">-->
+          <!--<button class="btn btn-default btn-block" type="button"-->
+          <!--style="font-family: FontAwesome !important;"-->
+          <!--ng-click="Func.onActionItemClick(field,item,$event)"-->
+          <!--ng-class="field.icon?field.icon: ''"-->
+          <!--style="cursor: pointer;">{{field.actionName}}</button>-->
+          <!--</span>-->
+          <span *ngSwitchDefault>{{item[field.prop]}}</span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

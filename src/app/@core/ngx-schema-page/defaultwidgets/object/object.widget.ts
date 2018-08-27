@@ -18,6 +18,5 @@ export class ObjectWidget implements OnInit {
   @Input() pageProp: any;
 
   ngOnInit() {
-    console.log(this.pageProp);
   }
 }

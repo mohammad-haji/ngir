@@ -1,0 +1,59 @@
+{
+  tableConfig: {
+    message: {
+      emptyMessage: 'داده ای وجود ندارد.',
+      totalMessage: 'مجموع'
+    },
+    actions: {
+      add: {
+        isShow: true,
+        icon: '',
+        title: 'New'
+      },
+      detail: {
+        isShow: true,
+        icon: 'remove_red_eye',
+        title: 'Detail'
+      },
+      edit: {
+        isShow: true,
+        icon: 'edit',
+        title: 'Edit'
+      },
+      remove: {
+        isShow: true,
+        icon: 'delete_forever',
+        title: 'Delete'
+      },
+      clone: {
+        isShow: true,
+        icon: 'file_copy',
+        title: 'Colon'
+      },
+    },
+    columns: [
+      {
+        type: 'bool',
+        prop: 'isActive',
+        name: 'IsActive',
+        sortable: false,
+        resizeable: false,
+        draggable: false,
+      }, {
+        type: 'number',
+        prop: 'masterDataCode',
+        name: 'MasterDataCode',
+        sortable: false,
+        resizeable: false,
+        draggable: false
+      }, {
+        type: 'string',
+        prop: 'guildTypeName',
+        name: 'GuildType',
+        sortable: false,
+        resizeable: false,
+        draggable: false
+      }
+    ]
+  }
+};

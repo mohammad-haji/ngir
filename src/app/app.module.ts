@@ -24,6 +24,8 @@ import {ServiceWorkerModule} from '@angular/service-worker';
 import {environment} from '../environments/environment';
 import {NbMenuService} from "@nebular/theme";
 import {NgxCommon} from "./common/common.module";
+import { AppService } from './app.service';
+import { SPService } from './sp.service';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(httpClient: HttpClient) {
@@ -57,6 +59,8 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
   bootstrap: [AppComponent],
   providers: [
     NbMenuService,
+    AppService,
+    SPService,
     {provide: APP_BASE_HREF, useValue: '/'},
     {
       provide: HTTP_INTERCEPTORS,

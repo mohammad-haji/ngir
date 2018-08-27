@@ -1,14 +1,15 @@
 /**
  * Created by Mohammad.hajiaghazadeh on 8/13/2018
  */
-import {Injectable} from "@angular/core";
-import {ActivatedRouteSnapshot, Resolve} from "@angular/router";
-import {Observable} from "rxjs/Rx";
-import {HttpClient} from "@angular/common/http";
+import { Injectable } from '@angular/core';
+import { ActivatedRouteSnapshot, Resolve } from '@angular/router';
+import { Observable } from 'rxjs/Rx';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable()
 export class FormLoaderService implements Resolve<Observable<any>> {
   private JSON_DIR = '/assets/data/forms/';
+  public requestList: any = [];
 
   constructor(private httpClient: HttpClient) {
 
@@ -24,25 +25,21 @@ export class FormLoaderService implements Resolve<Observable<any>> {
   }
 
   /**
-   * load forms based on form config
-   * @param route
-   * @returns {any}
-   */
-  loadForms(route): any {
-    return Object.keys(route.data.forms).forEach((formKey) => {
-      route.data.forms[formKey].schema = this.load(route.data.forms[formKey]);
-      // .subscribe(res => {
-      // });
-    });
-  }
-
-  /**
    * resolve forms
    * @param {ActivatedRouteSnapshot} route
    * @returns {any}
    */
   resolve(route: ActivatedRouteSnapshot) {
-    // @FIXME use logic of menu loader
-    return this.loadForms(route);
+    Object.keys(route.data.forms).forEach((formKey) => {
+      this.requestList.push(this.load(route.data.forms[formKey]));
+    });
+
+    return Observable.forkJoin(this.requestList).map(results => {
+      Object.keys(route.data.forms).forEach((formKey, index) => {
+        route.data.forms[formKey].schema = results[index];
+      });
+      delete route.data.form;
+      return {};
+    }).catch(err => Observable.throw(err));
   }
 }

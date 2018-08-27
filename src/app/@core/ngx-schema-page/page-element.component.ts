@@ -1,22 +1,28 @@
+import { OnDestroy } from '@angular/core';
 /**
  * Created by Mohammad.hajiaghazadeh on 8/18/2018
  */
-import {Component, Input} from "@angular/core";
+import {Component, Input, Output, EventEmitter} from "@angular/core";
+import { NgxSchemaPageService } from "./ngx-schema-page.service";
 
 @Component({
   selector: 'ns-page-element',
   template: `
     <div>
       <ns-widget-chooser [widgetInfo]="pageProp"
-                         (widgetInstanciated)="onWidgetInstanciated($event)"></ns-widget-chooser>
+                         (widgetInstanciated)="onWidgetInstanciated($event)" (onWidgetEvent)="onWidgetEvent($event)"></ns-widget-chooser>
     </div>
   `
 })
-export class PageElementComponent {
+export class PageElementComponent{
   private static counter = 0;
   @Input() pageProp: any;
-
+  // tslint:disable-next-line:no-output-on-prefix
   widget: any = null;
+  ngxSchemaPageService$: any;
+  constructor(private ngxSchemaPageService:NgxSchemaPageService){
+
+  }
 
   onWidgetInstanciated(widget: any) {
     this.widget = widget;
@@ -25,5 +31,9 @@ export class PageElementComponent {
     this.widget.schema = this.pageProp.schema;
     this.widget.name = id;
     this.widget.id = id;
+  }
+
+  onWidgetEvent(evt){
+    this.ngxSchemaPageService$ = this.ngxSchemaPageService.onAction$.next(evt);
   }
 }

@@ -16,6 +16,7 @@ import 'rxjs/add/operator/mergeMap';
 import {isPlatformServer} from "@angular/common";
 import {AuthService} from "./@theme/components/auth/auth.service";
 import {PageTitleTagsService} from "./@core/services/page-title-tags.service";
+import { AppService } from './app.service';
 
 const TOKEN_KEY = makeStateKey<string>('token');
 const USER_KEY = makeStateKey<string>('user');
@@ -24,7 +25,6 @@ const USER_KEY = makeStateKey<string>('user');
   selector: 'ngx-app',
   template: `
     <toaster-container [toasterconfig]="toasterConfig"></toaster-container>
-    <!--<ngx-schema-page [schema]="sampleNgxShema"></ngx-schema-page>-->
     <router-outlet></router-outlet>`,
 })
 
@@ -46,24 +46,6 @@ export class AppComponent implements OnInit {
   result: string = '';
   user: string = '';
 
-  sampleNgxShema = {
-    "$schema": "http://json-schema.org/draft-04/hyper-schema#",
-    "type": "page",
-    "head": {
-      "title": "nested layout demo"
-    },
-    "body": {
-      "type": "object",
-      "sections": [{
-        "items": [{
-          "type": "horizontal",
-          "components": [{
-            "type": "heading"
-          }]
-        }]
-      }]
-    }
-  };
 
   constructor(private analytics: AnalyticsService,
               private router: Router,
@@ -73,8 +55,18 @@ export class AppComponent implements OnInit {
               @Inject(PLATFORM_ID) platformId,
               private activatedRoute: ActivatedRoute,
               private authService: AuthService,
-              private pageTitleTagsService: PageTitleTagsService) {
+              private pageTitleTagsService: PageTitleTagsService,
+            private appService: AppService) {
     this.isServer = isPlatformServer(platformId);
+
+// console.log(this.sampleNgxShema.type);
+
+    // if(this.sampleNgxShema.type === 'CRUD'){
+    //   this.router.navigate(['/pages/crud']);
+    //   this.appService.setPageDate(this.sampleNgxShema);
+    // }
+
+
   }
 
   ngOnInit(): void {
