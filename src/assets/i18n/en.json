@@ -8,8 +8,43 @@
     "PANEL": "Panel"
   },
   "USERS": {
+    "AddUser": "Add User",
     "LIST": "List Of Users"
   },
+  "Discount":{
+    "List": "List of Discounts",
+    "AddDiscount": "Add Discount",
+    "EditDiscount": "Edit Discount",
+    "Store": "Store",
+    "DiscountType": "Discount Type",
+    "ActivationCode": "Activation Code",
+    "DiscountPercentage": "Discount Percentage",
+    "ExpireTime": "Expire Time",
+    "TotalUse": "Total Use"
+  },
+  "Buttons":{
+    "Submit": "Submit",
+    "Save": "Save",
+    "Reset": "Reset",
+    "Add": "Add",
+    "Cancel": "Cancel",
+    "Close": "Close",
+    "Delete": "Delete"
+  },
+  "DataTable": {
+    "New": "New",
+    "Edit": "Edit",
+    "Remove": "Remove",
+    "Detail": "Detail",
+    "EmptyList": "Empty List",
+    "Total": "Total"
+
+  },
+  "Messages":{
+    "ConfirmToDelete": "Are you sure?"
+  },
+
+
   "PRODUCTS": {
     "LIST": "List Of Products"
   },

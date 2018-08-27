@@ -37,7 +37,7 @@ const routes: Routes = [{
       }
     },
     resolve: {
-      form: FormLoaderService,
+      formLoader: FormLoaderService,
     }
   }, {
     path: 'detail/:id',
