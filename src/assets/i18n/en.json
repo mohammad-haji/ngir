@@ -13,8 +13,9 @@
   },
   "Discount":{
     "List": "List of Discounts",
-    "AddDiscount": "Add Discount",
-    "EditDiscount": "Edit Discount",
+    "Add": "Add Discount",
+    "Detail": "Discount Detail",
+    "Edit": "Edit Discount",
     "Store": "Store",
     "DiscountType": "Discount Type",
     "ActivationCode": "Activation Code",
@@ -25,6 +26,7 @@
   "Buttons":{
     "Submit": "Submit",
     "Save": "Save",
+    "Back": "Back",
     "Reset": "Reset",
     "Add": "Add",
     "Cancel": "Cancel",
