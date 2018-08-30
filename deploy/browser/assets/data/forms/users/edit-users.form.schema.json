@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-04/hyper-schema#",
+  "type": "object",
+  "properties": {
+    "firstName": {
+      "type": "string",
+      "placeholder": "نام کاربری",
+      "title": "First name",
+      "widget": {
+        "id": "string"
+      }
+    }
+  },
+  "required": [
+    "firstName"
+  ]
+}

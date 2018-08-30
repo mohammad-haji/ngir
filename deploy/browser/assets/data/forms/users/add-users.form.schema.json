@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-04/hyper-schema#",
+  "type": "object",
+  "properties": {
+    "email": {
+      "type": "string",
+      "description": "email",
+      "format": "email"
+    },
+    "password": {
+      "type": "string",
+      "description": "Password"
+    },
+    "rememberMe": {
+      "type": "boolean",
+      "default": false,
+      "description": "Remember me"
+    }
+  },
+  "required": ["email","password","rememberMe"]
+}

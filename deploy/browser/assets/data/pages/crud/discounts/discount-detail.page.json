@@ -1,0 +1,79 @@
+{
+  "$schema": "http://json-schema.org/draft-04/hyper-schema#",
+  "type": "CRUD",
+  "head": {
+    "title": "nested layout demo"
+  },
+  "body": {
+    "type": "object",
+    "sections": [
+      {
+        "items": [
+          {
+            "type": "horizontal",
+            "components": [
+              {
+                "type": "heading",
+                "data": {
+                  "title": "Discount.Detail"
+                }
+              },
+              {
+                "type": "detailView",
+                "id": "discountDetailView",
+                "data": {
+                  "fields": [
+                    {
+                      "title": "Discount.Store",
+                      "prop": "store",
+                      "type": "string",
+                      "default": "",
+                      "value": "",
+                      "isHidden": false
+                    },{
+                      "title": "Discount.DiscountType",
+                      "prop": "discountType",
+                      "type": "string",
+                      "default": "",
+                      "value": "",
+                      "isHidden": false
+                    },{
+                      "title": "Discount.ActivationCode",
+                      "prop": "activationCode",
+                      "type": "string",
+                      "default": "",
+                      "value": "",
+                      "isHidden": false
+                    },{
+                      "title": "Discount.DiscountPercentage",
+                      "prop": "discountPercentage",
+                      "type": "string",
+                      "default": "",
+                      "value": "",
+                      "isHidden": false
+                    },{
+                      "title": "Discount.ExpireTime",
+                      "prop": "expireTime",
+                      "type": "string",
+                      "default": "",
+                      "value": "",
+                      "isHidden": false
+                    },{
+                      "title": "Discount.TotalUse",
+                      "prop": "totalUse",
+                      "type": "string",
+                      "default": "",
+                      "value": "",
+                      "isHidden": false
+                    }
+                  ],
+                  "model": {}
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

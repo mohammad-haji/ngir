@@ -1,0 +1,197 @@
+[
+  {
+    "_id": {
+      "$oid": "54e201648ad433cd80bb68b3"
+    },
+    "regions": {
+      "region": [
+        {
+          "countriesMasterData": {
+            "language": "en",
+            "countries": {
+              "country": [
+                {
+                  "name": "India",
+                  "code": "IND"
+                },
+                {
+                  "name": "USA",
+                  "code": "USA"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "stateMasterData": {
+            "language": "en",
+            "country": "IND",
+            "states": {
+              "state": [
+                {
+                  "name": "Karnataka",
+                  "code": "KA",
+                  "country": "IND"
+                },
+                {
+                  "name": "Maharashtra",
+                  "code": "MH",
+                  "country": "IND"
+                },
+                {
+                  "name": "Tamilnadu",
+                  "code": "TN",
+                  "country": "IND"
+                },
+                {
+                  "name": "Uttar Pradesh",
+                  "code": "UP",
+                  "country": "IND"
+                },
+                {
+                  "name": "West Bengal",
+                  "code": "WB",
+                  "country": "IND"
+                },
+                {
+                  "name": "Kerala",
+                  "code": "KL",
+                  "country": "IND"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "citiesMasterData": {
+            "cityMasterData": [
+              {
+                "language": "en",
+                "state": "MH",
+                "country": "IND",
+                "cities": {
+                  "city": [
+                    {
+                      "name": "Mumbai",
+                      "code": "MUM",
+                      "state": "MH",
+                      "country": "IND"
+                    },
+                    {
+                      "name": "Pune",
+                      "code": "PUNE",
+                      "state": "MH",
+                      "country": "IND"
+                    },
+                    {
+                      "name": "Nagpur",
+                      "code": "NGP",
+                      "state": "MH",
+                      "country": "IND"
+                    }
+                  ]
+                }
+              },
+              {
+                "language": "en",
+                "state": "KA",
+                "country": "IND",
+                "cities": {
+                  "city": [
+                    {
+                      "name": "Bangalore",
+                      "code": "BNG",
+                      "state": "KA",
+                      "country": "IND"
+                    },
+                    {
+                      "name": "Pune",
+                      "code": "PUNE",
+                      "state": "MH",
+                      "country": "IND"
+                    },
+                    {
+                      "name": "Nagpur",
+                      "code": "NGP",
+                      "state": "MH",
+                      "country": "IND"
+                    }
+                  ]
+                }
+              },
+              {
+                "language": "en",
+                "state": "TN",
+                "country": "IND",
+                "cities": {
+                  "city": [
+                    {
+                      "name": "Chennai",
+                      "code": "CHE",
+                      "state": "TN",
+                      "country": "IND"
+                    },
+                    {
+                      "name": "Madurai",
+                      "code": "MAD",
+                      "state": "TN",
+                      "country": "IND"
+                    }
+                  ]
+                }
+              },
+              {
+                "language": "en",
+                "state": "UP",
+                "country": "IND",
+                "cities": {
+                  "city": [
+                    {
+                      "name": "Kanpur",
+                      "code": "KNP",
+                      "state": "UP",
+                      "country": "IND"
+                    },
+                    {
+                      "name": "Lucknow",
+                      "code": "LKO",
+                      "state": "UP",
+                      "country": "IND"
+                    },
+                    {
+                      "name": "Varanasi",
+                      "code": "VNS",
+                      "state": "UP",
+                      "country": "IND"
+                    },
+                    {
+                      "name": "Gorakhpur",
+                      "code": "GKP",
+                      "state": "UP",
+                      "country": "IND"
+                    }
+                  ]
+                }
+              },
+              {
+                "language": "en",
+                "state": "WB",
+                "country": "IND",
+                "cities": {
+                  "city": [
+                    {
+                      "name": "Kolkata",
+                      "code": "KLKT",
+                      "state": "WB",
+                      "country": "IND"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+]

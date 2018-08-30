@@ -23,6 +23,7 @@ export class CrudListComponent implements OnDestroy{
     this.initActionMap();
     this.activatedRoute.params.subscribe((res: any)=>{
       this.entity = res.entity;
+      this.listPageSchema = undefined;
       this.spService.getPageSchema('crud','list',this.entity).subscribe((res: any)=>{
         this.listPageSchema = res;
       });
@@ -36,13 +37,31 @@ export class CrudListComponent implements OnDestroy{
   private initActionMap(){
     this.ngxSchemaPageActionMap = {
       'DATATABLE_ADD': (data)=>{
-        this.router.navigateByUrl(`/pages/crud/add/${this.entity}`);
+        if(this.entity === 'groupContacts' || this.entity === 'privateGroupContacts'){
+          this.router.navigateByUrl(`/pages/crud/add/${this.entity}?parent=${this.entity}&datatable=${
+            JSON.stringify({id: data.id, init: false})
+          }`);
+        }else{
+          this.router.navigateByUrl(`/pages/crud/add/${this.entity}`);
+        }
       },
       'DATATABLE_DETAIL': (data)=>{
-        this.router.navigateByUrl(`/pages/crud/detail/${this.entity}/${data.id}`);
+        if(this.entity === 'groupContacts' || this.entity === 'privateGroupContacts'){
+          this.router.navigateByUrl(`/pages/crud/detail/${this.entity}/${data.id}?parent=${this.entity}&datatable=${
+            JSON.stringify({id: data.id, init: false})
+          }`);
+        }else{
+          this.router.navigateByUrl(`/pages/crud/detail/${this.entity}/${data.id}`);
+        }
       },
       'DATATABLE_EDIT': (data)=>{
-        this.router.navigateByUrl(`/pages/crud/edit/${this.entity}/${data.id}`);
+        if(this.entity === 'groupContacts' || this.entity === 'privateGroupContacts'){
+          this.router.navigateByUrl(`/pages/crud/edit/${this.entity}/${data.id}?parent=${this.entity}&datatable=${
+            JSON.stringify({id: data.id, init: false})
+          }`);
+        }else{
+          this.router.navigateByUrl(`/pages/crud/edit/${this.entity}/${data.id}`);
+        }
       },
       'DATATABLE_REMOVE': (data)=>{
         this.confirmModalService.open({}).result.then((evt)=>{
@@ -55,6 +74,16 @@ export class CrudListComponent implements OnDestroy{
       'DATATABLE_CUSTOM': (data)=>{
 
       },
+      'DATATABLE_CONTACTS': (data)=>{
+        this.router.navigateByUrl(`/pages/crud/list/groupContacts?parent=${this.entity}&datatable=${
+          JSON.stringify({id: data.id, init: false})
+        }`);
+      },
+      'DATATABLE_CONTACTS_PERSONAL': (data)=>{
+        this.router.navigateByUrl(`/pages/crud/list/privateGroupContacts?parent=${this.entity}&datatable=${
+          JSON.stringify({id: data.id, init: false})
+        }`);
+      }
     };
   }
 

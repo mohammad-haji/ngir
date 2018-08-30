@@ -1,3 +1,5 @@
+import { ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 import { ApiDataProviderService } from './../../../@core/services/api/api-data-provider.service';
 /**
  * ngx-persis-datatable
@@ -23,19 +25,39 @@ export class NgxDatatableComponent implements OnInit {
   public loading = true;
   public tableActions: any;
   public objectKeys = Object.keys;
+  private initWithParamData = false;
+  private dataTableParams: any = {};
 
   //TODO remove this
   item: any;
 
-  constructor(private apiDataProviderService: ApiDataProviderService) {}
+  constructor(private apiDataProviderService: ApiDataProviderService,
+    private activatedRoute: ActivatedRoute) {
+      this.activatedRoute.queryParams.subscribe((params: any)=>{
+        if ( params && params['datatable'] ){
+          const dataTableParams = JSON.parse(params['datatable']);
+          this.dataTableParams = dataTableParams;
+          this.initWithParamData = true;
+        }else{
+          this.initWithParamData = false;
+        }
+      });
+    }
 
   ngOnInit() {
     this.tableActions = this.config.actions;
     // this.processListResponse(this.rows);
-    this.apiDataProviderService.createApi(this.config.api.entity).getAll().subscribe((res: any)=>{
-      this.rows = res;
-      this.processListResponse(this.rows);
-    });
+    if ( this.initWithParamData) {
+      this.apiDataProviderService.createApi(this.config.api.entity).getAll(this.dataTableParams.id).subscribe((res: any)=>{
+        this.rows = res;
+        this.processListResponse(this.rows);
+      });
+    }else{
+      this.apiDataProviderService.createApi(this.config.api.entity).getAll().subscribe((res: any)=>{
+        this.rows = res;
+        this.processListResponse(this.rows);
+      });
+    }
   }
 
   onActionClick(actionKey: string, data: any, action: any): void {

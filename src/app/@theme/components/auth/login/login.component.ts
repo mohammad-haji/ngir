@@ -72,7 +72,7 @@ const USER_KEY = makeStateKey<string>('user');
 
         <div class="form-group accept-group col-sm-12">
           <nb-checkbox name="rememberMe" [(ngModel)]="user.rememberMe">مرا به خاطر بسپار</nb-checkbox>
-          <a class="forgot-password" routerLink="../request-password">رمز عبورم را فراموش کرده ام</a>
+          <!-- <a class="forgot-password" routerLink="../request-password">رمز عبورم را فراموش کرده ام</a>-->
         </div>
 
         <button [disabled]="submitted || !form.valid" class="btn btn-block btn-hero-success"
@@ -80,32 +80,33 @@ const USER_KEY = makeStateKey<string>('user');
           ورود
         </button>
       </form>
+<!--
+      // <div class="links">
 
-      <div class="links">
+      //   // <ng-container *ngIf="socialLinks && socialLinks.length > 0">
+      //   //   <small class="form-text">یا با حساب های کاربری خود وارد شوید</small>
 
-        <ng-container *ngIf="socialLinks && socialLinks.length > 0">
-          <small class="form-text">یا با حساب های کاربری خود وارد شوید</small>
+      //   //   <div class="socials">
+      //   //     <ng-container *ngFor="let socialLink of socialLinks">
+      //   //       <a *ngIf="socialLink.link"
+      //   //          [routerLink]="socialLink.link"
+      //   //          [attr.target]="socialLink.target"
+      //   //          [attr.class]="socialLink.icon"
+      //   //          [class.with-icon]="socialLink.icon">{{ socialLink.title }}</a>
+      //   //       <a *ngIf="socialLink.url"
+      //   //          [attr.href]="socialLink.url"
+      //   //          [attr.target]="socialLink.target"
+      //   //          [attr.class]="socialLink.icon"
+      //   //          [class.with-icon]="socialLink.icon">{{ socialLink.title }}</a>
+      //   //     </ng-container>
+      //   //   </div>
+      //   // </ng-container>
 
-          <div class="socials">
-            <ng-container *ngFor="let socialLink of socialLinks">
-              <a *ngIf="socialLink.link"
-                 [routerLink]="socialLink.link"
-                 [attr.target]="socialLink.target"
-                 [attr.class]="socialLink.icon"
-                 [class.with-icon]="socialLink.icon">{{ socialLink.title }}</a>
-              <a *ngIf="socialLink.url"
-                 [attr.href]="socialLink.url"
-                 [attr.target]="socialLink.target"
-                 [attr.class]="socialLink.icon"
-                 [class.with-icon]="socialLink.icon">{{ socialLink.title }}</a>
-            </ng-container>
-          </div>
-        </ng-container>
-
-        <small class="form-text">
-          حساب کاربری ندارید؟ <a routerLink="../register"><strong>ثبت نام</strong></a>
-        </small>
-      </div>
+      //   // <small class="form-text">
+      //   //   حساب کاربری ندارید؟ <a routerLink="../register"><strong>ثبت نام</strong></a>
+      //   // </small>
+      // </div>
+      -->
     </nb-auth-block>
   `,
 })

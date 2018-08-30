@@ -2,7 +2,7 @@
   <!-- <ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '14px' }"></ngx-loading> -->
   <table class="table table-hover table-striped table-bordered">
     <thead>
-      <th>
+      <th class="add-btn">
         <button type="button" class="btn btn-primary btn-sm" *ngIf="(tableActions && tableActions.add.isShow)"
           (click)="onActionClick('add', {}, tableActions['add']);">
           {{tableActions.add.title|translate}}

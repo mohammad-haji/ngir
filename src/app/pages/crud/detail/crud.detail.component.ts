@@ -27,6 +27,7 @@ export class CrudDetailComponent implements OnDestroy{
     this.activatedRoute.params.subscribe((params: any)=>{
       this.entity = params.entity;
       this.entityId = params.id;
+      this.detailPageSchema = undefined;
       this.spService.getPageSchema('crud','detail',this.entity).subscribe((res: any)=>{
         this.detailPageSchema = res;
         const widget: any = this.spService.getWidgetById('discountDetailView');
@@ -63,7 +64,13 @@ export class CrudDetailComponent implements OnDestroy{
 
         },
         'DETAIL_VIEW_BACK': (data)=>{
-          this.router.navigateByUrl(`/pages/crud/list/${this.entity}`);
+          if(this.entity === 'groupContacts' || this.entity === 'privateGroupContacts'){
+            this.router.navigateByUrl(`/pages/crud/list/${this.entity}?parent=${this.entity}&datatable=${
+              JSON.stringify({id: data.id, init: false})
+            }`);
+          }else{
+            this.router.navigateByUrl(`/pages/crud/list/${this.entity}`);
+          }
         }
       };
     }

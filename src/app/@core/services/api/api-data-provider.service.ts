@@ -11,6 +11,7 @@ import {ApiDataCleanerService} from "./api-data-cleaner.service";
 export class ApiDataProviderService {
   entityKey: string = '';
   apiConfig: any;
+  regexIdInPath = /\:id/;
 
   constructor(private httpClient: HttpClient,
               private apiConfigReaderService: ApiConfigReaderService,
@@ -23,8 +24,12 @@ export class ApiDataProviderService {
     return this;
   }
 
-  getAll(): Observable<any> {
+  getAll(id?: any): Observable<any> {
     if (this.isMethodConfigExists) {
+      if(this.regexIdInPath.test(this.apiConfig[this.entityKey].getAll.url)){
+        return this.httpClient.get(this.apiConfig[this.entityKey].getAll.url
+          .replace(this.regexIdInPath, id));
+      }
       return this.httpClient.get(this.apiConfig[this.entityKey].getAll.url);
     }
   }

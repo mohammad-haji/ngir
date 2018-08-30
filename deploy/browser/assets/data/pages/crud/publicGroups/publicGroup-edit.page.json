@@ -1,0 +1,120 @@
+{
+  "$schema": "http://json-schema.org/draft-04/hyper-schema#",
+  "type": "CRUD",
+  "head": {
+    "title": "nested layout demo"
+  },
+  "body": {
+    "type": "object",
+    "sections": [
+      {
+        "items": [
+          {
+            "type": "horizontal",
+            "components": [
+              {
+                "type": "heading",
+                "data": {
+                  "title": "PublicGroup.Edit"
+                }
+              },
+              {
+                "type": "sfForm",
+                "key": "ADD_USER_FORM",
+                "data": {
+                  "formList": [
+                    {
+                      "title": "",
+                      "containerClass": "col-sm-12",
+                      "path": "users/basic-info-users",
+                      "schema": {
+                        "properties": {
+                          "name": {
+                            "description": "",
+                            "title": "PublicGroup.Name",
+                            "type": "string",
+                            "widget": {
+                              "id": "string"
+                            }
+                          },
+                          "description": {
+                            "description": "",
+                            "title": "PublicGroup.Description",
+                            "type": "string",
+                            "widget": {
+                              "id": "string"
+                            }
+                          }
+                        },
+                        "buttons": [
+                          {
+                            "label": "Buttons.Save",
+                            "class": "btn-success",
+                            "actionKey": "SFFORM_SAVE",
+                            "id": "save",
+                            "parameters": {},
+                            "btnAction": {
+                              "type": "$network.request",
+                              "options": {
+                                "entity": "discounts",
+                                "method": "create",
+                                "data": {
+                                  "user_id": "fI9",
+                                  "message": "Hello there"
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "label": "Buttons.Reset",
+                            "class": "btn-danger",
+                            "actionKey": "SFFORM_RESET",
+                            "id": "reset",
+                            "parameters": {}
+                          },
+                          {
+                            "label": "Buttons.Cancel",
+                            "class": "btn-warning",
+                            "id": "cancel",
+                            "actionKey": "SFFORM_CANCEL",
+                            "parameters": {},
+                            "btnAction": {
+                              "type": "$href",
+                              "options": {
+                                "url": "/pages/dashboard",
+                                "method": "internal",
+                                "data": {
+                                  "user_id": "fI9",
+                                  "message": "Hello there"
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "label": "Buttons.Add",
+                            "class": "btn-light",
+                            "actionKey": "SFFORM_ADD",
+                            "isHidden": true,
+                            "id": "add",
+                            "parameters": {}
+                          }
+                        ],
+                        "required": [
+                          "title"
+                        ],
+                        "type": "object",
+                        "widget": {
+                          "id": "object"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

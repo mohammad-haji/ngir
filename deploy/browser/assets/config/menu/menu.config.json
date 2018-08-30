@@ -1,0 +1,16 @@
+{
+  "side_bar": {
+    "title": "side bar enu",
+    "path": "/side-bar-menu",
+    "default": "side-bar-menu.json",
+    "fa": "side-bar-menu-fa.json",
+    "en": "side-bar-menu-en.json"
+  },
+  "main_menu": {
+    "title": "main menu",
+    "path": "main-menu",
+    "default": "side-bar-menu.json",
+    "fa": "side-bar-menu-fa.json",
+    "en": "side-bar-menu-en.json"
+  }
+}

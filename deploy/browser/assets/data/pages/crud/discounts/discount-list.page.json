@@ -1,0 +1,117 @@
+{
+  "$schema": "http://json-schema.org/draft-04/hyper-schema#",
+  "type": "CRUD",
+  "head": {
+    "title": "nested layout demo"
+  },
+  "body": {
+    "type": "object",
+    "sections": [
+      {
+        "items": [
+          {
+            "type": "horizontal",
+            "components": [
+              {
+                "type": "heading",
+                "data": {
+                  "title": "Discount.List"
+                }
+              },
+              {
+                "type": "datatable",
+                "data": {
+                  "config": {
+                    "message": {
+                      "emptyMessage": "DataTable.EmptyList",
+                      "totalMessage": "DataTable.Total"
+                    },
+                    "api": {
+                      "entity": "discounts"
+                    },
+                    "actions": {
+                      "add": {
+                        "isShow": true,
+                        "icon": "",
+                        "actionKey": "DATATABLE_ADD",
+                        "title": "DataTable.New"
+                      },
+                      "detail": {
+                        "isShow": true,
+                        "icon": "nb-layout-default",
+                        "actionKey": "DATATABLE_DETAIL",
+                        "title": "DataTable.Detail"
+                      },
+                      "edit": {
+                        "isShow": true,
+                        "icon": "nb-edit",
+                        "actionKey": "DATATABLE_EDIT",
+                        "title": "DataTable.Edit"
+                      },
+                      "remove": {
+                        "isShow": true,
+                        "icon": "nb-trash",
+                        "actionKey": "DATATABLE_REMOVE",
+                        "title": "DataTable.Remove"
+                      }
+                    },
+                    "columns": [
+                      {
+                        "type": "string",
+                        "prop": "store",
+                        "name": "Discount.Store",
+                        "sortable": false,
+                        "resizeable": false,
+                        "draggable": false
+                      },
+                      {
+                        "type": "string",
+                        "prop": "discountType",
+                        "name": "Discount.DiscountType",
+                        "sortable": false,
+                        "resizeable": false,
+                        "draggable": false
+                      },
+                      {
+                        "type": "string",
+                        "prop": "activationCode",
+                        "name": "Discount.ActivationCode",
+                        "sortable": false,
+                        "resizeable": false,
+                        "draggable": false
+                      },
+                      {
+                        "type": "string",
+                        "prop": "discountPercentage",
+                        "name": "Discount.DiscountPercentage",
+                        "sortable": false,
+                        "resizeable": false,
+                        "draggable": false
+                      },
+                      {
+                        "type": "string",
+                        "prop": "expireTime",
+                        "name": "Discount.ExpireTime",
+                        "sortable": false,
+                        "resizeable": false,
+                        "draggable": false
+                      },
+                      {
+                        "type": "string",
+                        "prop": "totalUse",
+                        "name": "Discount.TotalUse",
+                        "sortable": false,
+                        "resizeable": false,
+                        "draggable": false
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

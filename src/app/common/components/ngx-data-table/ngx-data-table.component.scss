@@ -8,6 +8,9 @@
         text-align: center;
         font-size: 11px;
         vertical-align: middle;
+        &.add-btn{
+          width: 20%;
+        }
       }
     }
     tbody {
@@ -25,6 +28,7 @@
         }
         td {
           &.actions {
+            width: 100%;
             padding: 0;
             display: flex;
             align-items: center;

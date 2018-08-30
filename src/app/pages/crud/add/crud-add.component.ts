@@ -22,6 +22,7 @@ export class CrudAddComponent implements OnDestroy{
     this.initActionMap();
     this.activatedRoute.params.subscribe((res: any)=>{
       this.entity = res.entity;
+      this.addPageSchema = undefined;
       this.spService.getPageSchema('crud','add',this.entity).subscribe((res: any)=>{
         this.addPageSchema = res;
       });
@@ -47,7 +48,13 @@ export class CrudAddComponent implements OnDestroy{
         console.log('onsave', data);
       },
       'SFFORM_CANCEL': (data)=>{
-        this.router.navigateByUrl(`/pages/crud/list/${this.entity}`);
+        if(this.entity === 'groupContacts' || this.entity === 'privateGroupContacts'){
+          this.router.navigateByUrl(`/pages/crud/list/${this.entity}?parent=${this.entity}&datatable=${
+            JSON.stringify({id: data.id, init: false})
+          }`);
+        }else{
+          this.router.navigateByUrl(`/pages/crud/list/${this.entity}`);
+        }
       },
       'SFFORM_ADD': (data)=>{
         console.log('onAdd', data);

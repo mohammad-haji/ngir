@@ -1,0 +1,201 @@
+{
+  "$schema": "http://json-schema.org/draft-04/hyper-schema#",
+  "type": "CRUD",
+  "head": {
+    "title": "nested layout demo"
+  },
+  "body": {
+    "type": "object",
+    "sections": [
+      {
+        "items": [
+          {
+            "type": "horizontal",
+            "components": [
+              {
+                "type": "heading",
+                "data": {
+                  "title": "Discount.Add"
+                }
+              },
+              {
+                "type": "sfForm",
+                "key": "ADD_USER_FORM",
+                "data": {
+                  "formList": [
+                    {
+                      "title": "",
+                      "containerClass": "col-sm-12",
+                      "path": "users/basic-info-users",
+                      "schema": {
+                        "properties": {
+                          "store": {
+                            "type": "string",
+                            "widget": {
+                              "id": "select"
+                            },
+                            "title": "Discount.Store",
+                            "description": "",
+                            "oneOf": [
+                              {
+                                "description": "UPS",
+                                "enum": [
+                                  "ups"
+                                ]
+                              },
+                              {
+                                "description": "FedEx",
+                                "enum": [
+                                  "fedex"
+                                ]
+                              },
+                              {
+                                "description": "Other",
+                                "enum": [
+                                  "other"
+                                ]
+                              }
+                            ],
+                            "default": "fedex"
+                          },
+                          "discountType": {
+                            "type": "string",
+                            "widget": {
+                              "id": "select"
+                            },
+                            "title": "Discount.DiscountType",
+                            "description": "",
+                            "oneOf": [
+                              {
+                                "description": "UPS",
+                                "enum": [
+                                  "ups"
+                                ]
+                              },
+                              {
+                                "description": "FedEx",
+                                "enum": [
+                                  "fedex"
+                                ]
+                              },
+                              {
+                                "description": "Other",
+                                "enum": [
+                                  "other"
+                                ]
+                              }
+                            ],
+                            "default": "fedex"
+                          },
+                          "activationCode": {
+                            "description": "",
+                            "title": "Discount.ActivationCode",
+                            "type": "string",
+                            "widget": {
+                              "id": "string"
+                            }
+                          },
+                          "discountPercentage": {
+                            "description": "",
+                            "title": "Discount.DiscountPercentage",
+                            "type": "string",
+                            "widget": {
+                              "id": "string"
+                            }
+                          },
+                          "expireTime": {
+                            "description": "",
+                            "title": "Discount.ExpireTime",
+                            "type": "string",
+                            "widget": {
+                              "id": "date"
+                            }
+                          },
+                          "totalUse": {
+                            "description": "",
+                            "title": "Discount.TotalUse",
+                            "type": "string",
+                            "widget": {
+                              "id": "string"
+                            }
+                          }
+                        },
+                        "buttons": [
+                          {
+                            "label": "Buttons.Submit",
+                            "class": "btn-success",
+                            "id": "submit",
+                            "actionKey": "SFFORM_SUBMIT",
+                            "parameters": {}
+                          },
+                          {
+                            "label": "Buttons.Reset",
+                            "class": "btn-danger",
+                            "actionKey": "SFFORM_RESET",
+                            "id": "reset",
+                            "parameters": {}
+                          },
+                          {
+                            "label": "Buttons.Save",
+                            "class": "btn-success",
+                            "actionKey": "SFFORM_SAVE",
+                            "id": "save",
+                            "parameters": {},
+                            "btnAction": {
+                              "type": "$network.request",
+                              "options": {
+                                "entity": "discounts",
+                                "method": "create",
+                                "data": {
+                                  "user_id": "fI9",
+                                  "message": "Hello there"
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "label": "Buttons.Cancel",
+                            "class": "btn-warning",
+                            "id": "cancel",
+                            "actionKey": "SFFORM_CANCEL",
+                            "parameters": {},
+                            "btnAction": {
+                              "type": "$href",
+                              "options": {
+                                "url": "/pages/dashboard",
+                                "method": "internal",
+                                "data": {
+                                  "user_id": "fI9",
+                                  "message": "Hello there"
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "label": "Buttons.Add",
+                            "class": "btn-light",
+                            "actionKey": "SFFORM_ADD",
+                            "isHidden": true,
+                            "id": "add",
+                            "parameters": {}
+                          }
+                        ],
+                        "required": [
+                          "title"
+                        ],
+                        "type": "object",
+                        "widget": {
+                          "id": "object"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

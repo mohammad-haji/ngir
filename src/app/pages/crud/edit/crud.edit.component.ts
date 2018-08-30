@@ -21,6 +21,7 @@ export class CrudEditComponent{
       this.initActionMap();
       this.activatedRoute.params.subscribe((res: any)=>{
         this.entity = res.entity;
+        this.editPageSchema = undefined;
         this.spService.getPageSchema('crud','edit',this.entity).subscribe((res: any)=>{
           this.editPageSchema = res;
         });
@@ -42,7 +43,13 @@ export class CrudEditComponent{
         console.log('onsave', data);
       },
       'SFFORM_CANCEL': (data)=>{
-        this.router.navigateByUrl(`/pages/crud/list/${this.entity}`);
+        if(this.entity === 'groupContacts' || this.entity === 'privateGroupContacts'){
+          this.router.navigateByUrl(`/pages/crud/list/${this.entity}?parent=${this.entity}&datatable=${
+            JSON.stringify({id: data.id, init: false})
+          }`);
+        }else{
+          this.router.navigateByUrl(`/pages/crud/list/${this.entity}`);
+        }
       },
       'SFFORM_ADD': (data)=>{
         console.log('onAdd', data);

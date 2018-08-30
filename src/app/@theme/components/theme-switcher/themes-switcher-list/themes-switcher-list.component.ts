@@ -11,7 +11,7 @@ import { NbJSThemeOptions } from '@nebular/theme/services/js-themes/theme.option
           *ngFor="let theme of themes"
           (click)="onToggleTheme(theme.key)">
         <i class="nb-drop" [ngClass]="'drop-icon-' + theme.key"></i>
-        <span>{{ theme.title }}</span>
+        <span>{{ theme.title|translate }}</span>
       </li>
     </ul>
   `,
@@ -25,15 +25,15 @@ export class ThemeSwitcherListComponent {
 
   themes = [
     {
-      title: 'Light',
+      title: 'Themes.Light',
       key: 'default',
     },
     {
-      title: 'Cosmic',
+      title: 'Themes.Cosmic',
       key: 'cosmic',
     },
     {
-      title: 'Corporate',
+      title: 'Themes.Corporate',
       key: 'corporate',
     },
   ];
