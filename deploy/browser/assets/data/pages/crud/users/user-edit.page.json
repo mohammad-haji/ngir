@@ -20,13 +20,14 @@
               },
               {
                 "type": "sfForm",
-                "key": "ADD_USER_FORM",
+                "id": "EDIT_FORM",
                 "data": {
                   "formList": [
                     {
                       "title": "",
                       "containerClass": "col-sm-12",
                       "path": "users/basic-info-users",
+                      "mode": "EDIT",
                       "schema": {
                         "properties": {
                           "userName": {
@@ -80,7 +81,7 @@
                             "btnAction": {
                               "type": "$network.request",
                               "options": {
-                                "entity": "discounts",
+                                "entity": "users",
                                 "method": "create",
                                 "data": {
                                   "user_id": "fI9",
@@ -124,7 +125,7 @@
                           }
                         ],
                         "required": [
-                          "title"
+                          "userName","firstName","lastName","password","active"
                         ],
                         "type": "object",
                         "widget": {

@@ -24,7 +24,8 @@
     "Password": "Password",
     "FirstName": "FirstName",
     "LastName": "LastName",
-    "Active": "Active"
+    "Active": "Active",
+    "AccessLevel": "Access Level"
   },
   "Discount":{
     "List": "List of Discounts",

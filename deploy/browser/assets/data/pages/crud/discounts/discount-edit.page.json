@@ -27,6 +27,7 @@
                       "title": "",
                       "containerClass": "col-sm-12",
                       "path": "users/basic-info-users",
+                      "mode": "EDIT",
                       "schema": {
                         "properties": {
                           "store": {

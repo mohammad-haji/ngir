@@ -1,20 +1,28 @@
 {
   "users": {
     "getAll": {
-      "url": "/user",
+      "url": "/discount",
       "method": "GET"
     },
     "create": {
-      "url": "/user",
+      "url": "/discount",
       "method": "POST",
       "model": "users.create"
     },
     "getById": {
-      "url": "/user/:id",
+      "url": "/discount",
       "method": "GET"
+    },
+    "update": {
+      "url": "/discount/:id",
+      "method": "PUT"
+    },
+    "delete": {
+      "url": "/discount/:id",
+      "delete": "DELETE"
     }
   },
-  "discounts": {
+  "contacts": {
     "getAll": {
       "url": "/discount",
       "method": "GET"
@@ -27,6 +35,60 @@
     "getById": {
       "url": "/discount",
       "method": "GET"
+    },
+    "update": {
+      "url": "/discount/:id",
+      "method": "PUT"
+    },
+    "delete": {
+      "url": "/discount/:id",
+      "delete": "DELETE"
+    }
+  },
+  "publicGroups": {
+    "getAll": {
+      "url": "/discount",
+      "method": "GET"
+    },
+    "create": {
+      "url": "/discount",
+      "method": "POST",
+      "model": "users.create"
+    },
+    "getById": {
+      "url": "/discount",
+      "method": "GET"
+    },
+    "update": {
+      "url": "/discount/:id",
+      "method": "PUT"
+    },
+    "delete": {
+      "url": "/discount/:id",
+      "delete": "DELETE"
+    }
+  },
+  "personalGroups": {
+    "getAll": {
+      "url": "/discount",
+      "method": "GET"
+    },
+    "create": {
+      "url": "/discount",
+      "method": "POST",
+      "model": "users.create"
+    },
+    "getById": {
+      "url": "/discount",
+      "method": "GET"
+    },
+    "update": {
+      "url": "/discount/:id",
+      "method": "PUT"
+    },
+    "delete": {
+      "url": "/discount/:id",
+      "delete": "DELETE"
     }
   },
   "groupContacts": {
@@ -39,14 +101,50 @@
       "method": "POST",
       "model": "users.create"
     },
+    "createById":{
+      "url": "/discount",
+      "method": "POST",
+      "model": "users.create"
+    },
     "getById": {
       "url": "/discount",
       "method": "GET"
+    },
+    "update": {
+      "url": "/discount/:id",
+      "method": "PUT"
+    },
+    "delete": {
+      "url": "/discount/:id",
+      "delete": "DELETE"
     }
   },
-  "comments": {
+  "privateGroupContacts": {
     "getAll": {
-      "url": "/comments"
+      "url": "/discount",
+      "method": "GET"
+    },
+    "create": {
+      "url": "/discount",
+      "method": "POST",
+      "model": "users.create"
+    },
+    "createById":{
+      "url": "/discount",
+      "method": "POST",
+      "model": "users.create"
+    },
+    "getById": {
+      "url": "/discount",
+      "method": "GET"
+    },
+    "update": {
+      "url": "/discount/:id",
+      "method": "PUT"
+    },
+    "delete": {
+      "url": "/discount/:id",
+      "delete": "DELETE"
     }
   }
 }
