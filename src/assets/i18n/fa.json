@@ -24,7 +24,8 @@
     "Password": "رمز عبور",
     "FirstName": "نام",
     "LastName": "نام خانوادگی",
-    "Active": "فعال"
+    "Active": "فعال",
+    "AccessLevel": "سطح دسترسی"
   },
   "Discount":{
     "List": "لیست تخفیف ها",

@@ -57,6 +57,13 @@ export class ApiDataProviderService {
     }
   }
 
+  createById(payload: any, id: any): Observable<any> {
+    if (this.isMethodConfigExists) {
+      // const reqPayload = this.apiDataCleanerService.cleanForCreate(this.apiConfig[this.entityKey].create.model, payload);
+      return this.httpClient.post(this.getApi(this.apiConfig[this.entityKey].createById.url, id), payload);
+    }
+  }
+
   update(payload: any, id: any): Observable<any> {
     if (this.isMethodConfigExists) {
       return this.httpClient.put(this.getApi(this.apiConfig[this.entityKey].update.url, id), payload);
