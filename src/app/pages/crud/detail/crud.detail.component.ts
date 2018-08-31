@@ -17,6 +17,7 @@ export class CrudDetailComponent implements OnDestroy{
   entityId: string;
   ngxSchemaPageActionMap: {[type: string]: any} = {};
   ngxSchemaPageActionObservable: any;
+  parentParams: any;
   constructor(private activatedRoute: ActivatedRoute,
     private spService: SPService,
     private ngxSchemaPageService: NgxSchemaPageService,
@@ -36,6 +37,11 @@ export class CrudDetailComponent implements OnDestroy{
         });
       });
     });
+    this.activatedRoute.queryParams.subscribe((queryParams: any)=>{
+      if(queryParams && queryParams.parent){
+        this.parentParams = JSON.parse(queryParams.parent);
+      }
+    });
     this.ngxSchemaPageActionObservable = this.ngxSchemaPageService.onAction$.subscribe((evt: any)=>{
        this.ngxSchemaPageActionMap[evt.actionKey](evt);
     });
@@ -43,29 +49,11 @@ export class CrudDetailComponent implements OnDestroy{
 
     private initActionMap(){
       this.ngxSchemaPageActionMap = {
-        'DATATABLE_ADD': (data)=>{
-          this.router.navigateByUrl(`/pages/crud/add/${this.entity}`);
-        },
-        'DATATABLE_DETAIL': (data)=>{
-          this.router.navigateByUrl(`/pages/crud/detail/${this.entity}`);
-        },
-        'DATATABLE_EDIT': (data)=>{
-          this.router.navigateByUrl(`/pages/crud/edit/${this.entity}`);
-        },
-        'DATATABLE_REMOVE': (data)=>{
-          this.confirmModalService.open({}).result.then((evt)=>{
-            console.log(evt);
-          });
-        },
-        'DATATABLE_CLONE': (data)=>{
-
-        },
-        'DATATABLE_CUSTOM': (data)=>{
-
-        },
         'DETAIL_VIEW_BACK': (data)=>{
           if(this.entity === 'groupContacts' || this.entity === 'privateGroupContacts'){
-            this.router.navigateByUrl(`/pages/crud/list/${this.entity}?parent=${this.entity}&datatable=${
+            this.router.navigateByUrl(`/pages/crud/list/${this.entity}?parent=${
+              JSON.stringify({entity:this.entity, id: this.parentParams.id})
+            }&datatable=${
               JSON.stringify({id: data.id, init: false})
             }`);
           }else{

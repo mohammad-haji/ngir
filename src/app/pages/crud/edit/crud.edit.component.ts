@@ -16,6 +16,7 @@ export class CrudEditComponent{
   entityId: string;
   ngxSchemaPageActionMap: {[type: string]: any} = {};
   ngxSchemaPageActionObservable: any;
+  parentParams: any;
   constructor(private activatedRoute: ActivatedRoute,
     private spService: SPService,
     private ngxSchemaPageService:NgxSchemaPageService,
@@ -34,6 +35,11 @@ export class CrudEditComponent{
           });
         });
       });
+      this.activatedRoute.queryParams.subscribe((queryParams: any)=>{
+        if(queryParams && queryParams.parent){
+          this.parentParams = JSON.parse(queryParams.parent);
+        }
+      });
       this.ngxSchemaPageActionObservable = this.ngxSchemaPageService.onAction$.subscribe((evt: any)=>{
         if(this.ngxSchemaPageActionMap[evt.actionKey]){
           this.ngxSchemaPageActionMap[evt.actionKey](evt);
@@ -43,7 +49,9 @@ export class CrudEditComponent{
 
   private goBack(data): void{
     if(this.entity === 'groupContacts' || this.entity === 'privateGroupContacts'){
-      this.router.navigateByUrl(`/pages/crud/list/${this.entity}?parent=${this.entity}&datatable=${
+      this.router.navigateByUrl(`/pages/crud/list/${this.entity}?parent=${
+        JSON.stringify({entity:this.entity, id: this.parentParams.id})
+      }&datatable=${
         JSON.stringify({id: data.id, init: false})
       }`);
     }else{

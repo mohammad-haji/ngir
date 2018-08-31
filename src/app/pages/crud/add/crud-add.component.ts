@@ -15,6 +15,7 @@ export class CrudAddComponent implements OnDestroy{
   ngxSchemaPageActionObservable: any;
   ngxSchemaPageActionMap: {[type: string]: any} = {};
   entity: string;
+  parentParams: any;
   constructor(private activatedRoute: ActivatedRoute,
     private spService: SPService,
     private ngxSchemaPageService:NgxSchemaPageService,
@@ -22,12 +23,17 @@ export class CrudAddComponent implements OnDestroy{
     private apiDataProviderService: ApiDataProviderService){
 
     this.initActionMap();
-    this.activatedRoute.params.subscribe((res: any)=>{
-      this.entity = res.entity;
+    this.activatedRoute.params.subscribe((params: any)=>{
+      this.entity = params.entity;
       this.addPageSchema = undefined;
       this.spService.getPageSchema('crud','add',this.entity).subscribe((res: any)=>{
         this.addPageSchema = res;
       });
+    });
+    this.activatedRoute.queryParams.subscribe((queryParams: any)=>{
+      if(queryParams && queryParams.parent){
+        this.parentParams = JSON.parse(queryParams.parent);
+      }
     });
     this.ngxSchemaPageActionObservable = this.ngxSchemaPageService.onAction$.subscribe((evt: any)=>{
       this.ngxSchemaPageActionMap[evt.actionKey](evt);
@@ -40,7 +46,9 @@ export class CrudAddComponent implements OnDestroy{
 
   private goBack(data): void{
     if(this.entity === 'groupContacts' || this.entity === 'privateGroupContacts'){
-      this.router.navigateByUrl(`/pages/crud/list/${this.entity}?parent=${this.entity}&datatable=${
+      this.router.navigateByUrl(`/pages/crud/list/${this.entity}?parent=${
+        JSON.stringify({entity:this.entity, id: this.parentParams.id})
+      }&datatable=${
         JSON.stringify({id: data.id, init: false})
       }`);
     }else{
@@ -52,10 +60,19 @@ export class CrudAddComponent implements OnDestroy{
     this.ngxSchemaPageActionMap = {
       'SFFORM_SUBMIT': (data)=>{
         if(data.form.valid){
-          this.apiDataProviderService.createApi(data.btnAction.options.entity).create(data.form.value)
-          .subscribe((res: any)=>{
-            this.goBack(data);
-          });
+          if(this.entity === 'groupContacts' || this.entity === 'privateGroupContacts'){
+            this.apiDataProviderService.createApi(data.btnAction.options.entity)
+            .createById(data.form.value, this.parentParams.id)
+            .subscribe((res: any)=>{
+              this.goBack(data);
+            });
+          }else{
+            this.apiDataProviderService.createApi(data.btnAction.options.entity)
+            .create(data.form.value)
+            .subscribe((res: any)=>{
+              this.goBack(data);
+            });
+          }
         }
       },
       'SFFORM_RESET': (data)=>{

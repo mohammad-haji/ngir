@@ -14,6 +14,8 @@ import { ApiDataProviderService } from '../../../@core/services/api/api-data-pro
 export class CrudListComponent implements OnDestroy{
   listPageSchema: any;
   entity: string;
+  entityId: string;
+  parentParams: any;
   ngxSchemaPageActionMap: {[type: string]: any} = {};
   ngxSchemaPageActionObservable: any;
   constructor(private activatedRoute: ActivatedRoute,
@@ -23,12 +25,18 @@ export class CrudListComponent implements OnDestroy{
     private confirmModalService: ConfirmModalService,
     private apiDataProviderService: ApiDataProviderService){
     this.initActionMap();
-    this.activatedRoute.params.subscribe((res: any)=>{
-      this.entity = res.entity;
+    this.activatedRoute.params.subscribe((params: any)=>{
+      this.entity = params.entity;
+      // this.entityId = params.id;
       this.listPageSchema = undefined;
       this.spService.getPageSchema('crud','list',this.entity).subscribe((res: any)=>{
         this.listPageSchema = res;
       });
+    });
+    this.activatedRoute.queryParams.subscribe((queryParams: any)=>{
+      if(queryParams && queryParams.parent){
+        this.parentParams = JSON.parse(queryParams.parent);
+      }
     });
     this.ngxSchemaPageActionObservable = this.ngxSchemaPageService.onAction$.subscribe((evt: any)=>{
        this.ngxSchemaPageActionMap[evt.actionKey](evt);
@@ -40,7 +48,9 @@ export class CrudListComponent implements OnDestroy{
     this.ngxSchemaPageActionMap = {
       'DATATABLE_ADD': (data)=>{
         if(this.entity === 'groupContacts' || this.entity === 'privateGroupContacts'){
-          this.router.navigateByUrl(`/pages/crud/add/${this.entity}?parent=${this.entity}&datatable=${
+          this.router.navigateByUrl(`/pages/crud/add/${this.entity}?parent=${
+            JSON.stringify({entity:this.entity, id: this.parentParams.id})
+          }&datatable=${
             JSON.stringify({id: data.id, init: false})
           }`);
         }else{
@@ -49,7 +59,9 @@ export class CrudListComponent implements OnDestroy{
       },
       'DATATABLE_DETAIL': (data)=>{
         if(this.entity === 'groupContacts' || this.entity === 'privateGroupContacts'){
-          this.router.navigateByUrl(`/pages/crud/detail/${this.entity}/${data.id}?parent=${this.entity}&datatable=${
+          this.router.navigateByUrl(`/pages/crud/detail/${this.entity}/${data.id}?parent=${
+            JSON.stringify({entity:this.entity, id: this.parentParams.id})
+          }&datatable=${
             JSON.stringify({id: data.id, init: false})
           }`);
         }else{
@@ -58,7 +70,9 @@ export class CrudListComponent implements OnDestroy{
       },
       'DATATABLE_EDIT': (data)=>{
         if(this.entity === 'groupContacts' || this.entity === 'privateGroupContacts'){
-          this.router.navigateByUrl(`/pages/crud/edit/${this.entity}/${data.id}?parent=${this.entity}&datatable=${
+          this.router.navigateByUrl(`/pages/crud/edit/${this.entity}/${data.id}?parent=${
+            JSON.stringify({entity:this.entity, id: this.parentParams.id})
+          }&datatable=${
             JSON.stringify({id: data.id, init: false})
           }`);
         }else{
@@ -85,12 +99,16 @@ export class CrudListComponent implements OnDestroy{
 
       },
       'DATATABLE_CONTACTS': (data)=>{
-        this.router.navigateByUrl(`/pages/crud/list/groupContacts?parent=${this.entity}&datatable=${
+        this.router.navigateByUrl(`/pages/crud/list/groupContacts?parent=${
+          JSON.stringify({entity:this.entity, id: data.id})
+        }&datatable=${
           JSON.stringify({id: data.id, init: false})
         }`);
       },
       'DATATABLE_CONTACTS_PERSONAL': (data)=>{
-        this.router.navigateByUrl(`/pages/crud/list/privateGroupContacts?parent=${this.entity}&datatable=${
+        this.router.navigateByUrl(`/pages/crud/list/privateGroupContacts?parent=${
+          JSON.stringify({entity:this.entity, id: data.id})
+        }&datatable=${
           JSON.stringify({id: data.id, init: false})
         }`);
       }
