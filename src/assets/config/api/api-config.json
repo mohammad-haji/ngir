@@ -101,6 +101,11 @@
       "method": "POST",
       "model": "users.create"
     },
+    "createById":{
+      "url": "/discount",
+      "method": "POST",
+      "model": "users.create"
+    },
     "getById": {
       "url": "/discount",
       "method": "GET"
@@ -120,6 +125,11 @@
       "method": "GET"
     },
     "create": {
+      "url": "/discount",
+      "method": "POST",
+      "model": "users.create"
+    },
+    "createById":{
       "url": "/discount",
       "method": "POST",
       "model": "users.create"

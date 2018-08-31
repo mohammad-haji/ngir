@@ -44,6 +44,35 @@
                             "widget": {
                               "id": "string"
                             }
+                          },
+                          "levelUid": {
+                            "type": "string",
+                            "widget": {
+                              "id": "select"
+                            },
+                            "title": "User.AccessLevel",
+                            "description": "",
+                            "oneOf": [
+                              {
+                                "description": "f-mahramane",
+                                "enum": [
+                                  "F-MAHRAMANE"
+                                ]
+                              },
+                              {
+                                "description": "mahramane",
+                                "enum": [
+                                  "MAHRAMANE"
+                                ]
+                              },
+                              {
+                                "description": "serri",
+                                "enum": [
+                                  "SERRI"
+                                ]
+                              }
+                            ],
+                            "default": "F-MAHRAMANE"
                           }
                         },
                         "buttons": [

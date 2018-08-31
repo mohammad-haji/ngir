@@ -53,6 +53,35 @@
                               "id": "string"
                             }
                           },
+                          "levelUid": {
+                            "type": "string",
+                            "widget": {
+                              "id": "select"
+                            },
+                            "title": "User.AccessLevel",
+                            "description": "",
+                            "oneOf": [
+                              {
+                                "description": "f-mahramane",
+                                "enum": [
+                                  "F-MAHRAMANE"
+                                ]
+                              },
+                              {
+                                "description": "mahramane",
+                                "enum": [
+                                  "MAHRAMANE"
+                                ]
+                              },
+                              {
+                                "description": "serri",
+                                "enum": [
+                                  "SERRI"
+                                ]
+                              }
+                            ],
+                            "default": "F-MAHRAMANE"
+                          },
                           "password": {
                             "description": "",
                             "title": "User.Password",
@@ -62,13 +91,27 @@
                             }
                           },
                           "active": {
-                            "description": "",
-                            "title": "User.Active",
-                            "type": "boolean",
-                            "default": true,
+                            "type": "string",
                             "widget": {
-                              "id": "boolean"
-                            }
+                              "id": "select"
+                            },
+                            "title": "User.Active",
+                            "description": "",
+                            "oneOf": [
+                              {
+                                "description": "بلی",
+                                "enum": [
+                                  "1"
+                                ]
+                              },
+                              {
+                                "description": "خیر",
+                                "enum": [
+                                  "0"
+                                ]
+                              }
+                            ],
+                            "default": "1"
                           }
                         },
                         "buttons": [
