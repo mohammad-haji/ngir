@@ -30,8 +30,8 @@ export class CrudDetailComponent implements OnDestroy{
       this.detailPageSchema = undefined;
       this.spService.getPageSchema('crud','detail',this.entity).subscribe((res: any)=>{
         this.detailPageSchema = res;
-        const widget: any = this.spService.getWidgetById('discountDetailView');
-        this.apiDataProviderService.createApi('discounts').getById(this.entityId).subscribe((res)=>{
+        const widget: any = this.spService.getWidgetById('DetailView');
+        this.apiDataProviderService.createApi(this.entity).getById(this.entityId).subscribe((res)=>{
           widget.data.model = res;
         });
       });

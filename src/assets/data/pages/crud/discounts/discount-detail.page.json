@@ -20,7 +20,7 @@
               },
               {
                 "type": "detailView",
-                "id": "discountDetailView",
+                "id": "DetailView",
                 "data": {
                   "fields": [
                     {

@@ -1,5 +1,6 @@
-import { EventEmitter } from '@angular/core';
+import { EventEmitter, OnInit, DoCheck } from '@angular/core';
 import {Component, Input, Output} from '@angular/core';
+import * as _ from 'lodash';
 
 @Component({
   selector: 'ns-sf-form-widget',
@@ -13,7 +14,8 @@ import {Component, Input, Output} from '@angular/core';
         <nb-card>
           <nb-card-header *ngIf="pageProp.data.formList[form].title">{{pageProp.data.formList[form].title}}</nb-card-header>
           <nb-card-body>
-            <sf-form [schema]="pageProp.data.formList[form].schema" [actions]="sfFormActions">
+            <sf-form [schema]="pageProp.data.formList[form].schema"
+            [actions]="sfFormActions" [model]="model">
             </sf-form>
           </nb-card-body>
           </nb-card>
@@ -25,26 +27,40 @@ import {Component, Input, Output} from '@angular/core';
   </div>
   `
 })
-export class SFFormWidget {
+export class SFFormWidget implements DoCheck {
   @Input() pageProp: any;
   @Output() onAction: EventEmitter<any> = new EventEmitter();
 
+  model: any = {};
+  oldModel: any = {};
+
   sfFormActions = {
     "submit": (property, btnParams, button) => {
-      this.onAction.next(button);
+      console.log(property)
+      this.onAction.next({form:property, ...button});
     },
     "reset": (property, btnParams, button) => {
-      this.onAction.next(button);
+      this.onAction.next({form:property,...button});
     },
     "save": (property, btnParams, button) => {
-      this.onAction.next(button);
+      this.onAction.next({form:property,...button});
     },
     "cancel": (property, btnParams, button) => {
-      this.onAction.next(button);
+      this.onAction.next({form:property,...button});
     },
     "add": (property, btnParams, button) => {
-      this.onAction.next(button);
+      this.onAction.next({form:property,...button});
     }
   };
   objectKeys = Object.keys;
+
+
+  ngDoCheck() {
+    if(this.pageProp.data.formList['0'].mode && this.pageProp.data.formList['0'].mode === 'EDIT'){
+      if(!_.isEqual(this.oldModel, this.pageProp.data.formList['0'].model)) {
+        this.model = this.pageProp.data.formList['0'].model;
+        this.oldModel = _.cloneDeep(this.model);
+      }
+    }
+  }
 }

@@ -6,7 +6,7 @@ import { ConfirmModal } from "./confirm.modal";
 export class ConfirmModalService{
   constructor(private modalService: NgbModal){}
 
-  open(data, config: any = {size: 'sm'}){
+  open(data, config: any = {size: 'sm',backdrop:'static'}){
     const modalRef = this.modalService.open(ConfirmModal, config);
     return modalRef;
   }

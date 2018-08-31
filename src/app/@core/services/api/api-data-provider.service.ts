@@ -19,6 +19,14 @@ export class ApiDataProviderService {
     this.apiConfig = this.apiConfigReaderService.getConfig();
   }
 
+  private getApi(url: string, id?: any): string{
+    if(this.regexIdInPath.test(url)){
+      return url.replace(this.regexIdInPath, id);
+    }else{
+      return url;
+    }
+  }
+
   createApi(entityKey: string) {
     this.entityKey = entityKey;
     return this;
@@ -26,11 +34,7 @@ export class ApiDataProviderService {
 
   getAll(id?: any): Observable<any> {
     if (this.isMethodConfigExists) {
-      if(this.regexIdInPath.test(this.apiConfig[this.entityKey].getAll.url)){
-        return this.httpClient.get(this.apiConfig[this.entityKey].getAll.url
-          .replace(this.regexIdInPath, id));
-      }
-      return this.httpClient.get(this.apiConfig[this.entityKey].getAll.url);
+      return this.httpClient.get(this.getApi(this.apiConfig[this.entityKey].getAll.url, id));
     }
   }
 
@@ -48,20 +52,20 @@ export class ApiDataProviderService {
 
   create(payload: any): Observable<any> {
     if (this.isMethodConfigExists) {
-      const reqPayload = this.apiDataCleanerService.cleanForCreate(this.apiConfig[this.entityKey].create.model, payload);
-      return this.httpClient.post(this.apiConfig[this.entityKey].create.url, reqPayload);
+      // const reqPayload = this.apiDataCleanerService.cleanForCreate(this.apiConfig[this.entityKey].create.model, payload);
+      return this.httpClient.post(this.apiConfig[this.entityKey].create.url, payload);
     }
   }
 
-  update(): Observable<any> {
+  update(payload: any, id: any): Observable<any> {
     if (this.isMethodConfigExists) {
-      return this.httpClient.get(this.apiConfig[this.entityKey].update.url);
+      return this.httpClient.put(this.getApi(this.apiConfig[this.entityKey].update.url, id), payload);
     }
   }
 
-  delete(): Observable<any> {
+  delete(id: any): Observable<any> {
     if (this.isMethodConfigExists) {
-      return this.httpClient.get(this.apiConfig[this.entityKey].delete.url);
+      return this.httpClient.delete(this.getApi(this.apiConfig[this.entityKey].delete.url, id));
     }
   }
 

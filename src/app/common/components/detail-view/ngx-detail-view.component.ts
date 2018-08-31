@@ -18,6 +18,10 @@ import * as _ from 'lodash';
             <td>{{field.title|translate}}</td>
             <td>{{field.value}}</td>
           </ng-container>
+          <ng-container *ngSwitchCase="'bool'">
+            <td>{{field.title|translate}}</td>
+            <td>{{field.value|checkMark}}</td>
+          </ng-container>
         </tr>
       </tbody>
     </table>
@@ -89,7 +93,7 @@ export class NgxDetailViewComponent implements DoCheck{
 
   processData(fields, data) {
     fields.forEach(field => {
-      field.value = this.getValue(data, field.prop) || '-';
+      field.value = this.getValue(data, field.prop);
     });
   }
 

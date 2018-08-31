@@ -25,7 +25,7 @@ export class NotificationInterceptor implements HttpInterceptor {
             isUrlException = true;
           }
         });
-        if (!isUrlException) {
+        if (!isUrlException && request.method !== 'GET') {
           this.popNotification('با موفقیت انجام شد', event.body.message);
         }
       }

@@ -2,6 +2,7 @@ import { SPService } from './../../../sp.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Component, OnDestroy } from "@angular/core";
 import { NgxSchemaPageService } from '../../../@core/ngx-schema-page/ngx-schema-page.service';
+import { ApiDataProviderService } from '../../../@core/services/api/api-data-provider.service';
 
 @Component({
   selector: 'crud-add-component',
@@ -17,7 +18,8 @@ export class CrudAddComponent implements OnDestroy{
   constructor(private activatedRoute: ActivatedRoute,
     private spService: SPService,
     private ngxSchemaPageService:NgxSchemaPageService,
-    private router: Router){
+    private router: Router,
+    private apiDataProviderService: ApiDataProviderService){
 
     this.initActionMap();
     this.activatedRoute.params.subscribe((res: any)=>{
@@ -36,25 +38,34 @@ export class CrudAddComponent implements OnDestroy{
     this.ngxSchemaPageActionObservable.unsubscribe();
   }
 
+  private goBack(data): void{
+    if(this.entity === 'groupContacts' || this.entity === 'privateGroupContacts'){
+      this.router.navigateByUrl(`/pages/crud/list/${this.entity}?parent=${this.entity}&datatable=${
+        JSON.stringify({id: data.id, init: false})
+      }`);
+    }else{
+      this.router.navigateByUrl(`/pages/crud/list/${this.entity}`);
+    }
+  }
+
   private initActionMap(){
     this.ngxSchemaPageActionMap = {
       'SFFORM_SUBMIT': (data)=>{
-        console.log('onSubmit', data);
+        if(data.form.valid){
+          this.apiDataProviderService.createApi(data.btnAction.options.entity).create(data.form.value)
+          .subscribe((res: any)=>{
+            this.goBack(data);
+          });
+        }
       },
       'SFFORM_RESET': (data)=>{
-        console.log('onReset', data);
+        data.form.reset();
       },
       'SFFORM_SAVE': (data)=>{
         console.log('onsave', data);
       },
       'SFFORM_CANCEL': (data)=>{
-        if(this.entity === 'groupContacts' || this.entity === 'privateGroupContacts'){
-          this.router.navigateByUrl(`/pages/crud/list/${this.entity}?parent=${this.entity}&datatable=${
-            JSON.stringify({id: data.id, init: false})
-          }`);
-        }else{
-          this.router.navigateByUrl(`/pages/crud/list/${this.entity}`);
-        }
+         this.goBack(data);
       },
       'SFFORM_ADD': (data)=>{
         console.log('onAdd', data);

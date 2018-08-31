@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Component, OnInit, OnDestroy } from "@angular/core";
 import { NgxSchemaPageService } from '../../../@core/ngx-schema-page/ngx-schema-page.service';
 import { ConfirmModalService } from '../../../common/modals/confirm/confirm.modal.service';
+import { ApiDataProviderService } from '../../../@core/services/api/api-data-provider.service';
 
 @Component({
   selector: 'crud-list-component',
@@ -19,7 +20,8 @@ export class CrudListComponent implements OnDestroy{
     private spService: SPService,
     private ngxSchemaPageService: NgxSchemaPageService,
     private router: Router,
-    private confirmModalService: ConfirmModalService){
+    private confirmModalService: ConfirmModalService,
+    private apiDataProviderService: ApiDataProviderService){
     this.initActionMap();
     this.activatedRoute.params.subscribe((res: any)=>{
       this.entity = res.entity;
@@ -64,8 +66,16 @@ export class CrudListComponent implements OnDestroy{
         }
       },
       'DATATABLE_REMOVE': (data)=>{
-        this.confirmModalService.open({}).result.then((evt)=>{
-          console.log(evt);
+        this.confirmModalService.open({}).result.then((actionKey)=>{
+          if(actionKey === 'onDelete'){
+            this.apiDataProviderService.createApi(this.entity).delete(data.id)
+            .subscribe((res:any)=>{
+              this.listPageSchema = undefined;
+              this.spService.getPageSchema('crud','list',this.entity).subscribe((res: any)=>{
+                this.listPageSchema = res;
+              });
+            });
+          }
         });
       },
       'DATATABLE_CLONE': (data)=>{
