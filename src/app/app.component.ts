@@ -123,12 +123,12 @@ export class AppComponent implements OnInit {
     }
     else if (this.isServer) {
       // We are on the server
-      this.authService.isAuthenticated.subscribe(res => {
-        this.tstate.set(USER_KEY, res);
-        console.log(res);
-        console.log(this.authService.getCurrentUser());
-        this.tstate.set(USER_KEY, this.authService.getCurrentUser());
-      });
+      // this.authService.isAuthenticated.subscribe(res => {
+      //   this.tstate.set(USER_KEY, res);
+      //   console.log(res);
+      //   console.log(this.authService.getCurrentUser());
+      //   this.tstate.set(USER_KEY, this.authService.getCurrentUser());
+      // });
       this.tstate.set(TOKEN_KEY, 'Im created on the server!');
       console.log('server', this.tstate);
     } else {

@@ -1,0 +1,31 @@
+<div class="modal-header login-modal-header">
+  <span>ورود به چیدنا</span>
+</div>
+<form novalidate class="login-modal-body" name="form" [formGroup]="loginForm" (submit)="onSubmit();">
+  <div class="modal-body" style="padding: 25px 30px; margin: 3%;">
+    <div class="form-group">
+      <label>شماره موبایل یا ایمیل</label>
+      <input type="text" placeholder="شماره موبایل یا ایمیل خود را وارد نمایید ..."
+             formControlName="usernameOrEmail"
+             class="form-control"/>
+    </div>
+    <div class="form-group">
+      <label>رمز عبور</label>
+      <input type="password" placeholder="رمز عبور خود را وارد نمایید ..."
+             formControlName="password"
+             class="form-control"/>
+    </div>
+    <div class="form-group rememberme">
+      <nb-checkbox name="rememberMe">مرا به خاطر داشته باش</nb-checkbox>
+      <a href="">فراموشی رمز عبور</a>
+    </div>
+    <div class="input-group">
+      <button type="submit" class="btn btn-primary btn-block" i18n="save">ورود به چیدنا</button>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button (click)="openRegisterModal($event);" class="btn btn-primarys" i18n="save">کاربر جدید هستید؟
+      <span>ثبت نام در چیدنا</span>
+    </button>
+  </div>
+</form>

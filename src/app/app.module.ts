@@ -26,6 +26,7 @@ import {NbMenuService} from "@nebular/theme";
 import {NgxCommon} from "./common/common.module";
 import { AppService } from './app.service';
 import { SPService } from './sp.service';
+import {SharedService} from "./shared-service";
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(httpClient: HttpClient) {
@@ -61,6 +62,7 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     NbMenuService,
     AppService,
     SPService,
+    SharedService,
     {provide: APP_BASE_HREF, useValue: '/'},
     {
       provide: HTTP_INTERCEPTORS,

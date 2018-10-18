@@ -1,0 +1,111 @@
+/**
+ * Created by Asus on 9/6/2018.
+ */
+
+.contactus {
+  background: url("/assets/images/home/random-bg.png") no-repeat;
+  .detail {
+    margin-top: 4%;
+    .detail-card {
+      padding-bottom: 20px;
+      background: #FFFFFF;
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.05), 0 2px 10px 0 rgba(0, 0, 0, 0.05);
+      border-radius: 3px;
+      position: relative;
+      border: none;
+      margin-bottom: 6%;
+      .contact-detail {
+        h2 {
+          font-size: 17px;
+          color: #333333;
+          font-weight: bold;
+          margin-bottom: 5%;
+          padding: 1%;
+        }
+        p {
+          font-size: 13px;
+          font-weight: bold;
+          margin-top: 5%;
+          &:first-child {
+            margin-top: 5%;
+          }
+        }
+        img {
+          width: 100%;
+        }
+        .phone-container, .email-container, .address-container {
+          padding: 15px 0;
+          align-items: center;
+          justify-content: flex-start;
+          display: flex;
+          i {
+            margin-left: 5%;
+            font-size: 25px;
+            color: rgba(0, 0, 0, 0.4);
+          }
+          span {
+            font-size: 13px;
+            font-weight: bold;
+            margin-left: 5%;
+            &:first-child {
+              margin-left: 10px;
+            }
+          }
+        }
+      }
+      .contact-form {
+        h2 {
+          font-size: 17px;
+          color: #333333;
+          font-weight: bold;
+          margin-bottom: 5%;
+          padding: 1%;
+        }
+        p {
+          font-size: 13px;
+          font-weight: bold;
+          margin-top: 5%;
+          margin-bottom: 3%;
+          &:first-child {
+            margin-top: 5%;
+          }
+        }
+        label {
+          font-weight: bold;
+          font-size: 12px;
+          color: #333333;
+        }
+        .form-control{
+          border-color: #E5E6EC;
+          border-radius: 4px;
+        }
+        ::-webkit-input-placeholder {
+          color: #9E9E9E;
+          font-size: 12px;
+        }
+        ::-moz-placeholder {
+          color: #9E9E9E;
+          font-size: 12px;
+        }
+        :-ms-input-placeholder {
+          color: #9E9E9E;
+          font-size: 12px;
+        }
+        ::placeholder {
+          color: #9E9E9E;
+          font-size: 12px;
+        }
+        .action{
+          button{
+            font-size: 16px;
+            color: #fff;
+            background-color: #8E23AA;
+            border-radius: 5px;
+            padding-left: 38px;
+            padding-right: 38px;
+          }
+        }
+      }
+    }
+  }
+}

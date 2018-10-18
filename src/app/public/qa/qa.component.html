@@ -1,0 +1,45 @@
+<div class="container qa">
+  <div class="row">
+    <div class="col-sm-3 detail">
+      <nb-card class="detail-card qamenu">
+        <nb-card-body style="overflow: inherit;">
+          <h1>راهنما و سوالات متداول</h1>
+          <div>
+            <ul>
+              <li *ngFor="let qa of qaList;let i = index;" (click)="onQaClick(i);"
+                  [ngClass]="{'active': selectedQA.index==i}">
+                {{qa.title}}
+              </li>
+            </ul>
+            <div class="call">
+              <p>
+                پاسخ سوال خود را پیدا نکردید؟
+              </p>
+              <p>
+                با ما تماس بگیرید
+              </p>
+            </div>
+          </div>
+        </nb-card-body>
+      </nb-card>
+    </div>
+    <div class="col-sm-9 detail">
+      <nb-card class="detail-card qa-list-container">
+        <nb-card-body style="overflow: inherit;">
+          <h2>{{selectedQA.title}}</h2>
+          <div class="qa-container">
+            <div class="qa-item" *ngFor="let qa of selectedQA.qaList;" (click)="qa.selected = !qa.selected;">
+              <p [ngStyle]="{'color': qa.selected?'#8E23AA':'#000'}">
+                <i class="fa fa-caret-{{qa.selected?'down':'left'}}"></i>
+                {{qa.q}}
+              </p>
+              <p *ngIf="qa.selected" style="padding-right: 5%;">
+                {{qa.a}}
+              </p>
+            </div>
+          </div>
+        </nb-card-body>
+      </nb-card>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,90 @@
+<div class="header-container container">
+  <div class="row col-xl-12">
+    <div class="col-xs-12 col-sm-2 col-md-2">
+      <div class="logo-container">
+        <a routerLink="/home">
+          <img src="./assets/images/logo.png" alt="">
+          <div>
+            <p>پروژه</p>
+            <!--<p class="en"><span style="color: #8E23AA;">CHIDNA</span> net shopping</p>-->
+            <p> NGIR </p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-10">
+      <div class="top-small-nav">
+        <a routerLink="/home">صفحه اصلی</a>
+        <a routerLink="/qa">پرسش های متداول</a>
+        <!--<a>خرید عمده</a>-->
+        <a routerLink="/about-us">درباره ما</a>
+        <a routerLink="/contact-us">تماس با ما</a>
+        <a routerLink="/policy">قوانین</a>
+      </div>
+      <div class="row" ngbDropdown #searchDropdowm="ngbDropdown">
+        <div class="col-xs-12 col-sm-12 col-md-10">
+          <input class="form-control" type="text"
+                 ngbDropdownToggle
+                 [(ngModel)]="searchQeurry"
+                 (keyup)="searchProduct($event,searchQeurry);searchDropdowm.open();"
+                 placeholder="نام محصول مورد علاقه خود را جستجو نمایید ...">
+          <!--<div class="search-cssload-container" [hidden]="isSearching">-->
+          <!--<div class="search-cssload-double-torus"></div>-->
+          <!--</div>-->
+          <img class="search" src="./assets/images/header/search.png" alt="">
+          <div ngbDropdownMenu
+               aria-labelledby="dropdownBasic1" class="search-container">
+            <button *ngFor="let searchResult of searchResultList;"
+                    (click)="goToProductDetail($event, searchResult);"
+                    class="dropdown-item">
+              {{searchResult?.title}}
+            </button>
+            <!--<button class="dropdown-item" *ngIf="searchResultList.length==0">-->
+            <!--نتیجه ای یافت نشد.-->
+            <!--</button>-->
+          </div>
+        </div>
+
+        <div class="basket col-xs-12 col-sm-12 col-md-2" style="padding: 0;">
+          <a (click)="onLogout($event);" *ngIf="isAuthenticated">
+            <p style="margin-bottom: 0;position: absolute;
+    top: -30px;
+    border-bottom: 1px dashed rgba(117, 117, 117, 0.5);
+    padding-bottom: 6px;">
+              <i class="fa fa-sign-out" style="margin-left: 3px;"></i>
+              {{displayName}}
+            </p>
+          </a>
+          <!--<a *ngIf="isAuthenticated">-->
+          <!--<i class="fa fa-sign-out" style="margin-left: 3px;"></i>-->
+          <!--</a>-->
+          <a (click)="onLogin($event);" *ngIf="!isAuthenticated" style="cursor: pointer !important;">
+            <p style="margin-bottom: 0;position: absolute;
+    top: -30px;
+    border-bottom: 1px dashed rgba(117, 117, 117, 0.5);
+    padding-bottom: 6px;">
+              <i class="fa fa-user" style="margin-left: 3px;"></i>
+              ورود / ثبت نام
+            </p>
+          </a>
+          <div class="basket-container" *ngIf="false">
+            <a routerLink="/basket">
+              <i class="fa fa-shopping-basket"></i>
+              <div class="first">
+                <p>
+                  سبد خرید
+                </p>
+                <p>
+                  {{basketTotalPrice|number}}
+                </p>
+              </div>
+              <div class="second">
+                {{basketItemsList.length}}
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

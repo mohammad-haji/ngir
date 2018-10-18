@@ -1,0 +1,86 @@
+.qa {
+  background: url("/assets/images/home/random-bg.png") no-repeat;
+  .detail {
+    margin-top: 4%;
+    margin-bottom: 6%;
+    .qamenu {
+      position: sticky !important;
+      top: 100px;
+      .call {
+        position: absolute;
+        bottom: -20px;
+        right: 0;
+        text-align: center;
+        background: #F6F7F9;
+        width: 100%;
+        border-radius: 2px;
+        padding-top: 15px;
+        font-size: 12px;
+        p {
+          &:first-child {
+            font-size: 13px;
+            color: #333333;
+            font-weight: bold;
+          }
+          &:last-child {
+            color: #8E23AA;
+          }
+        }
+      }
+    }
+    .detail-card {
+      padding-bottom: 20px;
+      background: #FFFFFF;
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.05), 0 2px 10px 0 rgba(0, 0, 0, 0.05);
+      border-radius: 3px;
+      position: relative;
+      border: none;
+      h1 {
+        font-size: 16px;
+        color: #333333;
+        text-align: center;
+        font-weight: bold;
+        border-bottom: 1px solid #EEEEEE;
+        padding-bottom: 9%;
+        margin-bottom: 10%;
+      }
+      ul {
+        list-style: none;
+        color: #333333;
+        font-size: 13px;
+        padding-right: 5px;
+        margin-bottom: 25%;
+        li {
+          padding: 9% 13px;
+          cursor: pointer;
+          font-weight: bold;
+          &.active {
+            background: rgba(142, 35, 170, 0.1);
+            padding: 9% 13px;
+            color: #8E23AA;
+            font-weight: bold;
+            border-radius: 5px;
+            font-size: 13px;
+          }
+        }
+      }
+    }
+    .qa-list-container {
+      h2 {
+        font-size: 16px;
+        color: #8E23AA;
+        font-weight: bold;
+        margin-bottom: 7%;
+      }
+      p {
+        font-size: 13px;
+        font-weight: bold;
+        line-height: 2;
+      }
+      .qa-item{
+        padding: 5px 0;
+        cursor: pointer;
+      }
+    }
+  }
+}

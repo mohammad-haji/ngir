@@ -4,6 +4,7 @@ import {NgxAuthComponent, NgxLoginComponent} from "./@theme/components/auth";
 
 const routes: Routes = [
   {path: 'pages', loadChildren: 'app/pages/pages.module#PagesModule'},
+  {path: '', loadChildren: 'app/public/public.module#PublicModule'},
   {
     path: 'auth',
     component: NgxAuthComponent,
@@ -18,8 +19,9 @@ const routes: Routes = [
       },
     ]
   },
-  {path: '', redirectTo: 'pages', pathMatch: 'full'},
-  {path: '**', redirectTo: 'pages'},
+  {path: '**', redirectTo: ''},
+  // {path: '', redirectTo: 'pages', pathMatch: 'full'},
+  // {path: '**', redirectTo: 'pages'},
 ];
 
 const config: ExtraOptions = {

@@ -1,0 +1,116 @@
+@import '../../styles/themes';
+@import '~@nebular/theme/styles/global/bootstrap/breakpoints';
+@import '~bootstrap/scss/mixins/breakpoints';
+
+@include nb-install-component() {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #372940;
+  background: url("/assets/images/footer/footer-bg.png") #372940 no-repeat;
+
+  .container {
+    min-height: 310px;
+    padding-top: 4%;
+    background: url("/assets/images/footer/footer-bg.png") #372940 no-repeat;
+    .first {
+      h4 {
+        font-size: 14px;
+        color: #fff;
+      }
+      p {
+        color: rgba(255, 255, 255, 0.65);
+      }
+      p.phone {
+        font-size: 14px;
+      }
+      p.emial {
+        font-size: 12px;
+      }
+      p.address {
+        font-size: 13px;
+      }
+      i {
+        margin: 5px;
+        font-size: 21px;
+      }
+    }
+    .second {
+      p {
+        font-size: 14px;
+        color: #FFFFFF;
+        text-align: center;
+        line-height: 35px;
+      }
+      input {
+        background: #23152C;
+        color: #fff;
+        border: 1px solid #23152C;
+        height: 45px;
+      }
+      button {
+        border: 1px solid #50C98E;
+        background: #50C98E;
+        color: #fff;
+        border-radius: 0;
+        height: 45px;
+      }
+    }
+  }
+
+  .socials {
+    font-size: 2rem;
+    text-align: center;
+
+    a {
+      padding: 1.4rem;
+      color: nb-theme(color-fg);
+      transition: color ease-out 0.1s;
+
+      &:hover {
+        color: nb-theme(color-fg-heading);
+      }
+    }
+  }
+
+  .cert {
+    .images {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  .third {
+    p{
+      font-size: 12px;
+      color: #BDBDBD;
+      text-align: center;
+    }
+    a{
+      font-size: 12px;
+      color: #BDBDBD;
+      text-align: center;
+      display: inline-block;
+      margin-top: -15px;
+      &:hover, &:focus{
+        color: #fff;
+      }
+      text-decoration: none;
+    }
+    .footer-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      margin-top: 13%;
+      margin-bottom: 5%;
+    }
+  }
+
+  @include media-breakpoint-down(is) {
+    .socials {
+      font-size: 1.5rem;
+    }
+  }
+}

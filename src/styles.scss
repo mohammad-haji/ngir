@@ -8,9 +8,9 @@
 
 .has-error {
   color: red;
-  label + .form-control.ng-dirty.ng-invalid{
+  label + .form-control.ng-dirty.ng-invalid {
     border: 1px solid red;
-    .widget{
+    .widget {
       color: red;
     }
   }
@@ -27,6 +27,7 @@
 sf-button-widget button {
   color: #212529 !important;
 }
+
 //   text-transform: uppercase;
 //   letter-spacing: 0.4px;
 //   font-weight: 500;
@@ -39,3 +40,42 @@ sf-button-widget button {
 //   line-height: 1.25;
 //   border-radius: 0.75rem;
 // }
+
+.rightRs, .leftRs {
+  cursor: pointer !important;
+}
+
+.about-us .detail .detail-card .leftRs, .about-us .detail .detail-card .rightRs {
+  display: none !important;
+}
+
+.ngucarouselPointDefault {
+  margin-top: 17%;
+}
+
+.ngucarouselPointDefault .ngucarouselPoint li {
+  margin: 0 7px !important;
+  background-color: rgba(0, 0, 0, 0.35) !important;
+}
+
+.ngucarouselPointDefault .ngucarouselPoint li.active {
+  background: #8020A4 !important;
+}
+
+.multiselect-dropdown .dropdown-btn {
+  border: 2px solid #dadfe6 !important;
+  padding: 12px 12px !important;
+}
+
+* {
+  outline: none !important;
+}
+
+
+.nb-theme-corporate ngx-one-column-width-layout .layout-container .content nb-layout-footer nav {
+  padding: 0 !important;
+}
+
+.nb-theme-corporate ngx-one-column-width-layout nb-layout .layout nb-layout-header.fixed ~ .layout-container {
+  padding-top: 0rem !important;
+}

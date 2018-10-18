@@ -24,7 +24,7 @@ const routes: Routes = [{
   }, {
     path: 'users',
     loadChildren: './users/users.module#UsersModule',
-  },{
+  }, {
     path: 'crud',
     loadChildren: './crud/crud.module#CrudModule',
   },
@@ -62,10 +62,12 @@ const routes: Routes = [{
       path: '',
       redirectTo: 'dashboard',
       pathMatch: 'full',
-    }, {
-      path: '**',
-      component: NotFoundComponent,
-    }],
+    },
+    // {
+    //   path: '**',
+    //   component: NotFoundComponent,
+    // }
+  ],
 }];
 
 @NgModule({

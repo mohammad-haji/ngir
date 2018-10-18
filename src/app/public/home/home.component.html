@@ -1,0 +1,129 @@
+<ngx-lazy-cards [items]="homeSlider"
+                [config]="sliderConfig"
+                [template]="'homeSlider'">
+</ngx-lazy-cards>
+
+<div class="features">
+  <div class="container">
+    <div class="row justify-content-md-center">
+
+      <div class="col">
+        <div class="row">
+          <div class="col item">
+            <div>
+              <img src="./assets/images/home/shipped.png" alt="">
+            </div>
+            <div>
+              <h4>تحویل درب منزل</h4>
+              <p>۲۴ تا ۴۸ ساعت</p>
+            </div>
+          </div>
+          <div class="col item">
+            <div>
+              <img src="./assets/images/home/guarantee.png" alt="">
+            </div>
+            <div>
+              <h4>گارانتی اصالت کالا</h4>
+              <p>کیفیت بالای ساخت و تولید</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="row">
+          <div class="col item">
+            <div>
+              <img src="./assets/images/home/credit-card.png" alt="">
+            </div>
+            <div>
+              <h4>پرداخت آنلاین</h4>
+              <p>پرداخت توسط کلیه کارتهای بانکی</p>
+            </div>
+          </div>
+          <div class="col item">
+            <div>
+              <img src="./assets/images/home/24-hours.png" alt="">
+            </div>
+            <div>
+              <h4>پشتیبانی</h4>
+              <p>۷ روز هفته - ۲۴ ساعته</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="randoms">
+  <div class="container">
+    <div class="row justify-content-md-center">
+      <div class="col-sm-8">
+        <!--<div class="col-12">-->
+        <div class="row">
+          <div class="col-sm-5 first">
+            <img style="width: 100%" src="./assets/images/home/first.png" alt="">
+          </div>
+          <div class="col-sm-5 second">
+            <img style="width: 100%" src="./assets/images/home/second.png" alt="">
+          </div>
+          <div class="col-sm-10 third">
+            <img style="width: 100%" src="./assets/images/home/third.png" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4 forth">
+        <img style="width: 100%;" src="./assets/images/home/forth.png" alt="">
+      </div>
+      <div class="col-sm-12 fifth">
+        <img style="width: 100%;" src="./assets/images/home/fifth.png" alt="">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="featured-products">
+  <div class="container">
+    <h3>برترین ها</h3>
+    <a class="show-all" [routerLink]="['/search/top-products']">نمایش همه</a>
+    <ngx-lazy-cards [items]="featuredProducts"
+                    (onAdd)="onAddProductToBasket($event)"
+                    [config]="productsConfig"
+                    [template]="'latestProducts'">
+    </ngx-lazy-cards>
+  </div>
+</div>
+
+<div class="latest-products">
+  <div class="container">
+    <h3>جدیدترین ها</h3>
+    <a class="show-all" [routerLink]="['/search/latest-products']">نمایش همه</a>
+    <ngx-lazy-cards [items]="featuredProducts"
+                    (onAdd)="onAddProductToBasket($event)"
+                    [config]="productsConfig"
+                    [template]="'latestProducts'">
+    </ngx-lazy-cards>
+  </div>
+</div>
+
+<div class="brands">
+  <div class="container">
+    <div class="row justify-content-md-center">
+      <div class="col">
+        <img src="./assets/images/home/brands/Sony_logo.svg.png" alt="Card image cap">
+      </div>
+      <div class="col">
+        <img src="./assets/images/home/brands/beko.png" alt="Card image cap">
+      </div>
+      <div class="col">
+        <img src="./assets/images/home/brands/huAWEI.png" alt="Card image cap">
+      </div>
+      <div class="col">
+        <img src="./assets/images/home/brands/nike.png" alt="Card image cap">
+      </div>
+      <div class="col">
+        <img src="./assets/images/home/brands/Philips_logo_new.svg.png" alt="Card image cap">
+      </div>
+    </div>
+  </div>
+</div>

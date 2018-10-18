@@ -49,6 +49,13 @@ import {AuthService} from "./components/auth/auth.service";
 import {CORPORATE_THEME} from "./styles/theme.corporate";
 import {ThemeSwitcherListComponent} from "./components/theme-switcher/themes-switcher-list/themes-switcher-list.component";
 import {NbLayoutDirection} from "@nebular/theme/services/direction.service";
+import {NGXNewFooterComponent} from "./components/ngx-new-footer/ngx-new-footer.component";
+import {TopHeadComponent} from "./components/top-head/top-head.component";
+import {OneColumnWidthLayout} from "./layouts/one-column-width/one-column-width.layout";
+import {LoginModalComponent} from "./components/auth/modals/login/login.modal.component";
+import {SignupModalComponent} from "./components/auth/modals/signup/signup.modal.component";
+import {AdminHeaderComponent} from "./components/admin-header/admin-header.component";
+import {NavbarComponent} from "./components/navbar/navbar.component";
 
 const BASE_MODULES = [CommonModule, FormsModule, ReactiveFormsModule, RouterModule, TranslateModule];
 
@@ -83,11 +90,18 @@ const COMPONENTS = [
   SampleLayoutComponent,
   ThreeColumnsLayoutComponent,
   TwoColumnsLayoutComponent,
+  OneColumnWidthLayout,
 
 
   NgxAuthComponent,
   NgxAuthBlockComponent,
   NgxLoginComponent,
+  NGXNewFooterComponent,
+  TopHeadComponent,
+  LoginModalComponent,
+  SignupModalComponent,
+  AdminHeaderComponent,
+  NavbarComponent
 
 ];
 
