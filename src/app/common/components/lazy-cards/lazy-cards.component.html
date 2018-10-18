@@ -1,0 +1,61 @@
+<ngu-carousel
+        *ngIf="template==='homeSlider'"
+        class="banner"
+        style="height: 600px"
+        [inputs]="config"
+        (carouselLoad)="myfunc($event)">
+    <ngu-item NguCarouselItem>
+        <div class="bannerStyle" style="background: url('./assets/images/camera1.jpg')">
+            <p></p>
+        </div>
+    </ngu-item>
+    <ngu-item NguCarouselItem>
+        <div class="bannerStyle" style="background: url('./assets/images/camera2.jpg')">
+            <p></p>
+        </div>
+    </ngu-item>
+    <ngu-item NguCarouselItem>
+        <div class="bannerStyle" style="background: url('./assets/images/camera3.jpg')">
+            <p></p>
+        </div>
+    </ngu-item>
+    <ngu-item NguCarouselItem>
+        <div class="bannerStyle" style="background: url('./assets/images/camera4.jpg')">
+            <p></p>
+        </div>
+    </ngu-item>
+    <button NguCarouselPrev class='leftRs'><i class="fa fa-chevron-left"></i></button>
+    <button NguCarouselNext class='rightRs'><i class="fa fa-chevron-right"></i></button>
+</ngu-carousel>
+
+<ngu-carousel
+        class="banner product-slider"
+        style="min-height: 493px; padding-top: 20px;"
+        [inputs]="config"
+        *ngIf="template!=='homeSlider'"
+        (carouselLoad)="myfunc($event)">
+    <ngu-tile NguCarouselItem *ngFor="let item of items">
+        <div [ngSwitch]="template">
+            <div class="card" *ngSwitchCase="'latestProducts'">
+                <a routerLink="/product/{{item._id}}/{{item.title}}">
+                    <img class="card-img-top" src="{{item?.thumbnail?.fullLink}}"
+                         onerror="this.src='./assets/images/logo.png'"
+                         alt="Card image cap">
+                </a>
+                <div class="card-body">
+                    <a routerLink="/product/{{item._id}}/{{item.title}}">
+                        <h5 class="card-title">{{item.title}}</h5>
+                        <p class="desc card-text" [innerHtml]="item.desc" style="height: 45px;overflow: hidden;">
+                        </p>
+                        <p class="price card-text">
+                            {{item.pricing.price|price}}
+                        </p>
+                    </a>
+                    <a (click)="onAddToBasket($event, item);" class="btn btn-primary add">افزودن به سبد خرید</a>
+                </div>
+            </div>
+        </div>
+    </ngu-tile>
+    <button NguCarouselPrev class='leftRs'><i class="fa fa-chevron-left"></i></button>
+    <button NguCarouselNext class='rightRs'><i class="fa fa-chevron-right"></i></button>
+</ngu-carousel>
