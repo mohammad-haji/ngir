@@ -114,6 +114,8 @@ const PIPES = [
 
 const ENTRY_COMPONENTS = [
   ThemeSwitcherListComponent,
+  LoginModalComponent,
+  SignupModalComponent,
 ];
 
 const NB_THEME_PROVIDERS = [

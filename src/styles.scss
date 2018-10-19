@@ -79,3 +79,102 @@ sf-button-widget button {
 .nb-theme-corporate ngx-one-column-width-layout nb-layout .layout nb-layout-header.fixed ~ .layout-container {
   padding-top: 0rem !important;
 }
+
+
+.nb-theme-corporate .modal-header.login-modal-header {
+  justify-content: center !important;
+  align-items: center !important;
+  padding: 40px !important;
+}
+
+.nb-theme-corporate .modal-content {
+  border-radius: 10px !important;
+}
+
+.nb-theme-corporate .login-modal-body .form-group {
+  text-align: right;
+}
+
+.nb-theme-corporate .login-modal-body .modal-footer {
+  background: #F6F7F9;
+  border-top: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.nb-theme-corporate .login-modal-body .modal-footer button {
+  background: #F6F7F9;
+  color: #000;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.nb-theme-corporate .login-modal-body .modal-footer button span {
+  color: #8F25AB;
+  font-weight: bold;
+  margin-right: 2%;
+  font-size: 18px;
+}
+
+.nb-theme-corporate .login-modal-body .input-group button {
+  padding-bottom: 20px;
+  background: #8E23AA;
+  font-size: 18px;
+  border-radius: 5px;
+  padding-top: 20px;
+  margin-top: 5%;
+  box-shadow: 0 5px 25px 0 rgba(116, 18, 142, 0.35), 0 5px 40px 0 rgba(116, 18, 142, 0.35);
+}
+
+.nb-theme-corporate .login-modal-body .input-group button:hover,
+.nb-theme-corporate .login-modal-body .input-group button:active,
+.nb-theme-corporate .login-modal-body .input-group button:focus {
+  background-color: #8E23AA;
+}
+
+.nb-theme-corporate .login-modal-body .form-group.rememberme span {
+  font-size: 12px !important;
+  color: #5C5C5C !important;
+}
+
+.nb-theme-corporate .login-modal-body .form-group.rememberme a{
+  float: left;
+  color: #8F25AB;
+  font-size: 12px;
+}
+
+.nb-theme-corporate .login-modal-body .form-group input {
+  border-radius: 5px !important;
+  border: 1px solid #E5E6EC !important;
+}
+
+.nb-theme-corporate .login-modal-body label {
+  font-size: 16px;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 5%;
+}
+
+.nb-theme-corporate .modal-header.login-modal-header span {
+  font-size: 20px !important;
+  font-weight: bold !important;
+}
+
+
+::-webkit-input-placeholder {
+  color: #9E9E9E !important;
+  font-size: 12px !important;
+}
+::-moz-placeholder {
+  color: #9E9E9E !important;
+  font-size: 12px !important;
+}
+:-ms-input-placeholder {
+  color: #9E9E9E !important;
+  font-size: 12px !important;
+}
+::placeholder {
+  color: #9E9E9E !important;
+  font-size: 12px !important;
+}
+
