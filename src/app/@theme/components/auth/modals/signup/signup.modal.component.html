@@ -1,5 +1,5 @@
 <div class="modal-header login-modal-header">
-  <span>ثبت نام در چیدنا</span>
+  <span>ثبت نام در NGIR</span>
 </div>
 <form novalidate class="login-modal-body" [formGroup]="signupForm" (submit)="onSubmit($event);">
   <div class="modal-body" style="padding: 25px 30px; margin: 3%;">
@@ -24,16 +24,16 @@
     <div class="form-group rememberme">
       <nb-checkbox name="rememberMe">
         شرایط و قوانین
-        چیدنا را مطالعه نموده و با آنها موافقم
+        NGIR را مطالعه نموده و با آنها موافقم
       </nb-checkbox>
     </div>
     <div class="input-group">
-      <button type="submit" class="btn btn-primary btn-block" i18n="save">ثبت نام در چیدنا</button>
+      <button type="submit" class="btn btn-primary btn-block" i18n="save">ثبت نام در NGIR</button>
     </div>
   </div>
   <div class="modal-footer">
-    <button (click)="openLoginModal($event)" class="btn btn-primarys" i18n="save">قبلا در چیدنا ثبت نام کرده اید؟
-      <span>ورود به چیدنا</span>
+    <button (click)="openLoginModal($event)" class="btn btn-primarys" i18n="save">قبلا در NGIR ثبت نام کرده اید؟
+      <span>ورود به NGIR</span>
     </button>
   </div>
 </form>
