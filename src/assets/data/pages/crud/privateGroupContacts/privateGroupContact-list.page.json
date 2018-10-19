@@ -1,0 +1,85 @@
+{
+  "$schema": "http://json-schema.org/draft-04/hyper-schema#",
+  "type": "CRUD",
+  "head": {
+    "title": "nested layout demo"
+  },
+  "body": {
+    "type": "object",
+    "sections": [
+      {
+        "items": [
+          {
+            "type": "horizontal",
+            "components": [
+              {
+                "type": "heading",
+                "data": {
+                  "title": "PrivateGroupContact.List"
+                }
+              },
+              {
+                "type": "datatable",
+                "data": {
+                  "config": {
+                    "message": {
+                      "emptyMessage": "DataTable.EmptyList",
+                      "totalMessage": "DataTable.Total"
+                    },
+                    "api": {
+                      "entity": "privateGroupContacts"
+                    },
+                    "actions": {
+                      "add": {
+                        "isShow": true,
+                        "icon": "",
+                        "actionKey": "DATATABLE_ADD",
+                        "title": "DataTable.New"
+                      },
+                      "detail": {
+                        "isShow": true,
+                        "icon": "nb-layout-default",
+                        "actionKey": "DATATABLE_DETAIL",
+                        "title": "DataTable.Detail"
+                      },
+                      "edit": {
+                        "isShow": true,
+                        "icon": "nb-edit",
+                        "actionKey": "DATATABLE_EDIT",
+                        "title": "DataTable.Edit"
+                      },
+                      "remove": {
+                        "isShow": true,
+                        "icon": "nb-trash",
+                        "actionKey": "DATATABLE_REMOVE",
+                        "title": "DataTable.Remove"
+                      }
+                    },
+                    "columns": [
+                      {
+                        "type": "string",
+                        "prop": "firstName",
+                        "name": "Contact.FirstName",
+                        "sortable": false,
+                        "resizeable": false,
+                        "draggable": false
+                      },
+                      {
+                        "type": "string",
+                        "prop": "lastName",
+                        "name": "Contact.LastName",
+                        "sortable": false,
+                        "resizeable": false,
+                        "draggable": false
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

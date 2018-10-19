@@ -20,7 +20,7 @@
               },
               {
                 "type": "detailView",
-                "id": "discountDetailView",
+                "id": "DetailView",
                 "data": {
                   "fields": [
                     {
@@ -47,7 +47,7 @@
                     },{
                       "title": "User.Active",
                       "prop": "active",
-                      "type": "string",
+                      "type": "bool",
                       "default": "",
                       "value": "",
                       "isHidden": false

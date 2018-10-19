@@ -14,6 +14,8 @@ import { NgbActiveModal } from "@ng-bootstrap/ng-bootstrap";
       <p style="text-align: right">{{'Messages.ConfirmToDelete'|translate}}</p>
     </div>
     <div class="modal-footer">
+    <button type="button" style="color:#181818"
+    class="btn btn-light btn-sm" (click)="onDismiss($event)">{{'Buttons.Cancel'|translate}}</button>
       <button type="button" class="btn btn-danger btn-sm" (click)="onClose($event)">{{'Buttons.Delete'|translate}}</button>
     </div>
   `,
@@ -34,6 +36,9 @@ import { NgbActiveModal } from "@ng-bootstrap/ng-bootstrap";
           text-align: right;
         }
       }
+      .modal-footer{
+        justify-content: space-between;
+      }
 
 
     `
@@ -45,7 +50,7 @@ export class ConfirmModal{
   }
 
   onClose(evt){
-    this.activeModal.close('onClose');
+    this.activeModal.close('onDelete');
   }
 
   onDismiss(evt){

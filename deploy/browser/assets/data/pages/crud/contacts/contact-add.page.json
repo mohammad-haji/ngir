@@ -44,6 +44,35 @@
                             "widget": {
                               "id": "string"
                             }
+                          },
+                          "levelUid": {
+                            "type": "string",
+                            "widget": {
+                              "id": "select"
+                            },
+                            "title": "User.AccessLevel",
+                            "description": "",
+                            "oneOf": [
+                              {
+                                "description": "f-mahramane",
+                                "enum": [
+                                  "F-MAHRAMANE"
+                                ]
+                              },
+                              {
+                                "description": "mahramane",
+                                "enum": [
+                                  "MAHRAMANE"
+                                ]
+                              },
+                              {
+                                "description": "serri",
+                                "enum": [
+                                  "SERRI"
+                                ]
+                              }
+                            ],
+                            "default": "F-MAHRAMANE"
                           }
                         },
                         "buttons": [
@@ -52,25 +81,11 @@
                             "class": "btn-success",
                             "id": "submit",
                             "actionKey": "SFFORM_SUBMIT",
-                            "parameters": {}
-                          },
-                          {
-                            "label": "Buttons.Reset",
-                            "class": "btn-danger",
-                            "actionKey": "SFFORM_RESET",
-                            "id": "reset",
-                            "parameters": {}
-                          },
-                          {
-                            "label": "Buttons.Save",
-                            "class": "btn-success",
-                            "actionKey": "SFFORM_SAVE",
-                            "id": "save",
                             "parameters": {},
                             "btnAction": {
                               "type": "$network.request",
                               "options": {
-                                "entity": "discounts",
+                                "entity": "contacts",
                                 "method": "create",
                                 "data": {
                                   "user_id": "fI9",
@@ -78,6 +93,13 @@
                                 }
                               }
                             }
+                          },
+                          {
+                            "label": "Buttons.Reset",
+                            "class": "btn-danger",
+                            "actionKey": "SFFORM_RESET",
+                            "id": "reset",
+                            "parameters": {}
                           },
                           {
                             "label": "Buttons.Cancel",
@@ -107,7 +129,7 @@
                           }
                         ],
                         "required": [
-                          "title"
+                          "firstName", "lastName"
                         ],
                         "type": "object",
                         "widget": {

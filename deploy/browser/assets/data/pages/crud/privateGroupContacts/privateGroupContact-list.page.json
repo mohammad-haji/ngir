@@ -27,7 +27,7 @@
                       "totalMessage": "DataTable.Total"
                     },
                     "api": {
-                      "entity": "groupContacts"
+                      "entity": "privateGroupContacts"
                     },
                     "actions": {
                       "add": {
@@ -58,7 +58,7 @@
                     "columns": [
                       {
                         "type": "string",
-                        "prop": "store",
+                        "prop": "firstName",
                         "name": "Contact.FirstName",
                         "sortable": false,
                         "resizeable": false,
@@ -66,7 +66,7 @@
                       },
                       {
                         "type": "string",
-                        "prop": "discountType",
+                        "prop": "lastName",
                         "name": "Contact.LastName",
                         "sortable": false,
                         "resizeable": false,

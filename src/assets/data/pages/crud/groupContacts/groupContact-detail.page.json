@@ -1,0 +1,51 @@
+{
+  "$schema": "http://json-schema.org/draft-04/hyper-schema#",
+  "type": "CRUD",
+  "head": {
+    "title": "nested layout demo"
+  },
+  "body": {
+    "type": "object",
+    "sections": [
+      {
+        "items": [
+          {
+            "type": "horizontal",
+            "components": [
+              {
+                "type": "heading",
+                "data": {
+                  "title": "GroupContact.Detail"
+                }
+              },
+              {
+                "type": "detailView",
+                "id": "DetailView",
+                "data": {
+                  "fields": [
+                    {
+                      "title": "Contact.FirstName",
+                      "prop": "firstName",
+                      "type": "string",
+                      "default": "",
+                      "value": "",
+                      "isHidden": false
+                    },{
+                      "title": "Contact.LastName",
+                      "prop": "lastName",
+                      "type": "string",
+                      "default": "",
+                      "value": "",
+                      "isHidden": false
+                    }
+                  ],
+                  "model": {}
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

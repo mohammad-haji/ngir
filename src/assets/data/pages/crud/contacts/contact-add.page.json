@@ -1,0 +1,149 @@
+{
+  "$schema": "http://json-schema.org/draft-04/hyper-schema#",
+  "type": "CRUD",
+  "head": {
+    "title": "nested layout demo"
+  },
+  "body": {
+    "type": "object",
+    "sections": [
+      {
+        "items": [
+          {
+            "type": "horizontal",
+            "components": [
+              {
+                "type": "heading",
+                "data": {
+                  "title": "Contact.Add"
+                }
+              },
+              {
+                "type": "sfForm",
+                "key": "ADD_USER_FORM",
+                "data": {
+                  "formList": [
+                    {
+                      "title": "",
+                      "containerClass": "col-sm-12",
+                      "path": "users/basic-info-users",
+                      "schema": {
+                        "properties": {
+                          "firstName": {
+                            "description": "",
+                            "title": "Contact.FirstName",
+                            "type": "string",
+                            "widget": {
+                              "id": "string"
+                            }
+                          },
+                          "lastName": {
+                            "description": "",
+                            "title": "Contact.LastName",
+                            "type": "string",
+                            "widget": {
+                              "id": "string"
+                            }
+                          },
+                          "levelUid": {
+                            "type": "string",
+                            "widget": {
+                              "id": "select"
+                            },
+                            "title": "User.AccessLevel",
+                            "description": "",
+                            "oneOf": [
+                              {
+                                "description": "f-mahramane",
+                                "enum": [
+                                  "F-MAHRAMANE"
+                                ]
+                              },
+                              {
+                                "description": "mahramane",
+                                "enum": [
+                                  "MAHRAMANE"
+                                ]
+                              },
+                              {
+                                "description": "serri",
+                                "enum": [
+                                  "SERRI"
+                                ]
+                              }
+                            ],
+                            "default": "F-MAHRAMANE"
+                          }
+                        },
+                        "buttons": [
+                          {
+                            "label": "Buttons.Submit",
+                            "class": "btn-success",
+                            "id": "submit",
+                            "actionKey": "SFFORM_SUBMIT",
+                            "parameters": {},
+                            "btnAction": {
+                              "type": "$network.request",
+                              "options": {
+                                "entity": "contacts",
+                                "method": "create",
+                                "data": {
+                                  "user_id": "fI9",
+                                  "message": "Hello there"
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "label": "Buttons.Reset",
+                            "class": "btn-danger",
+                            "actionKey": "SFFORM_RESET",
+                            "id": "reset",
+                            "parameters": {}
+                          },
+                          {
+                            "label": "Buttons.Cancel",
+                            "class": "btn-warning",
+                            "id": "cancel",
+                            "actionKey": "SFFORM_CANCEL",
+                            "parameters": {},
+                            "btnAction": {
+                              "type": "$href",
+                              "options": {
+                                "url": "/pages/dashboard",
+                                "method": "internal",
+                                "data": {
+                                  "user_id": "fI9",
+                                  "message": "Hello there"
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "label": "Buttons.Add",
+                            "class": "btn-light",
+                            "actionKey": "SFFORM_ADD",
+                            "isHidden": true,
+                            "id": "add",
+                            "parameters": {}
+                          }
+                        ],
+                        "required": [
+                          "firstName", "lastName"
+                        ],
+                        "type": "object",
+                        "widget": {
+                          "id": "object"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -27,7 +27,7 @@
                       "totalMessage": "DataTable.Total"
                     },
                     "api": {
-                      "entity": "discounts"
+                      "entity": "users"
                     },
                     "actions": {
                       "add": {
@@ -58,7 +58,7 @@
                     "columns": [
                       {
                         "type": "string",
-                        "prop": "store",
+                        "prop": "userName",
                         "name": "User.UserName",
                         "sortable": false,
                         "resizeable": false,
@@ -66,7 +66,7 @@
                       },
                       {
                         "type": "string",
-                        "prop": "store",
+                        "prop": "firstName",
                         "name": "User.FirstName",
                         "sortable": false,
                         "resizeable": false,
@@ -74,15 +74,15 @@
                       },
                       {
                         "type": "string",
-                        "prop": "discountPercentage",
+                        "prop": "lastName",
                         "name": "User.LastName",
                         "sortable": false,
                         "resizeable": false,
                         "draggable": false
                       },
                       {
-                        "type": "string",
-                        "prop": "expireTime",
+                        "type": "bool",
+                        "prop": "active",
                         "name": "User.Active",
                         "sortable": false,
                         "resizeable": false,

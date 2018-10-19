@@ -20,13 +20,14 @@
               },
               {
                 "type": "sfForm",
-                "key": "ADD_USER_FORM",
+                "id": "EDIT_FORM",
                 "data": {
                   "formList": [
                     {
                       "title": "",
                       "containerClass": "col-sm-12",
                       "path": "users/basic-info-users",
+                      "mode": "EDIT",
                       "schema": {
                         "properties": {
                           "firstName": {
@@ -56,12 +57,9 @@
                             "btnAction": {
                               "type": "$network.request",
                               "options": {
-                                "entity": "discounts",
+                                "entity": "contacts",
                                 "method": "create",
-                                "data": {
-                                  "user_id": "fI9",
-                                  "message": "Hello there"
-                                }
+                                "data": {}
                               }
                             }
                           },
@@ -100,7 +98,7 @@
                           }
                         ],
                         "required": [
-                          "title"
+                          "firstName", "lastName"
                         ],
                         "type": "object",
                         "widget": {

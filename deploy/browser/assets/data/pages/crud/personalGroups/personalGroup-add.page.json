@@ -52,25 +52,11 @@
                             "class": "btn-success",
                             "id": "submit",
                             "actionKey": "SFFORM_SUBMIT",
-                            "parameters": {}
-                          },
-                          {
-                            "label": "Buttons.Reset",
-                            "class": "btn-danger",
-                            "actionKey": "SFFORM_RESET",
-                            "id": "reset",
-                            "parameters": {}
-                          },
-                          {
-                            "label": "Buttons.Save",
-                            "class": "btn-success",
-                            "actionKey": "SFFORM_SAVE",
-                            "id": "save",
                             "parameters": {},
                             "btnAction": {
                               "type": "$network.request",
                               "options": {
-                                "entity": "discounts",
+                                "entity": "personalGroups",
                                 "method": "create",
                                 "data": {
                                   "user_id": "fI9",
@@ -78,6 +64,13 @@
                                 }
                               }
                             }
+                          },
+                          {
+                            "label": "Buttons.Reset",
+                            "class": "btn-danger",
+                            "actionKey": "SFFORM_RESET",
+                            "id": "reset",
+                            "parameters": {}
                           },
                           {
                             "label": "Buttons.Cancel",
@@ -96,18 +89,10 @@
                                 }
                               }
                             }
-                          },
-                          {
-                            "label": "Buttons.Add",
-                            "class": "btn-light",
-                            "actionKey": "SFFORM_ADD",
-                            "isHidden": true,
-                            "id": "add",
-                            "parameters": {}
                           }
                         ],
                         "required": [
-                          "title"
+                          "name", "description"
                         ],
                         "type": "object",
                         "widget": {

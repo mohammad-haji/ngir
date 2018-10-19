@@ -35,7 +35,7 @@ export class SPService{
     _.forEach(this.pageSchema.body.sections, function (section) {
     	 _.forEach(section.items, function (item) {
           _.forEach(item.components, function (cp) {
-            if(cp.id=='discountDetailView'){
+            if(cp.id==id){
               widgetInfo = cp;
             }
           });

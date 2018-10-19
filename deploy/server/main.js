@@ -16513,10 +16513,10 @@ var styles_SFFormWidget = [];
 var RenderType_SFFormWidget = i0.ɵcrt({ encapsulation: 2, styles: styles_SFFormWidget, data: {} });
 exports.RenderType_SFFormWidget = RenderType_SFFormWidget;
 function View_SFFormWidget_2(_l) { return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, 0, null, null, 2, "nb-card-header", [], null, null, null, i1.View_NbCardHeaderComponent_0, i1.RenderType_NbCardHeaderComponent)), i0.ɵdid(1, 49152, null, 0, i2.NbCardHeaderComponent, [], null, null), (_l()(), i0.ɵted(2, 0, ["", ""]))], null, function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.pageProp.data.formList[_v.parent.context.$implicit].title; _ck(_v, 2, 0, currVal_0); }); }
-function View_SFFormWidget_1(_l) { return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, 0, null, null, 15, "div", [], [[8, "className", 0]], null, null, null, null)), (_l()(), i0.ɵeld(1, 0, null, null, 14, "nb-card", [], [[2, "xxsmall-card", null], [2, "xsmall-card", null], [2, "small-card", null], [2, "medium-card", null], [2, "large-card", null], [2, "xlarge-card", null], [2, "xxlarge-card", null], [2, "active-card", null], [2, "disabled-card", null], [2, "primary-card", null], [2, "info-card", null], [2, "success-card", null], [2, "warning-card", null], [2, "danger-card", null], [2, "accent", null], [2, "accent-primary", null], [2, "accent-info", null], [2, "accent-success", null], [2, "accent-warning", null], [2, "accent-danger", null], [2, "accent-active", null], [2, "accent-disabled", null]], null, null, i1.View_NbCardComponent_0, i1.RenderType_NbCardComponent)), i0.ɵdid(2, 49152, null, 0, i2.NbCardComponent, [], null, null), (_l()(), i0.ɵand(16777216, null, 0, 1, null, View_SFFormWidget_2)), i0.ɵdid(4, 16384, null, 0, i3.NgIf, [i0.ViewContainerRef, i0.TemplateRef], { ngIf: [0, "ngIf"] }, null), (_l()(), i0.ɵeld(5, 0, null, 1, 10, "nb-card-body", [], null, null, null, i1.View_NbCardBodyComponent_0, i1.RenderType_NbCardBodyComponent)), i0.ɵdid(6, 49152, null, 0, i2.NbCardBodyComponent, [], null, null), (_l()(), i0.ɵeld(7, 0, null, 0, 8, "sf-form", [], null, null, null, i4.View_FormComponent_0, i4.RenderType_FormComponent)), i0.ɵprd(4608, null, i5.SchemaPreprocessor, i5.SchemaPreprocessor, []), i0.ɵprd(4608, null, i6.WidgetFactory, i6.WidgetFactory, [i7.WidgetRegistry, i0.ComponentFactoryResolver]), i0.ɵprd(5120, null, i8.NG_VALUE_ACCESSOR, function (p0_0) { return [p0_0]; }, [i9.FormComponent]), i0.ɵprd(512, null, i10.ValidatorRegistry, i10.ValidatorRegistry, []), i0.ɵprd(1024, null, i11.FormPropertyFactory, i9.useFactory, [i12.SchemaValidatorFactory, i10.ValidatorRegistry]), i0.ɵprd(512, null, i13.ActionRegistry, i13.ActionRegistry, []), i0.ɵprd(512, null, i14.TerminatorService, i14.TerminatorService, []), i0.ɵdid(15, 573440, null, 0, i9.FormComponent, [i11.FormPropertyFactory, i13.ActionRegistry, i10.ValidatorRegistry, i0.ChangeDetectorRef, i14.TerminatorService], { schema: [0, "schema"], actions: [1, "actions"] }, null)], function (_ck, _v) { var _co = _v.component; var currVal_23 = _co.pageProp.data.formList[_v.context.$implicit].title; _ck(_v, 4, 0, currVal_23); var currVal_24 = _co.pageProp.data.formList[_v.context.$implicit].schema; var currVal_25 = _co.sfFormActions; _ck(_v, 15, 0, currVal_24, currVal_25); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = i0.ɵinlineInterpolate(1, "", _co.pageProp.data.formList[_v.context.$implicit].containerClass, ""); _ck(_v, 0, 0, currVal_0); var currVal_1 = i0.ɵnov(_v, 2).xxsmall; var currVal_2 = i0.ɵnov(_v, 2).xsmall; var currVal_3 = i0.ɵnov(_v, 2).small; var currVal_4 = i0.ɵnov(_v, 2).medium; var currVal_5 = i0.ɵnov(_v, 2).large; var currVal_6 = i0.ɵnov(_v, 2).xlarge; var currVal_7 = i0.ɵnov(_v, 2).xxlarge; var currVal_8 = i0.ɵnov(_v, 2).active; var currVal_9 = i0.ɵnov(_v, 2).disabled; var currVal_10 = i0.ɵnov(_v, 2).primary; var currVal_11 = i0.ɵnov(_v, 2).info; var currVal_12 = i0.ɵnov(_v, 2).success; var currVal_13 = i0.ɵnov(_v, 2).warning; var currVal_14 = i0.ɵnov(_v, 2).danger; var currVal_15 = i0.ɵnov(_v, 2).hasAccent; var currVal_16 = i0.ɵnov(_v, 2).primaryAccent; var currVal_17 = i0.ɵnov(_v, 2).infoAccent; var currVal_18 = i0.ɵnov(_v, 2).successAccent; var currVal_19 = i0.ɵnov(_v, 2).warningAccent; var currVal_20 = i0.ɵnov(_v, 2).dangerAccent; var currVal_21 = i0.ɵnov(_v, 2).activeAccent; var currVal_22 = i0.ɵnov(_v, 2).disabledAccent; _ck(_v, 1, 1, [currVal_1, currVal_2, currVal_3, currVal_4, currVal_5, currVal_6, currVal_7, currVal_8, currVal_9, currVal_10, currVal_11, currVal_12, currVal_13, currVal_14, currVal_15, currVal_16, currVal_17, currVal_18, currVal_19, currVal_20, currVal_21, currVal_22]); }); }
+function View_SFFormWidget_1(_l) { return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, 0, null, null, 15, "div", [], [[8, "className", 0]], null, null, null, null)), (_l()(), i0.ɵeld(1, 0, null, null, 14, "nb-card", [], [[2, "xxsmall-card", null], [2, "xsmall-card", null], [2, "small-card", null], [2, "medium-card", null], [2, "large-card", null], [2, "xlarge-card", null], [2, "xxlarge-card", null], [2, "active-card", null], [2, "disabled-card", null], [2, "primary-card", null], [2, "info-card", null], [2, "success-card", null], [2, "warning-card", null], [2, "danger-card", null], [2, "accent", null], [2, "accent-primary", null], [2, "accent-info", null], [2, "accent-success", null], [2, "accent-warning", null], [2, "accent-danger", null], [2, "accent-active", null], [2, "accent-disabled", null]], null, null, i1.View_NbCardComponent_0, i1.RenderType_NbCardComponent)), i0.ɵdid(2, 49152, null, 0, i2.NbCardComponent, [], null, null), (_l()(), i0.ɵand(16777216, null, 0, 1, null, View_SFFormWidget_2)), i0.ɵdid(4, 16384, null, 0, i3.NgIf, [i0.ViewContainerRef, i0.TemplateRef], { ngIf: [0, "ngIf"] }, null), (_l()(), i0.ɵeld(5, 0, null, 1, 10, "nb-card-body", [], null, null, null, i1.View_NbCardBodyComponent_0, i1.RenderType_NbCardBodyComponent)), i0.ɵdid(6, 49152, null, 0, i2.NbCardBodyComponent, [], null, null), (_l()(), i0.ɵeld(7, 0, null, 0, 8, "sf-form", [], null, null, null, i4.View_FormComponent_0, i4.RenderType_FormComponent)), i0.ɵprd(4608, null, i5.SchemaPreprocessor, i5.SchemaPreprocessor, []), i0.ɵprd(4608, null, i6.WidgetFactory, i6.WidgetFactory, [i7.WidgetRegistry, i0.ComponentFactoryResolver]), i0.ɵprd(5120, null, i8.NG_VALUE_ACCESSOR, function (p0_0) { return [p0_0]; }, [i9.FormComponent]), i0.ɵprd(512, null, i10.ValidatorRegistry, i10.ValidatorRegistry, []), i0.ɵprd(1024, null, i11.FormPropertyFactory, i9.useFactory, [i12.SchemaValidatorFactory, i10.ValidatorRegistry]), i0.ɵprd(512, null, i13.ActionRegistry, i13.ActionRegistry, []), i0.ɵprd(512, null, i14.TerminatorService, i14.TerminatorService, []), i0.ɵdid(15, 573440, null, 0, i9.FormComponent, [i11.FormPropertyFactory, i13.ActionRegistry, i10.ValidatorRegistry, i0.ChangeDetectorRef, i14.TerminatorService], { schema: [0, "schema"], model: [1, "model"], actions: [2, "actions"] }, null)], function (_ck, _v) { var _co = _v.component; var currVal_23 = _co.pageProp.data.formList[_v.context.$implicit].title; _ck(_v, 4, 0, currVal_23); var currVal_24 = _co.pageProp.data.formList[_v.context.$implicit].schema; var currVal_25 = _co.model; var currVal_26 = _co.sfFormActions; _ck(_v, 15, 0, currVal_24, currVal_25, currVal_26); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = i0.ɵinlineInterpolate(1, "", _co.pageProp.data.formList[_v.context.$implicit].containerClass, ""); _ck(_v, 0, 0, currVal_0); var currVal_1 = i0.ɵnov(_v, 2).xxsmall; var currVal_2 = i0.ɵnov(_v, 2).xsmall; var currVal_3 = i0.ɵnov(_v, 2).small; var currVal_4 = i0.ɵnov(_v, 2).medium; var currVal_5 = i0.ɵnov(_v, 2).large; var currVal_6 = i0.ɵnov(_v, 2).xlarge; var currVal_7 = i0.ɵnov(_v, 2).xxlarge; var currVal_8 = i0.ɵnov(_v, 2).active; var currVal_9 = i0.ɵnov(_v, 2).disabled; var currVal_10 = i0.ɵnov(_v, 2).primary; var currVal_11 = i0.ɵnov(_v, 2).info; var currVal_12 = i0.ɵnov(_v, 2).success; var currVal_13 = i0.ɵnov(_v, 2).warning; var currVal_14 = i0.ɵnov(_v, 2).danger; var currVal_15 = i0.ɵnov(_v, 2).hasAccent; var currVal_16 = i0.ɵnov(_v, 2).primaryAccent; var currVal_17 = i0.ɵnov(_v, 2).infoAccent; var currVal_18 = i0.ɵnov(_v, 2).successAccent; var currVal_19 = i0.ɵnov(_v, 2).warningAccent; var currVal_20 = i0.ɵnov(_v, 2).dangerAccent; var currVal_21 = i0.ɵnov(_v, 2).activeAccent; var currVal_22 = i0.ɵnov(_v, 2).disabledAccent; _ck(_v, 1, 1, [currVal_1, currVal_2, currVal_3, currVal_4, currVal_5, currVal_6, currVal_7, currVal_8, currVal_9, currVal_10, currVal_11, currVal_12, currVal_13, currVal_14, currVal_15, currVal_16, currVal_17, currVal_18, currVal_19, currVal_20, currVal_21, currVal_22]); }); }
 function View_SFFormWidget_0(_l) { return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, 0, null, null, 8, "div", [["class", "row"]], null, null, null, null, null)), (_l()(), i0.ɵeld(1, 0, null, null, 7, "div", [["class", "col-sm-12"]], null, null, null, null, null)), (_l()(), i0.ɵeld(2, 0, null, null, 6, "nb-card", [], [[2, "xxsmall-card", null], [2, "xsmall-card", null], [2, "small-card", null], [2, "medium-card", null], [2, "large-card", null], [2, "xlarge-card", null], [2, "xxlarge-card", null], [2, "active-card", null], [2, "disabled-card", null], [2, "primary-card", null], [2, "info-card", null], [2, "success-card", null], [2, "warning-card", null], [2, "danger-card", null], [2, "accent", null], [2, "accent-primary", null], [2, "accent-info", null], [2, "accent-success", null], [2, "accent-warning", null], [2, "accent-danger", null], [2, "accent-active", null], [2, "accent-disabled", null]], null, null, i1.View_NbCardComponent_0, i1.RenderType_NbCardComponent)), i0.ɵdid(3, 49152, null, 0, i2.NbCardComponent, [], null, null), (_l()(), i0.ɵeld(4, 0, null, 1, 4, "nb-card-body", [], null, null, null, i1.View_NbCardBodyComponent_0, i1.RenderType_NbCardBodyComponent)), i0.ɵdid(5, 49152, null, 0, i2.NbCardBodyComponent, [], null, null), (_l()(), i0.ɵeld(6, 0, null, 0, 2, "div", [["class", "row"]], null, null, null, null, null)), (_l()(), i0.ɵand(16777216, null, null, 1, null, View_SFFormWidget_1)), i0.ɵdid(8, 278528, null, 0, i3.NgForOf, [i0.ViewContainerRef, i0.TemplateRef, i0.IterableDiffers], { ngForOf: [0, "ngForOf"] }, null)], function (_ck, _v) { var _co = _v.component; var currVal_22 = _co.objectKeys(_co.pageProp.data.formList); _ck(_v, 8, 0, currVal_22); }, function (_ck, _v) { var currVal_0 = i0.ɵnov(_v, 3).xxsmall; var currVal_1 = i0.ɵnov(_v, 3).xsmall; var currVal_2 = i0.ɵnov(_v, 3).small; var currVal_3 = i0.ɵnov(_v, 3).medium; var currVal_4 = i0.ɵnov(_v, 3).large; var currVal_5 = i0.ɵnov(_v, 3).xlarge; var currVal_6 = i0.ɵnov(_v, 3).xxlarge; var currVal_7 = i0.ɵnov(_v, 3).active; var currVal_8 = i0.ɵnov(_v, 3).disabled; var currVal_9 = i0.ɵnov(_v, 3).primary; var currVal_10 = i0.ɵnov(_v, 3).info; var currVal_11 = i0.ɵnov(_v, 3).success; var currVal_12 = i0.ɵnov(_v, 3).warning; var currVal_13 = i0.ɵnov(_v, 3).danger; var currVal_14 = i0.ɵnov(_v, 3).hasAccent; var currVal_15 = i0.ɵnov(_v, 3).primaryAccent; var currVal_16 = i0.ɵnov(_v, 3).infoAccent; var currVal_17 = i0.ɵnov(_v, 3).successAccent; var currVal_18 = i0.ɵnov(_v, 3).warningAccent; var currVal_19 = i0.ɵnov(_v, 3).dangerAccent; var currVal_20 = i0.ɵnov(_v, 3).activeAccent; var currVal_21 = i0.ɵnov(_v, 3).disabledAccent; _ck(_v, 2, 1, [currVal_0, currVal_1, currVal_2, currVal_3, currVal_4, currVal_5, currVal_6, currVal_7, currVal_8, currVal_9, currVal_10, currVal_11, currVal_12, currVal_13, currVal_14, currVal_15, currVal_16, currVal_17, currVal_18, currVal_19, currVal_20, currVal_21]); }); }
 exports.View_SFFormWidget_0 = View_SFFormWidget_0;
-function View_SFFormWidget_Host_0(_l) { return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, 0, null, null, 1, "ns-sf-form-widget", [], null, null, null, View_SFFormWidget_0, RenderType_SFFormWidget)), i0.ɵdid(1, 49152, null, 0, i15.SFFormWidget, [], null, null)], null, null); }
+function View_SFFormWidget_Host_0(_l) { return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, 0, null, null, 1, "ns-sf-form-widget", [], null, null, null, View_SFFormWidget_0, RenderType_SFFormWidget)), i0.ɵdid(1, 311296, null, 0, i15.SFFormWidget, [], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
 exports.View_SFFormWidget_Host_0 = View_SFFormWidget_Host_0;
 var SFFormWidgetNgFactory = i0.ɵccf("ns-sf-form-widget", i15.SFFormWidget, View_SFFormWidget_Host_0, { pageProp: "pageProp" }, { onAction: "onAction" }, []);
 exports.SFFormWidgetNgFactory = SFFormWidgetNgFactory;
@@ -16533,31 +16533,51 @@ exports.SFFormWidgetNgFactory = SFFormWidgetNgFactory;
 
 "use strict";
 
+var __assign = (this && this.__assign) || Object.assign || function(t) {
+    for (var s, i = 1, n = arguments.length; i < n; i++) {
+        s = arguments[i];
+        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+            t[p] = s[p];
+    }
+    return t;
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = __webpack_require__(/*! @angular/core */ "@angular/core");
+var _ = __webpack_require__(/*! lodash */ "lodash");
 var SFFormWidget = /** @class */ (function () {
     function SFFormWidget() {
         var _this = this;
         this.onAction = new core_1.EventEmitter();
+        this.model = {};
+        this.oldModel = {};
         this.sfFormActions = {
             "submit": function (property, btnParams, button) {
-                _this.onAction.next(button);
+                console.log(property);
+                _this.onAction.next(__assign({ form: property }, button));
             },
             "reset": function (property, btnParams, button) {
-                _this.onAction.next(button);
+                _this.onAction.next(__assign({ form: property }, button));
             },
             "save": function (property, btnParams, button) {
-                _this.onAction.next(button);
+                _this.onAction.next(__assign({ form: property }, button));
             },
             "cancel": function (property, btnParams, button) {
-                _this.onAction.next(button);
+                _this.onAction.next(__assign({ form: property }, button));
             },
             "add": function (property, btnParams, button) {
-                _this.onAction.next(button);
+                _this.onAction.next(__assign({ form: property }, button));
             }
         };
         this.objectKeys = Object.keys;
     }
+    SFFormWidget.prototype.ngDoCheck = function () {
+        if (this.pageProp.data.formList['0'].mode && this.pageProp.data.formList['0'].mode === 'EDIT') {
+            if (!_.isEqual(this.oldModel, this.pageProp.data.formList['0'].model)) {
+                this.model = this.pageProp.data.formList['0'].model;
+                this.oldModel = _.cloneDeep(this.model);
+            }
+        }
+    };
     return SFFormWidget;
 }());
 exports.SFFormWidget = SFFormWidget;
@@ -19793,17 +19813,21 @@ var ApiDataProviderService = /** @class */ (function () {
         this.regexIdInPath = /\:id/;
         this.apiConfig = this.apiConfigReaderService.getConfig();
     }
+    ApiDataProviderService.prototype.getApi = function (url, id) {
+        if (this.regexIdInPath.test(url)) {
+            return url.replace(this.regexIdInPath, id);
+        }
+        else {
+            return url;
+        }
+    };
     ApiDataProviderService.prototype.createApi = function (entityKey) {
         this.entityKey = entityKey;
         return this;
     };
     ApiDataProviderService.prototype.getAll = function (id) {
         if (this.isMethodConfigExists) {
-            if (this.regexIdInPath.test(this.apiConfig[this.entityKey].getAll.url)) {
-                return this.httpClient.get(this.apiConfig[this.entityKey].getAll.url
-                    .replace(this.regexIdInPath, id));
-            }
-            return this.httpClient.get(this.apiConfig[this.entityKey].getAll.url);
+            return this.httpClient.get(this.getApi(this.apiConfig[this.entityKey].getAll.url, id));
         }
     };
     ApiDataProviderService.prototype.getById = function (id) {
@@ -19818,18 +19842,24 @@ var ApiDataProviderService = /** @class */ (function () {
     };
     ApiDataProviderService.prototype.create = function (payload) {
         if (this.isMethodConfigExists) {
-            var reqPayload = this.apiDataCleanerService.cleanForCreate(this.apiConfig[this.entityKey].create.model, payload);
-            return this.httpClient.post(this.apiConfig[this.entityKey].create.url, reqPayload);
+            // const reqPayload = this.apiDataCleanerService.cleanForCreate(this.apiConfig[this.entityKey].create.model, payload);
+            return this.httpClient.post(this.apiConfig[this.entityKey].create.url, payload);
         }
     };
-    ApiDataProviderService.prototype.update = function () {
+    ApiDataProviderService.prototype.createById = function (payload, id) {
         if (this.isMethodConfigExists) {
-            return this.httpClient.get(this.apiConfig[this.entityKey].update.url);
+            // const reqPayload = this.apiDataCleanerService.cleanForCreate(this.apiConfig[this.entityKey].create.model, payload);
+            return this.httpClient.post(this.getApi(this.apiConfig[this.entityKey].createById.url, id), payload);
         }
     };
-    ApiDataProviderService.prototype.delete = function () {
+    ApiDataProviderService.prototype.update = function (payload, id) {
         if (this.isMethodConfigExists) {
-            return this.httpClient.get(this.apiConfig[this.entityKey].delete.url);
+            return this.httpClient.put(this.getApi(this.apiConfig[this.entityKey].update.url, id), payload);
+        }
+    };
+    ApiDataProviderService.prototype.delete = function (id) {
+        if (this.isMethodConfigExists) {
+            return this.httpClient.delete(this.getApi(this.apiConfig[this.entityKey].delete.url, id));
         }
     };
     ApiDataProviderService.prototype.isMethodConfigExists = function (methodName) {
@@ -22639,20 +22669,22 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var i0 = __webpack_require__(/*! @angular/core */ "@angular/core");
 var i1 = __webpack_require__(/*! @ngx-translate/core */ "@ngx-translate/core");
 var i2 = __webpack_require__(/*! @angular/common */ "@angular/common");
-var i3 = __webpack_require__(/*! ./ngx-detail-view.component */ "./src/app/common/components/detail-view/ngx-detail-view.component.ts");
+var i3 = __webpack_require__(/*! ../../pipes/checkmark/checkMark.pipe */ "./src/app/common/pipes/checkmark/checkMark.pipe.ts");
+var i4 = __webpack_require__(/*! ./ngx-detail-view.component */ "./src/app/common/components/detail-view/ngx-detail-view.component.ts");
 var styles_NgxDetailViewComponent = ["td[_ngcontent-%COMP%]{\n        border-top: unset;\n      }"];
 var RenderType_NgxDetailViewComponent = i0.ɵcrt({ encapsulation: 0, styles: styles_NgxDetailViewComponent, data: {} });
 exports.RenderType_NgxDetailViewComponent = RenderType_NgxDetailViewComponent;
 function View_NgxDetailViewComponent_2(_l) { return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, 0, null, null, 5, null, null, null, null, null, null, null)), (_l()(), i0.ɵeld(1, 0, null, null, 2, "td", [], null, null, null, null, null)), (_l()(), i0.ɵted(2, null, ["", ""])), i0.ɵpid(131072, i1.TranslatePipe, [i1.TranslateService, i0.ChangeDetectorRef]), (_l()(), i0.ɵeld(4, 0, null, null, 1, "td", [], null, null, null, null, null)), (_l()(), i0.ɵted(5, null, ["", ""]))], null, function (_ck, _v) { var currVal_0 = i0.ɵunv(_v, 2, 0, i0.ɵnov(_v, 3).transform(_v.parent.context.$implicit.title)); _ck(_v, 2, 0, currVal_0); var currVal_1 = _v.parent.context.$implicit.value; _ck(_v, 5, 0, currVal_1); }); }
-function View_NgxDetailViewComponent_1(_l) { return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, 0, null, null, 3, "tr", [], null, null, null, null, null)), i0.ɵdid(1, 16384, null, 0, i2.NgSwitch, [], { ngSwitch: [0, "ngSwitch"] }, null), (_l()(), i0.ɵand(16777216, null, null, 1, null, View_NgxDetailViewComponent_2)), i0.ɵdid(3, 278528, null, 0, i2.NgSwitchCase, [i0.ViewContainerRef, i0.TemplateRef, i2.NgSwitch], { ngSwitchCase: [0, "ngSwitchCase"] }, null)], function (_ck, _v) { var currVal_0 = _v.context.$implicit.type; _ck(_v, 1, 0, currVal_0); var currVal_1 = "string"; _ck(_v, 3, 0, currVal_1); }, null); }
-function View_NgxDetailViewComponent_0(_l) { return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, 0, null, null, 9, "table", [["class", "table"]], null, null, null, null, null)), (_l()(), i0.ɵeld(1, 0, null, null, 8, "tbody", [], null, null, null, null, null)), (_l()(), i0.ɵeld(2, 0, null, null, 5, "tr", [["style", "border-bottom: 1px solid #dee2e6;"]], null, null, null, null, null)), (_l()(), i0.ɵeld(3, 0, null, null, 0, "td", [], null, null, null, null, null)), (_l()(), i0.ɵeld(4, 0, null, null, 3, "td", [["style", "text-align: left;"]], null, null, null, null, null)), (_l()(), i0.ɵeld(5, 0, null, null, 2, "button", [["class", "btn btn-light btn-sm"], ["style", "color:#212529;"]], null, [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
+function View_NgxDetailViewComponent_3(_l) { return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, 0, null, null, 6, null, null, null, null, null, null, null)), (_l()(), i0.ɵeld(1, 0, null, null, 2, "td", [], null, null, null, null, null)), (_l()(), i0.ɵted(2, null, ["", ""])), i0.ɵpid(131072, i1.TranslatePipe, [i1.TranslateService, i0.ChangeDetectorRef]), (_l()(), i0.ɵeld(4, 0, null, null, 2, "td", [], null, null, null, null, null)), (_l()(), i0.ɵted(5, null, ["", ""])), i0.ɵppd(6, 1)], null, function (_ck, _v) { var currVal_0 = i0.ɵunv(_v, 2, 0, i0.ɵnov(_v, 3).transform(_v.parent.context.$implicit.title)); _ck(_v, 2, 0, currVal_0); var currVal_1 = i0.ɵunv(_v, 5, 0, _ck(_v, 6, 0, i0.ɵnov(_v.parent.parent, 0), _v.parent.context.$implicit.value)); _ck(_v, 5, 0, currVal_1); }); }
+function View_NgxDetailViewComponent_1(_l) { return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, 0, null, null, 5, "tr", [], null, null, null, null, null)), i0.ɵdid(1, 16384, null, 0, i2.NgSwitch, [], { ngSwitch: [0, "ngSwitch"] }, null), (_l()(), i0.ɵand(16777216, null, null, 1, null, View_NgxDetailViewComponent_2)), i0.ɵdid(3, 278528, null, 0, i2.NgSwitchCase, [i0.ViewContainerRef, i0.TemplateRef, i2.NgSwitch], { ngSwitchCase: [0, "ngSwitchCase"] }, null), (_l()(), i0.ɵand(16777216, null, null, 1, null, View_NgxDetailViewComponent_3)), i0.ɵdid(5, 278528, null, 0, i2.NgSwitchCase, [i0.ViewContainerRef, i0.TemplateRef, i2.NgSwitch], { ngSwitchCase: [0, "ngSwitchCase"] }, null)], function (_ck, _v) { var currVal_0 = _v.context.$implicit.type; _ck(_v, 1, 0, currVal_0); var currVal_1 = "string"; _ck(_v, 3, 0, currVal_1); var currVal_2 = "bool"; _ck(_v, 5, 0, currVal_2); }, null); }
+function View_NgxDetailViewComponent_0(_l) { return i0.ɵvid(0, [i0.ɵpid(0, i3.CheckMarkPipe, []), (_l()(), i0.ɵeld(1, 0, null, null, 9, "table", [["class", "table"]], null, null, null, null, null)), (_l()(), i0.ɵeld(2, 0, null, null, 8, "tbody", [], null, null, null, null, null)), (_l()(), i0.ɵeld(3, 0, null, null, 5, "tr", [["style", "border-bottom: 1px solid #dee2e6;"]], null, null, null, null, null)), (_l()(), i0.ɵeld(4, 0, null, null, 0, "td", [], null, null, null, null, null)), (_l()(), i0.ɵeld(5, 0, null, null, 3, "td", [["style", "text-align: left;"]], null, null, null, null, null)), (_l()(), i0.ɵeld(6, 0, null, null, 2, "button", [["class", "btn btn-light btn-sm"], ["style", "color:#212529;"]], null, [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
         var pd_0 = (_co.onBackClick($event) !== false);
         ad = (pd_0 && ad);
-    } return ad; }, null, null)), (_l()(), i0.ɵted(6, null, ["", ""])), i0.ɵpid(131072, i1.TranslatePipe, [i1.TranslateService, i0.ChangeDetectorRef]), (_l()(), i0.ɵand(16777216, null, null, 1, null, View_NgxDetailViewComponent_1)), i0.ɵdid(9, 278528, null, 0, i2.NgForOf, [i0.ViewContainerRef, i0.TemplateRef, i0.IterableDiffers], { ngForOf: [0, "ngForOf"], ngForTrackBy: [1, "ngForTrackBy"] }, null)], function (_ck, _v) { var _co = _v.component; var currVal_1 = _co.fields; var currVal_2 = _co.field; _ck(_v, 9, 0, currVal_1, currVal_2); }, function (_ck, _v) { var currVal_0 = i0.ɵunv(_v, 6, 0, i0.ɵnov(_v, 7).transform("Buttons.Back")); _ck(_v, 6, 0, currVal_0); }); }
+    } return ad; }, null, null)), (_l()(), i0.ɵted(7, null, ["", ""])), i0.ɵpid(131072, i1.TranslatePipe, [i1.TranslateService, i0.ChangeDetectorRef]), (_l()(), i0.ɵand(16777216, null, null, 1, null, View_NgxDetailViewComponent_1)), i0.ɵdid(10, 278528, null, 0, i2.NgForOf, [i0.ViewContainerRef, i0.TemplateRef, i0.IterableDiffers], { ngForOf: [0, "ngForOf"], ngForTrackBy: [1, "ngForTrackBy"] }, null)], function (_ck, _v) { var _co = _v.component; var currVal_1 = _co.fields; var currVal_2 = _co.field; _ck(_v, 10, 0, currVal_1, currVal_2); }, function (_ck, _v) { var currVal_0 = i0.ɵunv(_v, 7, 0, i0.ɵnov(_v, 8).transform("Buttons.Back")); _ck(_v, 7, 0, currVal_0); }); }
 exports.View_NgxDetailViewComponent_0 = View_NgxDetailViewComponent_0;
-function View_NgxDetailViewComponent_Host_0(_l) { return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, 0, null, null, 1, "ngx-detail-view-component", [], null, null, null, View_NgxDetailViewComponent_0, RenderType_NgxDetailViewComponent)), i0.ɵdid(1, 376832, null, 0, i3.NgxDetailViewComponent, [i0.ChangeDetectorRef], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
+function View_NgxDetailViewComponent_Host_0(_l) { return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, 0, null, null, 1, "ngx-detail-view-component", [], null, null, null, View_NgxDetailViewComponent_0, RenderType_NgxDetailViewComponent)), i0.ɵdid(1, 376832, null, 0, i4.NgxDetailViewComponent, [i0.ChangeDetectorRef], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
 exports.View_NgxDetailViewComponent_Host_0 = View_NgxDetailViewComponent_Host_0;
-var NgxDetailViewComponentNgFactory = i0.ɵccf("ngx-detail-view-component", i3.NgxDetailViewComponent, View_NgxDetailViewComponent_Host_0, { fields: "fields", model: "model" }, { onAction: "onAction" }, []);
+var NgxDetailViewComponentNgFactory = i0.ɵccf("ngx-detail-view-component", i4.NgxDetailViewComponent, View_NgxDetailViewComponent_Host_0, { fields: "fields", model: "model" }, { onAction: "onAction" }, []);
 exports.NgxDetailViewComponentNgFactory = NgxDetailViewComponentNgFactory;
 
 
@@ -22726,7 +22758,7 @@ var NgxDetailViewComponent = /** @class */ (function () {
     NgxDetailViewComponent.prototype.processData = function (fields, data) {
         var _this = this;
         fields.forEach(function (field) {
-            field.value = _this.getValue(data, field.prop) || '-';
+            field.value = _this.getValue(data, field.prop);
         });
     };
     NgxDetailViewComponent.prototype.ngDoCheck = function () {
@@ -22981,16 +23013,19 @@ var i0 = __webpack_require__(/*! @angular/core */ "@angular/core");
 var i1 = __webpack_require__(/*! @ngx-translate/core */ "@ngx-translate/core");
 var i2 = __webpack_require__(/*! ./confirm.modal */ "./src/app/common/modals/confirm/confirm.modal.ts");
 var i3 = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "@ng-bootstrap/ng-bootstrap");
-var styles_ConfirmModal = [".modal-header[_ngcontent-%COMP%]{\n        text-align: right;\n        h6{\n          text-alight: right;\n        }\n        button{\n          margin-left: 0 !important;\n        }\n      }\n\n      .modal-body[_ngcontent-%COMP%]{\n        p{\n          text-align: right;\n        }\n      }"];
+var styles_ConfirmModal = [".modal-header[_ngcontent-%COMP%]{\n        text-align: right;\n        h6{\n          text-alight: right;\n        }\n        button{\n          margin-left: 0 !important;\n        }\n      }\n\n      .modal-body[_ngcontent-%COMP%]{\n        p{\n          text-align: right;\n        }\n      }\n      .modal-footer[_ngcontent-%COMP%]{\n        justify-content: space-between;\n      }"];
 var RenderType_ConfirmModal = i0.ɵcrt({ encapsulation: 0, styles: styles_ConfirmModal, data: {} });
 exports.RenderType_ConfirmModal = RenderType_ConfirmModal;
 function View_ConfirmModal_0(_l) { return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, 0, null, null, 6, "div", [["class", "modal-header"]], null, null, null, null, null)), (_l()(), i0.ɵeld(1, 0, null, null, 2, "button", [["aria-label", "Close"], ["class", "close"], ["style", "margin-left:0"], ["type", "button"]], null, [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
         var pd_0 = (_co.onDismiss($event) !== false);
         ad = (pd_0 && ad);
-    } return ad; }, null, null)), (_l()(), i0.ɵeld(2, 0, null, null, 1, "span", [["aria-hidden", "true"]], null, null, null, null, null)), (_l()(), i0.ɵted(-1, null, ["\u00D7"])), (_l()(), i0.ɵeld(4, 0, null, null, 2, "h6", [["class", "modal-title"]], null, null, null, null, null)), (_l()(), i0.ɵted(5, null, ["", ""])), i0.ɵpid(131072, i1.TranslatePipe, [i1.TranslateService, i0.ChangeDetectorRef]), (_l()(), i0.ɵeld(7, 0, null, null, 3, "div", [["class", "modal-body"]], null, null, null, null, null)), (_l()(), i0.ɵeld(8, 0, null, null, 2, "p", [["style", "text-align: right"]], null, null, null, null, null)), (_l()(), i0.ɵted(9, null, ["", ""])), i0.ɵpid(131072, i1.TranslatePipe, [i1.TranslateService, i0.ChangeDetectorRef]), (_l()(), i0.ɵeld(11, 0, null, null, 3, "div", [["class", "modal-footer"]], null, null, null, null, null)), (_l()(), i0.ɵeld(12, 0, null, null, 2, "button", [["class", "btn btn-danger btn-sm"], ["type", "button"]], null, [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
+    } return ad; }, null, null)), (_l()(), i0.ɵeld(2, 0, null, null, 1, "span", [["aria-hidden", "true"]], null, null, null, null, null)), (_l()(), i0.ɵted(-1, null, ["\u00D7"])), (_l()(), i0.ɵeld(4, 0, null, null, 2, "h6", [["class", "modal-title"]], null, null, null, null, null)), (_l()(), i0.ɵted(5, null, ["", ""])), i0.ɵpid(131072, i1.TranslatePipe, [i1.TranslateService, i0.ChangeDetectorRef]), (_l()(), i0.ɵeld(7, 0, null, null, 3, "div", [["class", "modal-body"]], null, null, null, null, null)), (_l()(), i0.ɵeld(8, 0, null, null, 2, "p", [["style", "text-align: right"]], null, null, null, null, null)), (_l()(), i0.ɵted(9, null, ["", ""])), i0.ɵpid(131072, i1.TranslatePipe, [i1.TranslateService, i0.ChangeDetectorRef]), (_l()(), i0.ɵeld(11, 0, null, null, 6, "div", [["class", "modal-footer"]], null, null, null, null, null)), (_l()(), i0.ɵeld(12, 0, null, null, 2, "button", [["class", "btn btn-light btn-sm"], ["style", "color:#181818"], ["type", "button"]], null, [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
+        var pd_0 = (_co.onDismiss($event) !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, null, null)), (_l()(), i0.ɵted(13, null, ["", ""])), i0.ɵpid(131072, i1.TranslatePipe, [i1.TranslateService, i0.ChangeDetectorRef]), (_l()(), i0.ɵeld(15, 0, null, null, 2, "button", [["class", "btn btn-danger btn-sm"], ["type", "button"]], null, [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
         var pd_0 = (_co.onClose($event) !== false);
         ad = (pd_0 && ad);
-    } return ad; }, null, null)), (_l()(), i0.ɵted(13, null, ["", ""])), i0.ɵpid(131072, i1.TranslatePipe, [i1.TranslateService, i0.ChangeDetectorRef])], null, function (_ck, _v) { var currVal_0 = i0.ɵunv(_v, 5, 0, i0.ɵnov(_v, 6).transform("Buttons.Delete")); _ck(_v, 5, 0, currVal_0); var currVal_1 = i0.ɵunv(_v, 9, 0, i0.ɵnov(_v, 10).transform("Messages.ConfirmToDelete")); _ck(_v, 9, 0, currVal_1); var currVal_2 = i0.ɵunv(_v, 13, 0, i0.ɵnov(_v, 14).transform("Buttons.Delete")); _ck(_v, 13, 0, currVal_2); }); }
+    } return ad; }, null, null)), (_l()(), i0.ɵted(16, null, ["", ""])), i0.ɵpid(131072, i1.TranslatePipe, [i1.TranslateService, i0.ChangeDetectorRef])], null, function (_ck, _v) { var currVal_0 = i0.ɵunv(_v, 5, 0, i0.ɵnov(_v, 6).transform("Buttons.Delete")); _ck(_v, 5, 0, currVal_0); var currVal_1 = i0.ɵunv(_v, 9, 0, i0.ɵnov(_v, 10).transform("Messages.ConfirmToDelete")); _ck(_v, 9, 0, currVal_1); var currVal_2 = i0.ɵunv(_v, 13, 0, i0.ɵnov(_v, 14).transform("Buttons.Cancel")); _ck(_v, 13, 0, currVal_2); var currVal_3 = i0.ɵunv(_v, 16, 0, i0.ɵnov(_v, 17).transform("Buttons.Delete")); _ck(_v, 16, 0, currVal_3); }); }
 exports.View_ConfirmModal_0 = View_ConfirmModal_0;
 function View_ConfirmModal_Host_0(_l) { return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, 0, null, null, 1, "confirm-modal", [], null, null, null, View_ConfirmModal_0, RenderType_ConfirmModal)), i0.ɵdid(1, 49152, null, 0, i2.ConfirmModal, [i3.NgbActiveModal], null, null)], null, null); }
 exports.View_ConfirmModal_Host_0 = View_ConfirmModal_Host_0;
@@ -23017,7 +23052,7 @@ var ConfirmModalService = /** @class */ (function () {
         this.modalService = modalService;
     }
     ConfirmModalService.prototype.open = function (data, config) {
-        if (config === void 0) { config = { size: 'sm' }; }
+        if (config === void 0) { config = { size: 'sm', backdrop: 'static' }; }
         var modalRef = this.modalService.open(confirm_modal_1.ConfirmModal, config);
         return modalRef;
     };
@@ -23044,7 +23079,7 @@ var ConfirmModal = /** @class */ (function () {
         this.activeModal = activeModal;
     }
     ConfirmModal.prototype.onClose = function (evt) {
-        this.activeModal.close('onClose');
+        this.activeModal.close('onDelete');
     };
     ConfirmModal.prototype.onDismiss = function (evt) {
         this.activeModal.close('onDismiss');
@@ -23165,6 +23200,17 @@ exports.DevelopmentConfigConst = {
         },
     },
 };
+// export const DevelopmentConfigConst = {
+//   server: {
+//     host: 'http://mysterious-headland-82408.herokuapp.com',
+//     port: '80',
+//     baseApi: '/demo/api',
+//     get serverBaseURL() {
+//       return `${this.host}:${this.port}${this.baseApi}`
+//     },
+//   },
+// }
+// ;
 
 
 /***/ }),
@@ -23257,7 +23303,7 @@ var NotificationInterceptor = /** @class */ (function () {
                         isUrlException_1 = true;
                     }
                 });
-                if (!isUrlException_1) {
+                if (!isUrlException_1 && request.method !== 'GET') {
                     _this.popNotification('با موفقیت انجام شد', event.body.message);
                 }
             }
@@ -23343,13 +23389,14 @@ var i4 = __webpack_require__(/*! ./crud-add.component */ "./src/app/pages/crud/a
 var i5 = __webpack_require__(/*! @angular/router */ "@angular/router");
 var i6 = __webpack_require__(/*! ../../../sp.service */ "./src/app/sp.service.ts");
 var i7 = __webpack_require__(/*! ../../../@core/ngx-schema-page/ngx-schema-page.service */ "./src/app/@core/ngx-schema-page/ngx-schema-page.service.ts");
+var i8 = __webpack_require__(/*! ../../../@core/services/api/api-data-provider.service */ "./src/app/@core/services/api/api-data-provider.service.ts");
 var styles_CrudAddComponent = [];
 var RenderType_CrudAddComponent = i0.ɵcrt({ encapsulation: 2, styles: styles_CrudAddComponent, data: {} });
 exports.RenderType_CrudAddComponent = RenderType_CrudAddComponent;
 function View_CrudAddComponent_1(_l) { return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, 0, null, null, 1, "ngx-schema-page", [], null, null, null, i1.View_NgxSchemaPageComponent_0, i1.RenderType_NgxSchemaPageComponent)), i0.ɵdid(1, 573440, null, 0, i2.NgxSchemaPageComponent, [], { schema: [0, "schema"] }, null)], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.addPageSchema; _ck(_v, 1, 0, currVal_0); }, null); }
 function View_CrudAddComponent_0(_l) { return i0.ɵvid(0, [(_l()(), i0.ɵand(16777216, null, null, 1, null, View_CrudAddComponent_1)), i0.ɵdid(1, 16384, null, 0, i3.NgIf, [i0.ViewContainerRef, i0.TemplateRef], { ngIf: [0, "ngIf"] }, null)], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.addPageSchema; _ck(_v, 1, 0, currVal_0); }, null); }
 exports.View_CrudAddComponent_0 = View_CrudAddComponent_0;
-function View_CrudAddComponent_Host_0(_l) { return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, 0, null, null, 1, "crud-add-component", [], null, null, null, View_CrudAddComponent_0, RenderType_CrudAddComponent)), i0.ɵdid(1, 180224, null, 0, i4.CrudAddComponent, [i5.ActivatedRoute, i6.SPService, i7.NgxSchemaPageService, i5.Router], null, null)], null, null); }
+function View_CrudAddComponent_Host_0(_l) { return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, 0, null, null, 1, "crud-add-component", [], null, null, null, View_CrudAddComponent_0, RenderType_CrudAddComponent)), i0.ɵdid(1, 180224, null, 0, i4.CrudAddComponent, [i5.ActivatedRoute, i6.SPService, i7.NgxSchemaPageService, i5.Router, i8.ApiDataProviderService], null, null)], null, null); }
 exports.View_CrudAddComponent_Host_0 = View_CrudAddComponent_Host_0;
 var CrudAddComponentNgFactory = i0.ɵccf("crud-add-component", i4.CrudAddComponent, View_CrudAddComponent_Host_0, {}, {}, []);
 exports.CrudAddComponentNgFactory = CrudAddComponentNgFactory;
@@ -23371,21 +23418,28 @@ var sp_service_1 = __webpack_require__(/*! ./../../../sp.service */ "./src/app/s
 var router_1 = __webpack_require__(/*! @angular/router */ "@angular/router");
 var core_1 = __webpack_require__(/*! @angular/core */ "@angular/core");
 var ngx_schema_page_service_1 = __webpack_require__(/*! ../../../@core/ngx-schema-page/ngx-schema-page.service */ "./src/app/@core/ngx-schema-page/ngx-schema-page.service.ts");
+var api_data_provider_service_1 = __webpack_require__(/*! ../../../@core/services/api/api-data-provider.service */ "./src/app/@core/services/api/api-data-provider.service.ts");
 var CrudAddComponent = /** @class */ (function () {
-    function CrudAddComponent(activatedRoute, spService, ngxSchemaPageService, router) {
+    function CrudAddComponent(activatedRoute, spService, ngxSchemaPageService, router, apiDataProviderService) {
         var _this = this;
         this.activatedRoute = activatedRoute;
         this.spService = spService;
         this.ngxSchemaPageService = ngxSchemaPageService;
         this.router = router;
+        this.apiDataProviderService = apiDataProviderService;
         this.ngxSchemaPageActionMap = {};
         this.initActionMap();
-        this.activatedRoute.params.subscribe(function (res) {
-            _this.entity = res.entity;
+        this.activatedRoute.params.subscribe(function (params) {
+            _this.entity = params.entity;
             _this.addPageSchema = undefined;
             _this.spService.getPageSchema('crud', 'add', _this.entity).subscribe(function (res) {
                 _this.addPageSchema = res;
             });
+        });
+        this.activatedRoute.queryParams.subscribe(function (queryParams) {
+            if (queryParams && queryParams.parent) {
+                _this.parentParams = JSON.parse(queryParams.parent);
+            }
         });
         this.ngxSchemaPageActionObservable = this.ngxSchemaPageService.onAction$.subscribe(function (evt) {
             _this.ngxSchemaPageActionMap[evt.actionKey](evt);
@@ -23394,25 +23448,43 @@ var CrudAddComponent = /** @class */ (function () {
     CrudAddComponent.prototype.ngOnDestroy = function () {
         this.ngxSchemaPageActionObservable.unsubscribe();
     };
+    CrudAddComponent.prototype.goBack = function (data) {
+        if (this.entity === 'groupContacts' || this.entity === 'privateGroupContacts') {
+            this.router.navigateByUrl("/pages/crud/list/" + this.entity + "?parent=" + JSON.stringify({ entity: this.entity, id: this.parentParams.id }) + "&datatable=" + JSON.stringify({ id: data.id, init: false }));
+        }
+        else {
+            this.router.navigateByUrl("/pages/crud/list/" + this.entity);
+        }
+    };
     CrudAddComponent.prototype.initActionMap = function () {
         var _this = this;
         this.ngxSchemaPageActionMap = {
             'SFFORM_SUBMIT': function (data) {
-                console.log('onSubmit', data);
+                if (data.form.valid) {
+                    if (_this.entity === 'groupContacts' || _this.entity === 'privateGroupContacts') {
+                        _this.apiDataProviderService.createApi(data.btnAction.options.entity)
+                            .createById(data.form.value, _this.parentParams.id)
+                            .subscribe(function (res) {
+                            _this.goBack(data);
+                        });
+                    }
+                    else {
+                        _this.apiDataProviderService.createApi(data.btnAction.options.entity)
+                            .create(data.form.value)
+                            .subscribe(function (res) {
+                            _this.goBack(data);
+                        });
+                    }
+                }
             },
             'SFFORM_RESET': function (data) {
-                console.log('onReset', data);
+                data.form.reset();
             },
             'SFFORM_SAVE': function (data) {
                 console.log('onsave', data);
             },
             'SFFORM_CANCEL': function (data) {
-                if (_this.entity === 'groupContacts' || _this.entity === 'privateGroupContacts') {
-                    _this.router.navigateByUrl("/pages/crud/list/" + _this.entity + "?parent=" + _this.entity + "&datatable=" + JSON.stringify({ id: data.id, init: false }));
-                }
-                else {
-                    _this.router.navigateByUrl("/pages/crud/list/" + _this.entity);
-                }
+                _this.goBack(data);
             },
             'SFFORM_ADD': function (data) {
                 console.log('onAdd', data);
@@ -23810,11 +23882,16 @@ var CrudDetailComponent = /** @class */ (function () {
             _this.detailPageSchema = undefined;
             _this.spService.getPageSchema('crud', 'detail', _this.entity).subscribe(function (res) {
                 _this.detailPageSchema = res;
-                var widget = _this.spService.getWidgetById('discountDetailView');
-                _this.apiDataProviderService.createApi('discounts').getById(_this.entityId).subscribe(function (res) {
+                var widget = _this.spService.getWidgetById('DetailView');
+                _this.apiDataProviderService.createApi(_this.entity).getById(_this.entityId).subscribe(function (res) {
                     widget.data.model = res;
                 });
             });
+        });
+        this.activatedRoute.queryParams.subscribe(function (queryParams) {
+            if (queryParams && queryParams.parent) {
+                _this.parentParams = JSON.parse(queryParams.parent);
+            }
         });
         this.ngxSchemaPageActionObservable = this.ngxSchemaPageService.onAction$.subscribe(function (evt) {
             _this.ngxSchemaPageActionMap[evt.actionKey](evt);
@@ -23823,27 +23900,9 @@ var CrudDetailComponent = /** @class */ (function () {
     CrudDetailComponent.prototype.initActionMap = function () {
         var _this = this;
         this.ngxSchemaPageActionMap = {
-            'DATATABLE_ADD': function (data) {
-                _this.router.navigateByUrl("/pages/crud/add/" + _this.entity);
-            },
-            'DATATABLE_DETAIL': function (data) {
-                _this.router.navigateByUrl("/pages/crud/detail/" + _this.entity);
-            },
-            'DATATABLE_EDIT': function (data) {
-                _this.router.navigateByUrl("/pages/crud/edit/" + _this.entity);
-            },
-            'DATATABLE_REMOVE': function (data) {
-                _this.confirmModalService.open({}).result.then(function (evt) {
-                    console.log(evt);
-                });
-            },
-            'DATATABLE_CLONE': function (data) {
-            },
-            'DATATABLE_CUSTOM': function (data) {
-            },
             'DETAIL_VIEW_BACK': function (data) {
                 if (_this.entity === 'groupContacts' || _this.entity === 'privateGroupContacts') {
-                    _this.router.navigateByUrl("/pages/crud/list/" + _this.entity + "?parent=" + _this.entity + "&datatable=" + JSON.stringify({ id: data.id, init: false }));
+                    _this.router.navigateByUrl("/pages/crud/list/" + _this.entity + "?parent=" + JSON.stringify({ entity: _this.entity, id: _this.parentParams.id }) + "&datatable=" + JSON.stringify({ id: data.id, init: false }));
                 }
                 else {
                     _this.router.navigateByUrl("/pages/crud/list/" + _this.entity);
@@ -23885,13 +23944,14 @@ var i4 = __webpack_require__(/*! ./crud.edit.component */ "./src/app/pages/crud/
 var i5 = __webpack_require__(/*! @angular/router */ "@angular/router");
 var i6 = __webpack_require__(/*! ../../../sp.service */ "./src/app/sp.service.ts");
 var i7 = __webpack_require__(/*! ../../../@core/ngx-schema-page/ngx-schema-page.service */ "./src/app/@core/ngx-schema-page/ngx-schema-page.service.ts");
+var i8 = __webpack_require__(/*! ../../../@core/services/api/api-data-provider.service */ "./src/app/@core/services/api/api-data-provider.service.ts");
 var styles_CrudEditComponent = [];
 var RenderType_CrudEditComponent = i0.ɵcrt({ encapsulation: 2, styles: styles_CrudEditComponent, data: {} });
 exports.RenderType_CrudEditComponent = RenderType_CrudEditComponent;
 function View_CrudEditComponent_1(_l) { return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, 0, null, null, 1, "ngx-schema-page", [], null, null, null, i1.View_NgxSchemaPageComponent_0, i1.RenderType_NgxSchemaPageComponent)), i0.ɵdid(1, 573440, null, 0, i2.NgxSchemaPageComponent, [], { schema: [0, "schema"] }, null)], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.editPageSchema; _ck(_v, 1, 0, currVal_0); }, null); }
 function View_CrudEditComponent_0(_l) { return i0.ɵvid(0, [(_l()(), i0.ɵand(16777216, null, null, 1, null, View_CrudEditComponent_1)), i0.ɵdid(1, 16384, null, 0, i3.NgIf, [i0.ViewContainerRef, i0.TemplateRef], { ngIf: [0, "ngIf"] }, null)], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.editPageSchema; _ck(_v, 1, 0, currVal_0); }, null); }
 exports.View_CrudEditComponent_0 = View_CrudEditComponent_0;
-function View_CrudEditComponent_Host_0(_l) { return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, 0, null, null, 1, "crud-edit-component", [], null, null, null, View_CrudEditComponent_0, RenderType_CrudEditComponent)), i0.ɵdid(1, 49152, null, 0, i4.CrudEditComponent, [i5.ActivatedRoute, i6.SPService, i7.NgxSchemaPageService, i5.Router], null, null)], null, null); }
+function View_CrudEditComponent_Host_0(_l) { return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, 0, null, null, 1, "crud-edit-component", [], null, null, null, View_CrudEditComponent_0, RenderType_CrudEditComponent)), i0.ɵdid(1, 49152, null, 0, i4.CrudEditComponent, [i5.ActivatedRoute, i6.SPService, i7.NgxSchemaPageService, i5.Router, i8.ApiDataProviderService], null, null)], null, null); }
 exports.View_CrudEditComponent_Host_0 = View_CrudEditComponent_Host_0;
 var CrudEditComponentNgFactory = i0.ɵccf("crud-edit-component", i4.CrudEditComponent, View_CrudEditComponent_Host_0, {}, {}, []);
 exports.CrudEditComponentNgFactory = CrudEditComponentNgFactory;
@@ -23912,51 +23972,66 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var sp_service_1 = __webpack_require__(/*! ./../../../sp.service */ "./src/app/sp.service.ts");
 var router_1 = __webpack_require__(/*! @angular/router */ "@angular/router");
 var ngx_schema_page_service_1 = __webpack_require__(/*! ../../../@core/ngx-schema-page/ngx-schema-page.service */ "./src/app/@core/ngx-schema-page/ngx-schema-page.service.ts");
+var api_data_provider_service_1 = __webpack_require__(/*! ../../../@core/services/api/api-data-provider.service */ "./src/app/@core/services/api/api-data-provider.service.ts");
 var CrudEditComponent = /** @class */ (function () {
-    function CrudEditComponent(activatedRoute, spService, ngxSchemaPageService, router) {
+    function CrudEditComponent(activatedRoute, spService, ngxSchemaPageService, router, apiDataProviderService) {
         var _this = this;
         this.activatedRoute = activatedRoute;
         this.spService = spService;
         this.ngxSchemaPageService = ngxSchemaPageService;
         this.router = router;
+        this.apiDataProviderService = apiDataProviderService;
         this.ngxSchemaPageActionMap = {};
         this.initActionMap();
-        this.activatedRoute.params.subscribe(function (res) {
-            _this.entity = res.entity;
+        this.activatedRoute.params.subscribe(function (params) {
+            _this.entity = params.entity;
+            _this.entityId = params.id;
             _this.editPageSchema = undefined;
             _this.spService.getPageSchema('crud', 'edit', _this.entity).subscribe(function (res) {
                 _this.editPageSchema = res;
+                var widget = _this.spService.getWidgetById('EDIT_FORM');
+                _this.apiDataProviderService.createApi(_this.entity).getById(_this.entityId).subscribe(function (res) {
+                    widget.data.formList["0"].model = res;
+                });
             });
         });
+        this.activatedRoute.queryParams.subscribe(function (queryParams) {
+            if (queryParams && queryParams.parent) {
+                _this.parentParams = JSON.parse(queryParams.parent);
+            }
+        });
         this.ngxSchemaPageActionObservable = this.ngxSchemaPageService.onAction$.subscribe(function (evt) {
-            _this.ngxSchemaPageActionMap[evt.actionKey](evt);
+            if (_this.ngxSchemaPageActionMap[evt.actionKey]) {
+                _this.ngxSchemaPageActionMap[evt.actionKey](evt);
+            }
         });
     }
+    CrudEditComponent.prototype.goBack = function (data) {
+        if (this.entity === 'groupContacts' || this.entity === 'privateGroupContacts') {
+            this.router.navigateByUrl("/pages/crud/list/" + this.entity + "?parent=" + JSON.stringify({ entity: this.entity, id: this.parentParams.id }) + "&datatable=" + JSON.stringify({ id: data.id, init: false }));
+        }
+        else {
+            this.router.navigateByUrl("/pages/crud/list/" + this.entity);
+        }
+    };
     CrudEditComponent.prototype.initActionMap = function () {
         var _this = this;
         this.ngxSchemaPageActionMap = {
-            'SFFORM_SUBMIT': function (data) {
-                console.log('onSubmit', data);
-            },
             'SFFORM_RESET': function (data) {
-                console.log('onReset', data);
+                data.form.reset();
             },
             'SFFORM_SAVE': function (data) {
-                console.log('onsave', data);
+                if (data.form.valid) {
+                    _this.apiDataProviderService.createApi(data.btnAction.options.entity)
+                        .update(data.form.value, _this.entityId)
+                        .subscribe(function (res) {
+                        _this.goBack(data);
+                    });
+                }
             },
             'SFFORM_CANCEL': function (data) {
-                if (_this.entity === 'groupContacts' || _this.entity === 'privateGroupContacts') {
-                    _this.router.navigateByUrl("/pages/crud/list/" + _this.entity + "?parent=" + _this.entity + "&datatable=" + JSON.stringify({ id: data.id, init: false }));
-                }
-                else {
-                    _this.router.navigateByUrl("/pages/crud/list/" + _this.entity);
-                }
-            },
-            'SFFORM_ADD': function (data) {
-                console.log('onAdd', data);
-            },
-            'DATATABLE_CUSTOM': function (data) {
-            },
+                _this.goBack(data);
+            }
         };
     };
     return CrudEditComponent;
@@ -23991,13 +24066,14 @@ var i5 = __webpack_require__(/*! @angular/router */ "@angular/router");
 var i6 = __webpack_require__(/*! ../../../sp.service */ "./src/app/sp.service.ts");
 var i7 = __webpack_require__(/*! ../../../@core/ngx-schema-page/ngx-schema-page.service */ "./src/app/@core/ngx-schema-page/ngx-schema-page.service.ts");
 var i8 = __webpack_require__(/*! ../../../common/modals/confirm/confirm.modal.service */ "./src/app/common/modals/confirm/confirm.modal.service.ts");
+var i9 = __webpack_require__(/*! ../../../@core/services/api/api-data-provider.service */ "./src/app/@core/services/api/api-data-provider.service.ts");
 var styles_CrudListComponent = [];
 var RenderType_CrudListComponent = i0.ɵcrt({ encapsulation: 2, styles: styles_CrudListComponent, data: {} });
 exports.RenderType_CrudListComponent = RenderType_CrudListComponent;
 function View_CrudListComponent_1(_l) { return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, 0, null, null, 1, "ngx-schema-page", [], null, null, null, i1.View_NgxSchemaPageComponent_0, i1.RenderType_NgxSchemaPageComponent)), i0.ɵdid(1, 573440, null, 0, i2.NgxSchemaPageComponent, [], { schema: [0, "schema"] }, null)], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.listPageSchema; _ck(_v, 1, 0, currVal_0); }, null); }
 function View_CrudListComponent_0(_l) { return i0.ɵvid(0, [(_l()(), i0.ɵand(16777216, null, null, 1, null, View_CrudListComponent_1)), i0.ɵdid(1, 16384, null, 0, i3.NgIf, [i0.ViewContainerRef, i0.TemplateRef], { ngIf: [0, "ngIf"] }, null)], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.listPageSchema; _ck(_v, 1, 0, currVal_0); }, null); }
 exports.View_CrudListComponent_0 = View_CrudListComponent_0;
-function View_CrudListComponent_Host_0(_l) { return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, 0, null, null, 1, "crud-list-component", [], null, null, null, View_CrudListComponent_0, RenderType_CrudListComponent)), i0.ɵdid(1, 180224, null, 0, i4.CrudListComponent, [i5.ActivatedRoute, i6.SPService, i7.NgxSchemaPageService, i5.Router, i8.ConfirmModalService], null, null)], null, null); }
+function View_CrudListComponent_Host_0(_l) { return i0.ɵvid(0, [(_l()(), i0.ɵeld(0, 0, null, null, 1, "crud-list-component", [], null, null, null, View_CrudListComponent_0, RenderType_CrudListComponent)), i0.ɵdid(1, 180224, null, 0, i4.CrudListComponent, [i5.ActivatedRoute, i6.SPService, i7.NgxSchemaPageService, i5.Router, i8.ConfirmModalService, i9.ApiDataProviderService], null, null)], null, null); }
 exports.View_CrudListComponent_Host_0 = View_CrudListComponent_Host_0;
 var CrudListComponentNgFactory = i0.ɵccf("crud-list-component", i4.CrudListComponent, View_CrudListComponent_Host_0, {}, {}, []);
 exports.CrudListComponentNgFactory = CrudListComponentNgFactory;
@@ -24020,22 +24096,30 @@ var router_1 = __webpack_require__(/*! @angular/router */ "@angular/router");
 var core_1 = __webpack_require__(/*! @angular/core */ "@angular/core");
 var ngx_schema_page_service_1 = __webpack_require__(/*! ../../../@core/ngx-schema-page/ngx-schema-page.service */ "./src/app/@core/ngx-schema-page/ngx-schema-page.service.ts");
 var confirm_modal_service_1 = __webpack_require__(/*! ../../../common/modals/confirm/confirm.modal.service */ "./src/app/common/modals/confirm/confirm.modal.service.ts");
+var api_data_provider_service_1 = __webpack_require__(/*! ../../../@core/services/api/api-data-provider.service */ "./src/app/@core/services/api/api-data-provider.service.ts");
 var CrudListComponent = /** @class */ (function () {
-    function CrudListComponent(activatedRoute, spService, ngxSchemaPageService, router, confirmModalService) {
+    function CrudListComponent(activatedRoute, spService, ngxSchemaPageService, router, confirmModalService, apiDataProviderService) {
         var _this = this;
         this.activatedRoute = activatedRoute;
         this.spService = spService;
         this.ngxSchemaPageService = ngxSchemaPageService;
         this.router = router;
         this.confirmModalService = confirmModalService;
+        this.apiDataProviderService = apiDataProviderService;
         this.ngxSchemaPageActionMap = {};
         this.initActionMap();
-        this.activatedRoute.params.subscribe(function (res) {
-            _this.entity = res.entity;
+        this.activatedRoute.params.subscribe(function (params) {
+            _this.entity = params.entity;
+            // this.entityId = params.id;
             _this.listPageSchema = undefined;
             _this.spService.getPageSchema('crud', 'list', _this.entity).subscribe(function (res) {
                 _this.listPageSchema = res;
             });
+        });
+        this.activatedRoute.queryParams.subscribe(function (queryParams) {
+            if (queryParams && queryParams.parent) {
+                _this.parentParams = JSON.parse(queryParams.parent);
+            }
         });
         this.ngxSchemaPageActionObservable = this.ngxSchemaPageService.onAction$.subscribe(function (evt) {
             _this.ngxSchemaPageActionMap[evt.actionKey](evt);
@@ -24046,7 +24130,7 @@ var CrudListComponent = /** @class */ (function () {
         this.ngxSchemaPageActionMap = {
             'DATATABLE_ADD': function (data) {
                 if (_this.entity === 'groupContacts' || _this.entity === 'privateGroupContacts') {
-                    _this.router.navigateByUrl("/pages/crud/add/" + _this.entity + "?parent=" + _this.entity + "&datatable=" + JSON.stringify({ id: data.id, init: false }));
+                    _this.router.navigateByUrl("/pages/crud/add/" + _this.entity + "?parent=" + JSON.stringify({ entity: _this.entity, id: _this.parentParams.id }) + "&datatable=" + JSON.stringify({ id: data.id, init: false }));
                 }
                 else {
                     _this.router.navigateByUrl("/pages/crud/add/" + _this.entity);
@@ -24054,7 +24138,7 @@ var CrudListComponent = /** @class */ (function () {
             },
             'DATATABLE_DETAIL': function (data) {
                 if (_this.entity === 'groupContacts' || _this.entity === 'privateGroupContacts') {
-                    _this.router.navigateByUrl("/pages/crud/detail/" + _this.entity + "/" + data.id + "?parent=" + _this.entity + "&datatable=" + JSON.stringify({ id: data.id, init: false }));
+                    _this.router.navigateByUrl("/pages/crud/detail/" + _this.entity + "/" + data.id + "?parent=" + JSON.stringify({ entity: _this.entity, id: _this.parentParams.id }) + "&datatable=" + JSON.stringify({ id: data.id, init: false }));
                 }
                 else {
                     _this.router.navigateByUrl("/pages/crud/detail/" + _this.entity + "/" + data.id);
@@ -24062,15 +24146,23 @@ var CrudListComponent = /** @class */ (function () {
             },
             'DATATABLE_EDIT': function (data) {
                 if (_this.entity === 'groupContacts' || _this.entity === 'privateGroupContacts') {
-                    _this.router.navigateByUrl("/pages/crud/edit/" + _this.entity + "/" + data.id + "?parent=" + _this.entity + "&datatable=" + JSON.stringify({ id: data.id, init: false }));
+                    _this.router.navigateByUrl("/pages/crud/edit/" + _this.entity + "/" + data.id + "?parent=" + JSON.stringify({ entity: _this.entity, id: _this.parentParams.id }) + "&datatable=" + JSON.stringify({ id: data.id, init: false }));
                 }
                 else {
                     _this.router.navigateByUrl("/pages/crud/edit/" + _this.entity + "/" + data.id);
                 }
             },
             'DATATABLE_REMOVE': function (data) {
-                _this.confirmModalService.open({}).result.then(function (evt) {
-                    console.log(evt);
+                _this.confirmModalService.open({}).result.then(function (actionKey) {
+                    if (actionKey === 'onDelete') {
+                        _this.apiDataProviderService.createApi(_this.entity).delete(data.id)
+                            .subscribe(function (res) {
+                            _this.listPageSchema = undefined;
+                            _this.spService.getPageSchema('crud', 'list', _this.entity).subscribe(function (res) {
+                                _this.listPageSchema = res;
+                            });
+                        });
+                    }
                 });
             },
             'DATATABLE_CLONE': function (data) {
@@ -24078,10 +24170,10 @@ var CrudListComponent = /** @class */ (function () {
             'DATATABLE_CUSTOM': function (data) {
             },
             'DATATABLE_CONTACTS': function (data) {
-                _this.router.navigateByUrl("/pages/crud/list/groupContacts?parent=" + _this.entity + "&datatable=" + JSON.stringify({ id: data.id, init: false }));
+                _this.router.navigateByUrl("/pages/crud/list/groupContacts?parent=" + JSON.stringify({ entity: _this.entity, id: data.id }) + "&datatable=" + JSON.stringify({ id: data.id, init: false }));
             },
             'DATATABLE_CONTACTS_PERSONAL': function (data) {
-                _this.router.navigateByUrl("/pages/crud/list/privateGroupContacts?parent=" + _this.entity + "&datatable=" + JSON.stringify({ id: data.id, init: false }));
+                _this.router.navigateByUrl("/pages/crud/list/privateGroupContacts?parent=" + JSON.stringify({ entity: _this.entity, id: data.id }) + "&datatable=" + JSON.stringify({ id: data.id, init: false }));
             }
         };
     };
@@ -26320,7 +26412,7 @@ var SPService = /** @class */ (function () {
         _.forEach(this.pageSchema.body.sections, function (section) {
             _.forEach(section.items, function (item) {
                 _.forEach(item.components, function (cp) {
-                    if (cp.id == 'discountDetailView') {
+                    if (cp.id == id) {
                         widgetInfo = cp;
                     }
                 });

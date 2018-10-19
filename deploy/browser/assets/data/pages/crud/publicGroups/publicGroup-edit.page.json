@@ -20,13 +20,14 @@
               },
               {
                 "type": "sfForm",
-                "key": "ADD_USER_FORM",
+                "id": "EDIT_FORM",
                 "data": {
                   "formList": [
                     {
                       "title": "",
                       "containerClass": "col-sm-12",
                       "path": "users/basic-info-users",
+                      "mode": "EDIT",
                       "schema": {
                         "properties": {
                           "name": {
@@ -56,7 +57,7 @@
                             "btnAction": {
                               "type": "$network.request",
                               "options": {
-                                "entity": "discounts",
+                                "entity": "publicGroups",
                                 "method": "create",
                                 "data": {
                                   "user_id": "fI9",
@@ -89,18 +90,10 @@
                                 }
                               }
                             }
-                          },
-                          {
-                            "label": "Buttons.Add",
-                            "class": "btn-light",
-                            "actionKey": "SFFORM_ADD",
-                            "isHidden": true,
-                            "id": "add",
-                            "parameters": {}
                           }
                         ],
                         "required": [
-                          "title"
+                          "name", "description"
                         ],
                         "type": "object",
                         "widget": {
